@@ -1,0 +1,12 @@
+{
+    "games":[
+        {
+            "name": "name",
+            "price":"price",
+            "desription":"desription",
+            "image": "image",
+            "id":1
+            
+        }
+    ]
+}
