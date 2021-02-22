@@ -1,4 +1,17 @@
 {
+<<<<<<< HEAD
+    "games":[
+        {
+            "name": "name",
+            "price":"gitgprice",
+            "desription":"desription",
+            "image": "image",
+            "id":1
+            
+        }
+    ]
+}
+=======
   "products": [
     {
       "name": "name",
@@ -35,3 +48,4 @@
   ]
 }
 >>>>>>> f449b7e8410b1b4e588064209104df49231ac71d
+>>>>>>> 8e2c30cccd149fa61a1c1baffb0f6ad7122684ec
