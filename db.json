@@ -1,5 +1,5 @@
 {
-  "products": [
+"products": [
     {
       "name": "name",
       "price": "price",
@@ -20,3 +20,4 @@
     }
   ]
 }
+
