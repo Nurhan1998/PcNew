@@ -3,20 +3,6 @@
     {
       "name": "name",
       "price": "price",
-<<<<<<< HEAD
-      "desription": "desription",
-      "image": "image",
-      "id": 1
-    }
-  ],
-  "users": [
-    {
-      "mail": "",
-      "password": ""
-    }
-  ]
-}
-=======
       "description": "description",
       "image": [
         "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
@@ -34,4 +20,3 @@
     }
   ]
 }
->>>>>>> f449b7e8410b1b4e588064209104df49231ac71d
