@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "games":[
         {
             "name": "name",
@@ -10,3 +11,41 @@
         }
     ]
 }
+=======
+  "products": [
+    {
+      "name": "name",
+      "price": "price",
+<<<<<<< HEAD
+      "desription": "desription",
+      "image": "image",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "mail": "",
+      "password": ""
+    }
+  ]
+}
+=======
+      "description": "description",
+      "image": [
+        "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+      ],
+      "id": 1
+    },
+    {
+      "name": "asddasd",
+      "price": "asdasd",
+      "description": "121212",
+      "image": [
+        "https://miro.medium.com/max/1838/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
+      ],
+      "id": 2
+    }
+  ]
+}
+>>>>>>> f449b7e8410b1b4e588064209104df49231ac71d
+>>>>>>> 8e2c30cccd149fa61a1c1baffb0f6ad7122684ec
