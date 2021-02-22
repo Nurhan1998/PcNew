@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react';
 import axios from 'axios';
+import { API } from '../../helpers/constatns';
 
 export const productsContext =React.createContext()
 
@@ -9,7 +10,7 @@ const INIT_STATE ={
 
 const reducer =(state = INIT_STATE,action) =>{
     switch (action.type){
-        case 'GET_DATA':
+        case 'GET_PRODUCTS':
             return{...state,
                 products: action.payload
             }
@@ -33,7 +34,8 @@ const addProduct = async (newProd) =>{
     return (
         <productsContext.Provider value ={{
             products : state.products,
-            addProduct
+            addProduct,
+            getProducts
         }}> 
             {children}
         </productsContext.Provider>
