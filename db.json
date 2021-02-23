@@ -9,5 +9,22 @@
       ],
       "id": 2
     }
+  ],
+  "users": [
+    {
+      "email": "asdf",
+      "password": "asdf",
+      "id": 1
+    },
+    {
+      "email": "temir",
+      "password": "temir",
+      "id": 2
+    },
+    {
+      "email": "nba",
+      "password": "nba",
+      "id": 3
+    }
   ]
 }

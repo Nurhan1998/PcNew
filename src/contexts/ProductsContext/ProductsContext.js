@@ -32,7 +32,7 @@ const reducer =(state = INIT_STATE,action) =>{
 }
 const ProductsContextProvider = ({children}) => {
     const [state,dispatch] = useReducer(reducer,INIT_STATE)
-    const isAdmin = false
+    const isAdmin = true
 const getProducts = async () =>{
     const {data} = await axios.get (`${API}/products`)
     dispatch ({
