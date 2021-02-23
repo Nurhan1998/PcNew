@@ -34,6 +34,11 @@
       "email": "nba",
       "password": "nba",
       "id": 3
+    },
+    {
+      "email": "qwerty",
+      "password": "qwerty",
+      "id": 4
     }
   ]
 }

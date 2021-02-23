@@ -13,13 +13,14 @@ console.log(products)
   return (
     <ul>ProductList
     {products?.map(item => (
-        <span key={item.id}>
-            <li >{item.name}</li>
-            <li >{item.price}</li>
-            <li >{item.description}</li>
+        <li key={item.id}>
+            <span >{item.name}</span>
+            <span >{item.price}</span>
+            <span >{item.description}</span>
             <img src = {item.image[0]}/>
+            <button>Detail</button>
             
-        </span>
+        </li>
     ))}
 </ul>
   )

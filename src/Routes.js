@@ -4,6 +4,7 @@ import Login from "./pages/Auth/Login/Login";
 import Register from "./pages/Auth/Register/Register";
 import Cart from "./pages/Cart/Cart";
 import FormPage from "./pages/FormPage/FormPage";
+import Payment from "./pages/Payment/Payment"
 import Home from "./pages/Home/Home";
 import ProductsAdd from "./pages/Admin/AdminAdd/AdminAdd";
 import ProductsContextProvider from "./contexts/ProductsContext/ProductsContext";
@@ -22,6 +23,8 @@ const Routes = () => {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/list" component={ProductList} />
+            <Route exact path="/formpage" component={FormPage}/>
+            <Route exact path="/payment" component={Payment}/>
 
             <Route exact path="/admin-add" component={ProductsAdd} />
             <Route exact path="/admin-list" component={AdminList} />
