@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./pages/Auth/Login/Login";
 import Register from "./pages/Auth/Register/Register";
 import Cart from "./pages/Cart/Cart";
+import FormPage from "./pages/FormPage/FormPage";
 import Home from "./pages/Home/Home";
 import ProductsAdd from "./pages/Admin/AdminAdd/AdminAdd";
 import ProductsContextProvider from "./contexts/ProductsContext/ProductsContext";
