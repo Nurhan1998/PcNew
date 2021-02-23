@@ -4,7 +4,9 @@ import { productsContext } from "../../contexts/ProductsContext/ProductsContext"
 import { Link } from "react-router-dom";
 import { API } from "../../helpers/constatns";
 import Pagination from "react-bootstrap/Pagination";
-import PageItem from 'react-bootstrap/PageItem'
+import Form from 'react-bootstrap/Form'
+
+
 
 const ProductList = () => {
   const { products, getProducts,limit,count } = useContext(productsContext);
@@ -12,11 +14,17 @@ const ProductList = () => {
   const [page,setPage] =useState(1)
   const [searchValue,setSearchValue] =useState('')
   const [productCount, setProductCount] = useState(1);
+  const [filter,setFilter] = useState('')
 
   useEffect(() => {
     getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`).then(()=>{
     })
-  }, [page,searchValue]);
+    
+    console.log(filter)
+    // getProducts(`${API}/products?products.category=${filter}`).then(()=>{
+    // })
+  }, [page,searchValue,filter]);
+
 
   const onPaginationChange = (e,value) =>{
       setPage(+e.target.textContent)
@@ -31,9 +39,6 @@ const ProductList = () => {
   };
 
   let active = page;
-  console.log(products,page)
-  console.log(Math.ceil(count/limit))
-
   let items =[];
   for (let page = 1; page <= Math.ceil(count/limit); page++) {
     items.push(
@@ -45,6 +50,19 @@ const ProductList = () => {
 
   return (
     <div style={{ margin: '50px auto', minHeight: '80vh', position: 'relative' }}>
+  
+  <Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>Filter by Category</Form.Label>
+    <Form.Control as="select" defaultValue onChange = {(e) => setFilter(e.target.value)} >
+      <option>none</option>
+      <option>action</option>
+      <option>shooter</option>
+      <option>quest</option>
+      <option>strategy</option>
+      <option>simulator</option>
+    </Form.Control>
+  </Form.Group>
+
     <Pagination onClick={onPaginationChange}>{items}</Pagination>
     <input 
     style={{ maxWidth: '80%', margin: '0 auto', display: 'block' }} 
