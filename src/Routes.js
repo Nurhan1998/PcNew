@@ -8,23 +8,26 @@ import ProductsAdd from "./pages/Admin/ProductsAdd/ProductsAdd";
 import ProductsContextProvider from "./contexts/ProductsContext/ProductsContext";
 import List from "./pages/Products/List";
 import ProductList from "./pages/Admin/ProductList/ProductList";
+import AuthContextProvider from "./contexts/AuthContext/AuthContext";
 
 const Routes = () => {
   return (
-    <ProductsContextProvider>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/cart" component={Cart} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/list" component={List} />
+    <AuthContextProvider>
+      <ProductsContextProvider>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/list" component={List} />
 
-          <Route exact path="/admin-add" component={ProductsAdd} />
-          <Route exact path="/admin-list" component={ProductList} />
-        </Switch>
-      </BrowserRouter>
-    </ProductsContextProvider>
+            <Route exact path="/admin-add" component={ProductsAdd} />
+            <Route exact path="/admin-list" component={ProductList} />
+          </Switch>
+        </BrowserRouter>
+      </ProductsContextProvider>
+    </AuthContextProvider>
   );
 };
 
