@@ -15,12 +15,14 @@ const Login = () => {
       password,
     };
     users.forEach((element) => {
+      console.log(element);
+
       if (element.email === logs.email && element.password === logs.password) {
         setIsValid(true);
-      } else {
-        alert("пройдите регистрацию");
+        console.log(isValid);
       }
     });
+
     history.replace(isValid ? "/home" : "/login");
   };
   return (
