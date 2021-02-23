@@ -42,4 +42,4 @@ const addProduct = async (newProd) =>{
     );
 };
 
-export default ProductsContextProvider;
+export default ProductsContextProvider; 
