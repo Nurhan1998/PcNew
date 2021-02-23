@@ -17,6 +17,7 @@ useEffect(() =>{
     {products?.map(item => (
         <span key={item.id}>
             <li >{item.name}</li>
+            <li >{item.category}</li>
             <li >{item.price}</li>
             <li >{item.description}</li>
             <img src = {item.image[0]}/>

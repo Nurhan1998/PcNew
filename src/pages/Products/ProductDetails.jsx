@@ -44,7 +44,7 @@ const ProductDetails = () => {
 
                             {productDetail?.description}
 
-                            <Link onClick={() => handleClickEdit(id)} to='/admin-edit'>
+                            <Link onClick={() => handleClickEdit(id)} to={'/admin-edit'}>
                                 <button>Edit</button>
                             </Link>
                             <button onClick={() => handleClickDelete(id)} >
