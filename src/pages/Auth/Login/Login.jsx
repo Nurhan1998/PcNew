@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { authContext } from "../../../contexts/AuthContext/AuthContext";
 
@@ -6,24 +6,28 @@ const Login = () => {
   const { users, getUsers } = useContext(authContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isValid, setIsValid] = useState(false);
   const history = useHistory();
-  const handleLogin = () => {
+
+  useEffect(() => {
     getUsers();
+  }, []);
+
+  const handleLogin = () => {
+    console.log("askat");
     let logs = {
       email,
       password,
     };
-    users.forEach((element) => {
-      console.log(element);
-
-      if (element.email === logs.email && element.password === logs.password) {
-        setIsValid(true);
-        console.log(isValid);
+    const candidate = users.filter((item) => {
+      if (item.email === logs.email && item.password === logs.password) {
+        return item;
       }
     });
-
-    history.replace(isValid ? "/home" : "/login");
+    if (candidate.length) {
+      history.push("/home");
+    } else {
+      alert("такого пользователя не существует, просьба зарегистрироваться");
+    }
   };
   return (
     <div>
@@ -38,7 +42,7 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleLogin}>enter</button>
-      <button>signUp</button>
+      <button onClick={() => history.push("/register")}>signUp</button>
     </div>
   );
 };
