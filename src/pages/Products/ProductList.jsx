@@ -1,16 +1,35 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { cartContext } from "../../contexts/CartContext/CartContext";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
 import { Link } from "react-router-dom";
+import { API } from "../../helpers/constatns";
 const ProductList = () => {
-  const { products, getProducts } = useContext(productsContext);
+  const { products, getProducts,limit } = useContext(productsContext);
   const { handleInp } = useContext(cartContext);
+  const [page,setPage] =useState(1)
+  const [searchValue,setSearchValue] =useState('')
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`).then(()=>{
+    })
+  }, [page,searchValue]);
+
+  const   onPaginationChange = (e,value) =>{
+      setPage(+e.target.textContent)
+    }
 
   return (
+
+  <div style={{ margin: '50px auto', minHeight: '80vh', position: 'relative' }}>
+    <input 
+    style={{ maxWidth: '80%', margin: '0 auto', display: 'block' }} 
+    placeholder ='Search' 
+    value = {searchValue}
+    onChange ={(e) => {
+      e.preventDefault();
+      setSearchValue(e.target.value)}}
+    />
+
     <ul>
       ProductList
       {products?.map((item) => (
@@ -26,7 +45,7 @@ const ProductList = () => {
             onChange={(e) => {
               handleInp(e.target.value);
             }}
-          />
+            />
           <button>в корзину</button>
 
           <Link to={`products/${item.id}`} style={{ textDecoration: "none" }}>
@@ -35,6 +54,7 @@ const ProductList = () => {
         </div>
       ))}
     </ul>
+  </div>
   );
 };
 

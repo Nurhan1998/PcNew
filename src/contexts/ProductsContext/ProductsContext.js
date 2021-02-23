@@ -8,14 +8,16 @@ export const productsContext =React.createContext()
 const INIT_STATE ={
     products:[],
     productDetail:null,
-    productToEdit: null
+    productToEdit: null,
+    count:0
 }
 
 const reducer =(state = INIT_STATE,action) =>{
     switch (action.type){
         case 'GET_PRODUCTS':
             return{...state,
-                products: action.payload
+                products: action.payload.products,
+                count: action.payload.count
             }
         case 'GET_PRODUCT_DETAIL':
             return{
@@ -32,12 +34,18 @@ const reducer =(state = INIT_STATE,action) =>{
 }
 const ProductsContextProvider = ({children}) => {
     const [state,dispatch] = useReducer(reducer,INIT_STATE)
-    const isAdmin = true
-const getProducts = async () =>{
-    const {data} = await axios.get (`${API}/products`)
+    const isAdmin = true;
+    const limit = 9;
+
+const getProducts = async (url) =>{
+    const countProducts = await axios.get (`${API}/products`)
+    const {data} = await axios.get (url)
     dispatch ({
         type : 'GET_PRODUCTS',
-        payload: data
+        payload: {
+            products: data,
+            count: countProducts.data.length
+        }
     })
 }
 const getProductDetail = async (id) =>{
@@ -73,6 +81,8 @@ const editSave = async(newProd) =>{
             productDetail : state.productDetail,
             productToEdit: state.productToEdit,
             isAdmin: isAdmin,
+            count: state.count,
+            limit: limit,
             addProduct,
             getProducts,
             getProductDetail,
