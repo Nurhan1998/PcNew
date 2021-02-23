@@ -5,18 +5,27 @@ import { Link } from "react-router-dom";
 import { API } from "../../helpers/constatns";
 const ProductList = () => {
   const { products, getProducts,limit } = useContext(productsContext);
-  const { handleInp } = useContext(cartContext);
+  const { postCart } = useContext(cartContext);
   const [page,setPage] =useState(1)
   const [searchValue,setSearchValue] =useState('')
+  const [productCount, setProductCount] = useState(1);
 
   useEffect(() => {
     getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`).then(()=>{
     })
   }, [page,searchValue]);
 
-  const   onPaginationChange = (e,value) =>{
+  const onPaginationChange = (e,value) =>{
       setPage(+e.target.textContent)
     }
+
+  function handleClickCart(item) {
+    item.quantity = productCount;
+    postCart(item);
+  }
+  const handleInp = (e) => {
+    setProductCount(e);
+  };
 
   return (
 
@@ -45,8 +54,8 @@ const ProductList = () => {
             onChange={(e) => {
               handleInp(e.target.value);
             }}
-            />
-          <button>в корзину</button>
+          />
+          <button onClick={() => handleClickCart(item)}>в корзину</button>
 
           <Link to={`products/${item.id}`} style={{ textDecoration: "none" }}>
             <button>Detail</button>

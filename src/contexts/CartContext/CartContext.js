@@ -26,11 +26,16 @@ const CartContextProvider = ({ children }) => {
       payload: data,
     });
   };
-  const [quantity, setQuantity] = useState(0);
-  //   const addToCart = async (id) => {};
+  const postCart = async (item) => {
+    let { data } = await axios(`${API}/carts`);
+    let res = data.find((elem) => item.id === elem.id);
 
-  const handleInp = (e) => {
-    console.log(e);
+    if (res) {
+      res.quantity += 1;
+      await axios.patch(`${API}/carts/${res.id}`, res);
+    } else {
+      await axios.post(`${API}/carts`, item);
+    }
   };
 
   return (
@@ -38,7 +43,7 @@ const CartContextProvider = ({ children }) => {
       value={{
         carts: state.carts,
         getCarts,
-        handleInp,
+        postCart,
       }}
     >
       {children}
