@@ -7,16 +7,8 @@
       "image": [
         "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
       ],
+      "quantity": 0,
       "id": 1
-    },
-    {
-      "name": "asddasd",
-      "price": "asdasd",
-      "description": "121212",
-      "image": [
-        "https://miro.medium.com/max/1838/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-      ],
-      "id": 2
     }
   ],
   "users": [
@@ -34,6 +26,33 @@
       "email": "nba",
       "password": "nba",
       "id": 3
+    },
+    {
+      "email": "123",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "email": "ghj",
+      "password": "ghj",
+      "id": 5
+    },
+    {
+      "email": "askat",
+      "password": "askat",
+      "id": 6
+    }
+  ],
+  "carts": [
+    {
+      "name": "name",
+      "price": "price",
+      "description": "description",
+      "image": [
+        "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+      ],
+      "quantity": 0,
+      "id": 1
     }
   ]
 }
