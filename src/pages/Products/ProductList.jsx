@@ -3,8 +3,11 @@ import { cartContext } from "../../contexts/CartContext/CartContext";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
 import { Link } from "react-router-dom";
 import { API } from "../../helpers/constatns";
+import Pagination from "react-bootstrap/Pagination";
+import PageItem from 'react-bootstrap/PageItem'
+
 const ProductList = () => {
-  const { products, getProducts,limit } = useContext(productsContext);
+  const { products, getProducts,limit,count } = useContext(productsContext);
   const { postCart } = useContext(cartContext);
   const [page,setPage] =useState(1)
   const [searchValue,setSearchValue] =useState('')
@@ -27,9 +30,22 @@ const ProductList = () => {
     setProductCount(e);
   };
 
-  return (
+  let active = page;
+  console.log(products,page)
+  console.log(Math.ceil(count/limit))
 
-  <div style={{ margin: '50px auto', minHeight: '80vh', position: 'relative' }}>
+  let items =[];
+  for (let page = 1; page <= Math.ceil(count/limit); page++) {
+    items.push(
+      <Pagination.Item key={page} active={page === active}>
+        {page}
+      </Pagination.Item>
+    );
+  }
+
+  return (
+    <div style={{ margin: '50px auto', minHeight: '80vh', position: 'relative' }}>
+    <Pagination onClick={onPaginationChange}>{items}</Pagination>
     <input 
     style={{ maxWidth: '80%', margin: '0 auto', display: 'block' }} 
     placeholder ='Search' 
@@ -41,7 +57,7 @@ const ProductList = () => {
 
     <ul>
       ProductList
-      {products?.map((item) => (
+      {products?.map((item,index) => (
         <div key={item.id}>
           <li>{item.name}</li>
           <li>{item.category}</li>
