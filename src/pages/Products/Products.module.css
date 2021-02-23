@@ -1,0 +1,15 @@
+.product_detail_content{
+    width: 80%;
+    max-width: 1080px;
+    margin: 50px auto;
+}
+.product_content_wrapper{
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 1080px;
+    margin: 50px auto;
+    min-height: 400px;
+    height: auto;
+    padding: 20px;
+    border-radius: 15px !important;
+}

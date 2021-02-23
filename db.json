@@ -1,16 +1,7 @@
 {
-"products": [
+  "products": [
     {
-      "name": "name",
-      "price": "price",
-      "description": "description",
-      "image": [
-        "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
-      ],
-      "id": 1
-    },
-    {
-      "name": "asddasd",
+      "name": "askat",
       "price": "asdasd",
       "description": "121212",
       "image": [
@@ -20,4 +11,3 @@
     }
   ]
 }
-

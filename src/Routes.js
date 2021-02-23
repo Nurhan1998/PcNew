@@ -8,6 +8,8 @@ import ProductsAdd from "./pages/Admin/ProductsAdd/ProductsAdd";
 import ProductsContextProvider from "./contexts/ProductsContext/ProductsContext";
 import ProductList from "./pages/Products/ProductList";
 import AdminList from "./pages/Admin/ProductList/AdminList";
+import ProductDetails from "./pages/Products/ProductDetails";
+import ProductEdit from "./pages/Admin/ProductEdit/ProductEdit";
 
 const Routes = () => {
   return (
@@ -18,10 +20,12 @@ const Routes = () => {
           <Route exact path="/register" component={Register} />
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/home" component={Home} />
+          <Route exact path="/products/:id" component={ProductDetails} />
           <Route exact path="/list" component={ProductList} />
 
           <Route exact path="/admin-add" component={ProductsAdd} />
           <Route exact path="/admin-list" component={AdminList} />
+          <Route exact path="/admin-edit" component={ProductEdit} />
         </Switch>
       </BrowserRouter>
     </ProductsContextProvider>
