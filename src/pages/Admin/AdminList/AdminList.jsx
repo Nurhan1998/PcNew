@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductList from '../../Products/ProductList';
 
-const List = () => {
+const AdminList = () => {
     return (
         <div>
             <ProductList/>
@@ -9,4 +9,4 @@ const List = () => {
     );
 };
 
-export default List;
+export default AdminList;
