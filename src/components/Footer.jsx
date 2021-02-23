@@ -4,7 +4,7 @@ import {GrInstagram} from 'react-icons/gr'
 
 const Footer = () => {
     return (
-        <div style={{background:"#00439c",height:"100px"}}>
+        <div style={{background:"#00439c",height:"100px"}} >
             <Container> 
                 <Row>
                     <Col>
