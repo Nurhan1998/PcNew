@@ -1,33 +1,41 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { cartContext } from "../../contexts/CartContext/CartContext";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
-
+import { Link } from "react-router-dom";
 const ProductList = () => {
-const{products,getProducts,getProductDetail} = useContext(productsContext)
+  const { products, getProducts } = useContext(productsContext);
+  const { handleInp } = useContext(cartContext);
 
-useEffect(() =>{
-  getProducts()
-},[])
-
-
-
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   return (
-    <ul>ProductList
-    {products?.map(item => (
-        <span key={item.id}>
-            <li >{item.name}</li>
-            <li >{item.category}</li>
-            <li >{item.price}</li>
-            <li >{item.description}</li>
-            <img src = {item.image[0]}/>
-            <Link to={`products/${item.id}`} style={{ textDecoration: 'none' }}>
-                <button>Detail</button>
-            </Link>
-        </span>
-    ))}
-</ul>
-  )
+    <ul>
+      ProductList
+      {products?.map((item) => (
+        <div key={item.id}>
+          <li>{item.name}</li>
+          <li>{item.category}</li>
+          <li>{item.price}</li>
+          <li>{item.description}</li>
+          <img src={item.image[0]} />
+          <input
+            type="number"
+            min="1"
+            onChange={(e) => {
+              handleInp(e.target.value);
+            }}
+          />
+          <button>в корзину</button>
+
+          <Link to={`products/${item.id}`} style={{ textDecoration: "none" }}>
+            <button>Detail</button>
+          </Link>
+        </div>
+      ))}
+    </ul>
+  );
 };
 
 export default ProductList;

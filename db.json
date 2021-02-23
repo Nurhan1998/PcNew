@@ -38,6 +38,22 @@
       "email": "nba",
       "password": "nba",
       "id": 3
+    },
+    {
+      "email": "123",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "email": "ghj",
+      "password": "ghj",
+      "id": 5
+    },
+    {
+      "email": "askat",
+      "password": "askat",
+      "id": 6
     }
-  ]
+  ],
+  "carts": []
 }

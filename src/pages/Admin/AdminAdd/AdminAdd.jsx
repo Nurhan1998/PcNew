@@ -17,6 +17,7 @@ const ProductsAdd = () => {
       description,
       quantity:0,
       image: [image],
+      quantity: 0,
     };
     addProduct(newObj);
     setName("");

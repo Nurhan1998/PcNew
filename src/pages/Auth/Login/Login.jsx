@@ -13,7 +13,6 @@ const Login = () => {
   }, [users]);
 
   const handleLogin = () => {
-    console.log("askat");
     let logs = {
       email,
       password,
