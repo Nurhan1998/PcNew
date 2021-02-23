@@ -1,11 +1,12 @@
 {
-
   "products": [
     {
       "name": "name",
       "price": "price",
-      "desription": "desription",
-      "image": "image",
+      "description": "description",
+      "image": [
+        "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+      ],
       "id": 1
     },
     {
@@ -16,6 +17,23 @@
         "https://miro.medium.com/max/1838/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
       ],
       "id": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "asdf",
+      "password": "asdf",
+      "id": 1
+    },
+    {
+      "email": "temir",
+      "password": "temir",
+      "id": 2
+    },
+    {
+      "email": "nba",
+      "password": "nba",
+      "id": 3
     }
   ]
 }
