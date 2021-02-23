@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { cartContext } from "../../contexts/CartContext/CartContext";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
-
+import { Link } from "react-router-dom";
 const ProductList = () => {
   const { products, getProducts } = useContext(productsContext);
-  const { addToCart, handleInp } = useContext(cartContext);
+  const { handleInp } = useContext(cartContext);
 
   useEffect(() => {
     getProducts();
@@ -14,10 +14,11 @@ const ProductList = () => {
     <ul>
       ProductList
       {products?.map((item) => (
-        <li key={item.id}>
-          <p>{item.name}</p>
-          <p>{item.price}</p>
-          <p>{item.description}</p>
+        <div key={item.id}>
+          <li>{item.name}</li>
+          <li>{item.category}</li>
+          <li>{item.price}</li>
+          <li>{item.description}</li>
           <img src={item.image[0]} />
           <input
             type="number"
@@ -26,8 +27,12 @@ const ProductList = () => {
               handleInp(e.target.value);
             }}
           />
-          <button onClick={() => addToCart(item.id)}>в корзину</button>
-        </li>
+          <button>в корзину</button>
+
+          <Link to={`products/${item.id}`} style={{ textDecoration: "none" }}>
+            <button>Detail</button>
+          </Link>
+        </div>
       ))}
     </ul>
   );

@@ -27,17 +27,16 @@ const CartContextProvider = ({ children }) => {
     });
   };
   const [quantity, setQuantity] = useState(0);
-  const addToCart = async (id) => {};
+  //   const addToCart = async (id) => {};
 
   const handleInp = (e) => {
-    setQuantity(e);
+    console.log(e);
   };
 
   return (
     <cartContext.Provider
       value={{
         carts: state.carts,
-        addToCart,
         getCarts,
         handleInp,
       }}
