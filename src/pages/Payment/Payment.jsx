@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
 
@@ -44,7 +43,7 @@ export default class PaymentForm extends React.Component {
           <input
             type="text"
             name="name"
-            placeholder="Enter your name"
+            placeholder="enter your name"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
@@ -62,9 +61,7 @@ export default class PaymentForm extends React.Component {
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
-          <Button variant="primary">
-              Оплатить
-          </Button>
+          <button>save</button>
         </form>
       </div>
     );

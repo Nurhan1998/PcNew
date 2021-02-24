@@ -21,21 +21,15 @@ const ProductList = () => {
       return getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`)
     }
     setFilter(e.target.value)
-
-  }
+  } 
 
   useEffect(() => {
     if (filter == "none") {
-      console.log("filter")
-      return getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`)
+           return getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`)
     }
     (getProducts(`${API}/products?category=${filter}&_page=${page}&_limit=${limit}&q=${searchValue}`).then(() => {
     }))
   }, [page, searchValue, filter]);
-
-useEffect(() => {
-  getProducts(`${API}/products/?search=${searchValue}`)
-}, [searchValue]);
 
 
   const onPaginationChange = (e, value) => {

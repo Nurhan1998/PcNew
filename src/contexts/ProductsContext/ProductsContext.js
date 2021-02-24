@@ -35,7 +35,7 @@ const reducer =(state = INIT_STATE,action) =>{
 const ProductsContextProvider = ({children}) => {
     const [state,dispatch] = useReducer(reducer,INIT_STATE)
     const isAdmin = true;
-    const limit = 1;
+    const limit = 3;
 
 const getProducts = async (url) =>{
     const countProducts = await axios.get (`${API}/products`)
