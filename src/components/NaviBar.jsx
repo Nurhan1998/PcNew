@@ -1,6 +1,7 @@
 import React from 'react';
 import {Navbar,Nav,NavDropdown,Form,FormControl,Button,Col,Image, Container,Row} from "react-bootstrap"
 import {FaPlaystation} from 'react-icons/fa'
+// import {isAdmin} from "../contexts/ProductsContext/ProductsContext"
 
 const NaviBar = () => {
     return (
@@ -20,10 +21,14 @@ const NaviBar = () => {
         </Container>
         {/* User Buttons */}
         <Container className="justify-content-end">
+            
+
+          {/* {isAdmin?<h1></h1>:} */}
           <Form >
           <Button variant="outline-primary" className="mr-3 rounded-pill border border-dark">Sign Up</Button>
           <Button className="rounded-pill border border-dark">Sign In</Button>
           </Form>
+            
         </Container>
       </Navbar>
          
