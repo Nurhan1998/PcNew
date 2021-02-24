@@ -33,6 +33,10 @@ const ProductList = () => {
     }))
   }, [page, searchValue, filter]);
 
+useEffect(() => {
+  getProducts(`${API}/products/?search=${searchValue}`)
+}, [searchValue]);
+
 
   const onPaginationChange = (e, value) => {
     setPage(+e.target.textContent)
