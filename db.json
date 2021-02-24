@@ -1,22 +1,37 @@
 {
   "products": [
     {
-      "name": "name",
-      "price": "price",
-      "description": "description",
+      "name": "Counter Strike",
+      "category": "RPG",
+      "price": "20",
+      "description": "Source",
+      "quantity": 0,
       "image": [
-        "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+        "https://s1.gaming-cdn.com/images/products/258/orig/counter-strike-source-cover.jpg"
       ],
-      "id": 1
+      "id": 3
     },
     {
-      "name": "asddasd",
-      "price": "asdasd",
-      "description": "121212",
+      "name": "NBA",
+      "category": "Basketball",
+      "price": "50",
+      "description": "PC",
+      "quantity": 0,
       "image": [
-        "https://miro.medium.com/max/1838/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202008/1822/YsOJjjnoruH9gzwXgwgdFFnQ.jpg"
       ],
-      "id": 2
+      "id": 4
+    },
+    {
+      "name": "Red Dead",
+      "category": "RPG",
+      "price": "100",
+      "description": "PS4",
+      "quantity": 0,
+      "image": [
+        "https://images-na.ssl-images-amazon.com/images/I/91C8piUiI0L._SL1500_.jpg"
+      ],
+      "id": 5
     }
   ],
   "users": [
@@ -34,6 +49,72 @@
       "email": "nba",
       "password": "nba",
       "id": 3
+    },
+    {
+      "email": "123",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "email": "ghj",
+      "password": "ghj",
+      "id": 5
+    },
+    {
+      "email": "askat",
+      "password": "askat",
+      "id": 6
+    },
+    {
+      "email": "goal",
+      "password": "goal",
+      "id": 7
+    }
+  ],
+  "carts": [
+    {
+      "name": "aaaaa",
+      "category": "",
+      "price": "8",
+      "description": "aaaa",
+      "quantity": 6,
+      "image": [
+        "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Counter Strike",
+      "category": "RPG",
+      "price": "20",
+      "description": "Source",
+      "quantity": "1",
+      "image": [
+        "https://s1.gaming-cdn.com/images/products/258/orig/counter-strike-source-cover.jpg"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Red Dead",
+      "category": "RPG",
+      "price": "100",
+      "description": "PS4",
+      "quantity": "1",
+      "image": [
+        "https://images-na.ssl-images-amazon.com/images/I/91C8piUiI0L._SL1500_.jpg"
+      ],
+      "id": 5
+    },
+    {
+      "name": "NBA",
+      "category": "Basketball",
+      "price": "50",
+      "description": "PC",
+      "quantity": 3,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202008/1822/YsOJjjnoruH9gzwXgwgdFFnQ.jpg"
+      ],
+      "id": 4
     }
   ]
 }

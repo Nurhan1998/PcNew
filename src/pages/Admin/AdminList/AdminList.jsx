@@ -1,12 +1,12 @@
-import React from 'react';
-import ProductList from '../../Products/ProductList';
+import React from "react";
+import ProductList from "../../Products/ProductList";
 
-const List = () => {
-    return (
-        <div>
-            <ProductList/>
-        </div>
-    );
+const AdminList = () => {
+  return (
+    <div>
+      <ProductList />
+    </div>
+  );
 };
 
-export default List;
+export default AdminList;
