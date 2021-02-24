@@ -9,26 +9,34 @@ import Form from 'react-bootstrap/Form'
 
 
 const ProductList = () => {
-  const { products, getProducts,limit,count } = useContext(productsContext);
+  const { products, getProducts, limit, count } = useContext(productsContext);
   const { postCart } = useContext(cartContext);
-  const [page,setPage] =useState(1)
-  const [searchValue,setSearchValue] =useState('')
+  const [page, setPage] = useState(1)
+  const [searchValue, setSearchValue] = useState('')
   const [productCount, setProductCount] = useState(1);
-  const [filter,setFilter] = useState('')
+  const [filter, setFilter] = useState("none")
+
+  function handleFilter(e) {
+    if (e.target.value == "none") {
+      return getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`)
+    }
+    setFilter(e.target.value)
+
+  }
 
   useEffect(() => {
-    getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`).then(()=>{
-    })
-    
-    console.log(filter)
-    // getProducts(`${API}/products?products.category=${filter}`).then(()=>{
-    // })
-  }, [page,searchValue,filter]);
-
-
-  const onPaginationChange = (e,value) =>{
-      setPage(+e.target.textContent)
+    if (filter == "none") {
+      console.log("filter")
+      return getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`)
     }
+    (getProducts(`${API}/products?category=${filter}&_page=${page}&_limit=${limit}&q=${searchValue}`).then(() => {
+    }))
+  }, [page, searchValue, filter]);
+
+
+  const onPaginationChange = (e, value) => {
+    setPage(+e.target.textContent)
+  }
 
   function handleClickCart(item) {
     item.quantity = productCount;
@@ -39,8 +47,8 @@ const ProductList = () => {
   };
 
   let active = page;
-  let items =[];
-  for (let page = 1; page <= Math.ceil(count/limit); page++) {
+  let items = [];
+  for (let page = 1; page <= Math.ceil(count / limit); page++) {
     items.push(
       <Pagination.Item key={page} active={page === active}>
         {page}
@@ -50,32 +58,33 @@ const ProductList = () => {
 
   return (
     <div style={{ margin: '50px auto', minHeight: '80vh', position: 'relative' }}>
-  
-  <Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>Filter by Category</Form.Label>
-    <Form.Control as="select" defaultValue onChange = {(e) => setFilter(e.target.value)} >
-      <option>none</option>
-      <option>action</option>
-      <option>shooter</option>
-      <option>quest</option>
-      <option>strategy</option>
-      <option>simulator</option>
-    </Form.Control>
-  </Form.Group>
 
-    <Pagination onClick={onPaginationChange}>{items}</Pagination>
-    <input 
-    style={{ maxWidth: '80%', margin: '0 auto', display: 'block' }} 
-    placeholder ='Search' 
-    value = {searchValue}
-    onChange ={(e) => {
-      e.preventDefault();
-      setSearchValue(e.target.value)}}
-    />
+      <Form.Group controlId="exampleForm.ControlSelect1">
+        <Form.Label>Filter by Category</Form.Label>
+        <Form.Control as="select" defaultValue onChange={handleFilter} >
+          <option>none</option>
+          <option>action</option>
+          <option>shooter</option>
+          <option>quest</option>
+          <option>strategy</option>
+          <option>simulator</option>
+        </Form.Control>
+      </Form.Group>
 
-    <ul>
-      ProductList
-      {products?.map((item,index) => (
+      <Pagination onClick={onPaginationChange}>{items}</Pagination>
+      <input
+        style={{ maxWidth: '80%', margin: '0 auto', display: 'block' }}
+        placeholder='Search'
+        value={searchValue}
+        onChange={(e) => {
+          e.preventDefault();
+          setSearchValue(e.target.value)
+        }}
+      />
+
+      <ul>
+        ProductList
+      {products?.map((item, index) => (
         <div key={item.id}>
           <li>{item.name}</li>
           <li>{item.category}</li>
@@ -96,8 +105,8 @@ const ProductList = () => {
           </Link>
         </div>
       ))}
-    </ul>
-  </div>
+      </ul>
+    </div>
   );
 };
 

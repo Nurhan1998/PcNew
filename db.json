@@ -1,17 +1,6 @@
 {
   "products": [
     {
-      "name": "aaaaa",
-      "category": "",
-      "price": "8",
-      "description": "aaaa",
-      "quantity": 0,
-      "image": [
-        "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png"
-      ],
-      "id": 1
-    },
-    {
       "name": "dfgsdfg",
       "category": "sdfgsdg",
       "price": "2132",
@@ -32,6 +21,83 @@
         "https://filedn.com/ltOdFv1aqz1YIFhf4gTY8D7/ingus-info/BLOGS/Photography-stocks3/stock-photography-slider.jpg"
       ],
       "id": 3
+    },
+    {
+      "name": "God of War",
+      "category": "action",
+      "price": "1200",
+      "description": "God of War — компьютерная игра в жанре action-adventure, разработанная компанией SIE Santa Monica Studio, и изданная Sony Interactive Entertainment для игровой консоли PlayStation 4. Вышла 20 апреля 2018 года. Является восьмой игрой серии God of War, а также сиквелом к игре 2010 года God of War III.",
+      "quantity": 0,
+      "image": [
+        "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5a/God_of_War_2018_cover.jpg/274px-God_of_War_2018_cover.jpg"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Grand Theft Auto V",
+      "category": "action",
+      "price": "1000",
+      "description": "Grand Theft Auto V — мультиплатформенная компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Rockstar North и изданная компанией Rockstar Games.",
+      "quantity": 0,
+      "image": [
+        "https://upload.wikimedia.org/wikipedia/ru/thumb/c/c8/GTAV_Official_Cover_Art.jpg/274px-GTAV_Official_Cover_Art.jpg"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Apex Legends",
+      "category": "shooter",
+      "price": "1200",
+      "description": "Apex Legends — компьютерная игра в жанре многопользовательского шутера от первого лица и королевской битвы, разработанная американской студией Respawn Entertainment и выпущенная компанией Electronic Arts для платформ Windows, PlayStation 4 и Xbox One в 2019 году.",
+      "quantity": 0,
+      "image": [
+        "https://upload.wikimedia.org/wikipedia/ru/thumb/1/17/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Apex_Legends.jpg/266px-%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Apex_Legends.jpg"
+      ],
+      "id": 6
+    },
+    {
+      "name": "The Sims 4",
+      "category": "simulator",
+      "price": "700",
+      "description": "The Sims 4 — однопользовательская компьютерная игра в жанре симулятора жизни, четвёртая по счёту из серии игр The Sims, разработанная компанией Maxis и издаваемая Electronic Arts для Windows и macOS",
+      "quantity": 0,
+      "image": [
+        "https://upload.wikimedia.org/wikipedia/ru/5/5e/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_The_Sims_4.jpeg"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Dirt 4",
+      "category": "simulator",
+      "price": "700",
+      "description": "DiRT 4 — видеоигра в жанре автосимулятор, посвящённая тематике ралли. Она была разработана и издана Codemasters для платформ Microsoft Windows, PlayStation 4 и Xbox One и была выпущена для macOS и Linux в 2019 году компанией Feral Interactive. Игра принадлежит серии DiRT, также известной как Colin McRae Rally",
+      "quantity": 0,
+      "image": [
+        "https://upload.wikimedia.org/wikipedia/ru/2/2d/Dirt_4_cover.jpg"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Dota 2",
+      "category": "strategy",
+      "price": "500",
+      "description": "Dota 2 — компьютерная многопользовательская командная игра в жанре multiplayer online battle arena, разработанная корпорацией Valve. Игра является продолжением DotA — пользовательской карты-модификации для игры Warcraft III: Reign of Chaos и дополнения к ней Warcraft III: The Frozen Throne.",
+      "quantity": 0,
+      "image": [
+        "https://upload.wikimedia.org/wikipedia/ru/8/8e/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Dota_2.jpg"
+      ],
+      "id": 9
+    },
+    {
+      "name": "StarCraft II: Wings of Liberty",
+      "category": "strategy",
+      "price": "500",
+      "description": "StarCraft II: Wings of Liberty — компьютерная игра в жанре стратегии в реальном времени, продолжение StarCraft. Была анонсирована 19 мая 2007 года на фестивале Blizzard Worldwide Invitational в Сеуле, Южная Корея.",
+      "quantity": 0,
+      "image": [
+        "https://upload.wikimedia.org/wikipedia/ru/0/07/StarCraft_II.jpg"
+      ],
+      "id": 10
     }
   ],
   "users": [
@@ -68,15 +134,15 @@
   ],
   "carts": [
     {
-      "name": "aaaaa",
-      "category": "",
-      "price": "8",
-      "description": "aaaa",
-      "quantity": 7,
+      "name": "dfgsdfg",
+      "category": "sdfgsdg",
+      "price": "2132",
+      "description": "werwrwr",
+      "quantity": "4",
       "image": [
-        "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png"
+        "https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
       ],
-      "id": 1
+      "id": 2
     }
   ]
 }
