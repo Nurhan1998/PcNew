@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { productsContext } from "../../../contexts/ProductsContext/ProductsContext";
+import {Container,FormControl,Button} from 'react-bootstrap'
 
 const ProductsAdd = () => {
   const [name, setName] = useState("");
@@ -28,37 +29,50 @@ const ProductsAdd = () => {
   }
   return (
     <div>
-      <input
+      <Container 
+        style={{
+        width:"400px",
+        marginTop:"120px"
+  }}> 
+    <h1>Admin Add Product</h1>
+      <FormControl
+        className="mt-2"
         value={name}
         onChange={(e) => setName(e.target.value)}
         type="text"
         placeholder="Name"
       />
-      <input
+      <FormControl
+        className="mt-2"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
         type="text"
         placeholder="Category"
       />
-      <input
+      <FormControl
+        className="mt-2"
         value={price}
         onChange={(e) => setPrice(e.target.value)}
         type="number"
         placeholder="Price"
       />
-      <input
+      <FormControl
+        className="mt-2"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         type="text"
         placeholder="Description"
       />
-      <input
+      <FormControl
+        className="mt-2"
         value={image}
         onChange={(e) => setImage(e.target.value)}
         type="text"
-        placeholder="Image"
+        placeholder="Image URL"
       />
-      <button onClick={handleClick}>Add Product</button>
+      <Button className="mt-2 " block onClick={handleClick}>Add Product</Button>
+      </Container>
+     
     </div>
   );
   return <div></div>;

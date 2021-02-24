@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { authContext } from "../../../contexts/AuthContext/AuthContext";
+import {Button,Container,Form,form,Image} from "react-bootstrap"
+
 
 const Login = () => {
   const { users, getUsers } = useContext(authContext);
@@ -29,19 +31,46 @@ const Login = () => {
     }
   };
   return (
-    <div>
-      <input
-        type="text"
+    <div  style={{
+      position: "absolute",
+      width: "100%",
+      left: "50%",
+      top: "50%",
+      height: "100%",
+      objectFit: "cover",
+      transform: "translate(-50%, -50%)",
+      zIndex: "-1"
+  }}>
+  
+    
+    <Container style={{
+      width:"400px",
+      marginTop:"120px"
+  }} >
+ <form style={{backgroundColor:"white"}} >
+ <div style={{backgroundColor:"black"}}>
+      <h3 style={{color:"gray"}} className="text-center">SONY</h3>
+      <Image src="https://my.account.sony.com/central/signin/3af9e8524048c1e82c2c86d9e2c20ebb3c2032b5/assets/images/logo_playstation.png" fluid/>
+    </div>
+      <p>Sign in to PlayStation using one of your Sony accounts.</p>
+      <Form.Control 
+        type="email"
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input
-        type="text"
+      <Form.Control 
+        className="mt-1"
+        type="password"
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>enter</button>
-      <button onClick={() => history.push("/register")}>signUp</button>
+      <Button onClick={handleLogin} variant="outline-primary" 
+        size="lg" block className="mt-3">GO!</Button>
+      <Button onClick={() => history.push("/register")}
+        size="lg" block
+      >Create new account</Button>
+    </form>
+    </Container>
     </div>
   );
 };

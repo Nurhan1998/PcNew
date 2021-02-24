@@ -2,9 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import { cartContext } from "../../contexts/CartContext/CartContext";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
 import { Link } from "react-router-dom";
+import NaviBar from "../../components/NaviBar";
+import {Container,Button,Image,Col,Row,item,Card} from "react-bootstrap"
 import { API } from "../../helpers/constatns";
 import Pagination from "react-bootstrap/Pagination";
 import Form from 'react-bootstrap/Form'
+
 
 
 
@@ -61,8 +64,9 @@ useEffect(() => {
   }
 
   return (
+    
     <div style={{ margin: '50px auto', minHeight: '80vh', position: 'relative' }}>
-
+     
       <Form.Group controlId="exampleForm.ControlSelect1">
         <Form.Label>Filter by Category</Form.Label>
         <Form.Control as="select" defaultValue onChange={handleFilter} >
@@ -90,23 +94,25 @@ useEffect(() => {
         ProductList
       {products?.map((item, index) => (
         <div key={item.id}>
-          <li>{item.name}</li>
-          <li>{item.category}</li>
-          <li>{item.price}</li>
-          <li>{item.description}</li>
-          <img src={item.image[0]} />
+          <Image src={item.image[0]} fluid className="border border-primary"/>
+          <h5 className="text-center">{item.name}</h5>
+          <li><strong>Category: </strong>{item.category}</li>
+          <li><strong>Price: </strong>{item.price} USD</li>
+          <li><strong>Platform: </strong>{item.description}</li>
+          <Link to={`products/${item.id}`} style={{ textDecoration: "none" }}>
+            <Button  className="rounded-pill mt-3" block>Details</Button>
+          </Link>
+          <form className="text-center mt-2 mb-2 ">
+          <Button onClick={() => handleClickCart(item)} variant="outline-primary" className="rounded-pill mr-2">Add to cart</Button>
           <input
             type="number"
             min="1"
+            style={{width:"50px"}}
             onChange={(e) => {
               handleInp(e.target.value);
             }}
           />
-          <button onClick={() => handleClickCart(item)}>в корзину</button>
-
-          <Link to={`products/${item.id}`} style={{ textDecoration: "none" }}>
-            <button>Detail</button>
-          </Link>
+          </form>
         </div>
       ))}
       </ul>

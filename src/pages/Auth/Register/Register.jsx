@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Button, Container, FormControl,Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { authContext } from "../../../contexts/AuthContext/AuthContext";
 
@@ -14,7 +15,7 @@ const Register = () => {
       setEmail("");
       setPassword("");
       setConfirm("");
-      return alert("введите все поля");
+      return alert("заполните все поля");
     } else if (password === confirm) {
       let newUser = {
         email,
@@ -34,25 +35,38 @@ const Register = () => {
 
   return (
     <div>
-      <input
+      <Container style={{
+        width:"400px",
+        marginTop:"120px"
+  }}>
+    <div style={{backgroundColor:"black"}}>
+      <h3 style={{color:"gray"}} className="text-center">SONY</h3>
+      <Image src="https://my.account.sony.com/central/signin/3af9e8524048c1e82c2c86d9e2c20ebb3c2032b5/assets/images/logo_playstation.png" fluid/>
+    </div>
+      <FormControl
+        className="mt-1"
         value={email}
-        type="text"
+        type="email"
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input
+      <FormControl
+        className="mt-1"
         value={password}
-        type="text"
+        type="password"
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <input
+      <FormControl
+          className="mt-1"
         value={confirm}
-        type="text"
+        type="password"
         placeholder="Confirm Password"
         onChange={(e) => setConfirm(e.target.value)}
       />
-      <button onClick={handleClickAddUser}>enter</button>
+      <Button onClick={handleClickAddUser} size="lg" block className="mt-3">Sign Up</Button>
+      </Container>
+      
     </div>
   );
 };
