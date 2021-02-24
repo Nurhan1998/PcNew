@@ -3,6 +3,7 @@ import { productsContext } from "../../../contexts/ProductsContext/ProductsConte
 
 const ProductsAdd = () => {
   const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([]);
@@ -11,12 +12,16 @@ const ProductsAdd = () => {
   function handleClick() {
     let newObj = {
       name,
+      category,
       price,
       description,
+      quantity:0,
       image: [image],
+      quantity: 0,
     };
     addProduct(newObj);
     setName("");
+    setCategory("");
     setPrice("");
     setDescription("");
     setImage("");
@@ -28,6 +33,12 @@ const ProductsAdd = () => {
         onChange={(e) => setName(e.target.value)}
         type="text"
         placeholder="Name"
+      />
+      <input
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        type="text"
+        placeholder="Category"
       />
       <input
         value={price}
