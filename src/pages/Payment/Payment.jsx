@@ -63,7 +63,7 @@ export default class PaymentForm extends React.Component {
             onFocus={this.handleInputFocus}
           />
           <Button variant="primary">
-              Добавить карту
+              Оплатить
           </Button>
         </form>
       </div>

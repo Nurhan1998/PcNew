@@ -32,13 +32,13 @@ const ProductsAdd = () => {
       <input
         value={price}
         onChange={(e) => setPrice(e.target.value)}
-        type="text"
+        type="number"
         placeholder="Price"
       />
       <input
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        type="number"
+        type="text"
         placeholder="Description"
       />
       <input

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Form, Col, Button, Image, Container} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 const FormPage = () => {
     
@@ -45,18 +46,23 @@ const FormPage = () => {
         <option>Issyk-Kol</option>
         <option>Naryn</option>
         <option>Jalal-Abad</option>
-        <option>Osh</option>\
+        <option>Osh</option>
         <option>Batken</option>
       </Form.Control>
     </Form.Group>
   </Form.Row>
 
+<Link to="/payment">
   <Button variant="primary" type="submit">
     Добавить карту
   </Button>
+</Link>
+
+<Link to="/cart">
   <Button variant="danger">
       Отмена
   </Button>
+</Link>
 </Form>
         </Container>
         
