@@ -5,8 +5,10 @@ import Pagination from "react-bootstrap/Pagination";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { RiAddCircleLine, RiDeleteBin6Line } from "react-icons/ri";
+import { useHistory } from "react-router-dom";
 
 const Cart = () => {
+  let history = useHistory();
   const { carts, getCarts, deleteCart } = useContext(cartContext);
   useEffect(() => {
     getCarts();
@@ -68,7 +70,9 @@ const Cart = () => {
               className="border"
             >
               <h5 className="text-center border-bottom">TOTAL</h5>
-              <Button block>CHECKOUT</Button>
+              <Button block onClick={() => history.push("/formpage")}>
+                CHECKOUT
+              </Button>
               <h6>WE ACCEPT:</h6>
               <Image
                 style={{ width: "18rem" }}
