@@ -177,6 +177,26 @@
       "email": "123",
       "password": "123",
       "id": 2
+    },
+    {
+      "email": "salekh",
+      "password": "salekh",
+      "id": 3
+    },
+    {
+      "email": "playstation",
+      "password": "playstation",
+      "id": 4
+    },
+    {
+      "email": "qwerty",
+      "password": "qwerty",
+      "id": 5
+    },
+    {
+      "email": "s",
+      "password": "s",
+      "id": 6
     }
   ],
   "carts": [

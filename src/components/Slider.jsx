@@ -19,7 +19,7 @@ const Slider = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-block-desktop-03-en-15jun20?$native$"
+      src="https://gmedia.playstation.com/is/image/SIEPDC/destruction-allstars-desktop-hero-02-ps5-en-12jun20?$native$"
       alt="Second slide"
     />
     <Carousel.Caption>
@@ -27,17 +27,7 @@ const Slider = () => {
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="holder.js/800x400?text=Third slide&bg=20232a"
-      alt="Third slide"
-    />
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
+  
 </Carousel>
         </div>
     );

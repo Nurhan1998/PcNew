@@ -17,13 +17,13 @@ const NaviBar = () => {
   const handleLogOut = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("role");
-    history.push("/login");
+    history.push("/");
   };
 
 
 
     return (
-      <Navbar bg="white" expand="lg" sticky="top" >
+      <Navbar expand="lg" sticky="top" bg="white">
       <Navbar.Brand href="/">
         <h3 className="ml-3"><SiPlaystation/></h3>
       </Navbar.Brand>
@@ -44,7 +44,11 @@ const NaviBar = () => {
         
         <Form inline>
           <h1>{user}</h1>
-        <Button variant="outline-primary" className="mr-3 rounded-pill border border-dark" size="sm">Sign Up</Button>
+          <Link to="/register">
+          <Button variant="outline-primary" className="mr-3 rounded-pill border border-dark" size="sm">Sign Up</Button>
+          </Link>
+
+          
         {user?(<Button className="rounded-pill border border-dark" size="sm" onClick={()=>handleLogOut()}>Log Out</Button>):(
           <Button className="rounded-pill border border-dark" size="sm" onClick={()=>history.push("/login")}>Log In</Button>)
         }  
