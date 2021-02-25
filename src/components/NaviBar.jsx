@@ -30,8 +30,10 @@ const NaviBar = () => {
     history.push("/");
   };
 
-  return (
-    <Navbar bg="white" expand="lg" sticky="top">
+
+
+    return (
+      <Navbar expand="lg" sticky="top" bg="white">
       <Navbar.Brand href="/">
         <h3 className="ml-3">
           <SiPlaystation />
