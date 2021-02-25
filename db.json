@@ -1,17 +1,6 @@
 {
   "products": [
     {
-      "name": "Call of Duty: Modern Warfare Remastered",
-      "category": "Shooter",
-      "price": "20",
-      "description": "Call of Duty: Modern Warfare Remastered - шутер от первого лица 2016 года, разработанный Raven Software и опубликованный Activision.",
-      "quantity": 0,
-      "image": [
-        "https://image.api.playstation.com/cdn/EP0002/CUSA05380_00/FiekbfhIalRbPcJBkU83XfjWhHyvjNhk.png"
-      ],
-      "id": 1
-    },
-    {
       "name": "Spider-Man: Miles Morales",
       "category": "Action",
       "price": "90",
@@ -46,7 +35,7 @@
     },
     {
       "name": "Doom Eternal",
-      "category": "Shooter",
+      "category": "shooter",
       "price": "20",
       "description": "Doom Eternal — компьютерная игра в жанре шутера от первого лица. Игра разработана студией id Software, а издателем выступила компания Bethesda Softworks.",
       "quantity": 0,
@@ -156,7 +145,7 @@
     },
     {
       "name": "Destiny 2",
-      "category": "Shooter",
+      "category": "shooter",
       "price": "20",
       "description": "Destiny 2 — компьютерная игра в жанре шутера от первого лица с элементами MMORPG, разработанная Bungie.",
       "quantity": 0,
@@ -164,6 +153,30 @@
         "https://image.api.playstation.com/vulcan/img/rnd/202011/0400/3PetyfDv6TpzxVQtBKYnWq8o.png"
       ],
       "id": 15
+    },
+    {
+      "name": "test",
+      "category": "test",
+      "price": "100",
+      "description": "asdfasdf",
+      "quantity": 0,
+      "image": [
+        ""
+      ],
+      "likes": 0,
+      "id": 16
+    },
+    {
+      "name": "aaaaa1111",
+      "category": "Action",
+      "price": "200",
+      "description": "asdfasdf",
+      "quantity": 0,
+      "image": [
+        []
+      ],
+      "likes": 0,
+      "id": 17
     }
   ],
   "users": [
@@ -179,24 +192,9 @@
       "id": 2
     },
     {
-      "email": "salekh",
-      "password": "salekh",
+      "email": "test",
+      "password": "test",
       "id": 3
-    },
-    {
-      "email": "playstation",
-      "password": "playstation",
-      "id": 4
-    },
-    {
-      "email": "qwerty",
-      "password": "qwerty",
-      "id": 5
-    },
-    {
-      "email": "s",
-      "password": "s",
-      "id": 6
     }
   ],
   "carts": [
@@ -205,7 +203,7 @@
       "category": "RPG",
       "price": "100",
       "description": "PS4",
-      "quantity": "1",
+      "quantity": 0,
       "image": [
         "https://images-na.ssl-images-amazon.com/images/I/91C8piUiI0L._SL1500_.jpg"
       ],
@@ -221,6 +219,17 @@
         "https://image.api.playstation.com/vulcan/img/rnd/202011/0314/tReLA4tRl0hyg4wvmg1kwEqb.png?w=440&thumb=false"
       ],
       "id": 2
+    },
+    {
+      "name": "Call of Duty: Modern Warfare Remastered111",
+      "category": "Shooter",
+      "price": "2000",
+      "description": "Call of Duty: Modern Warfare Remastered - шутер от первого лица 2016 года, разработанный Raven Software и опубликованный Activision.",
+      "quantity": 1,
+      "image": [
+        "https://image.api.playstation.com/cdn/EP0002/CUSA05380_00/FiekbfhIalRbPcJBkU83XfjWhHyvjNhk.png"
+      ],
+      "id": 1
     }
   ]
 }

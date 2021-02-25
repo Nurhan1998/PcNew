@@ -19,8 +19,7 @@ const ProductsAdd = () => {
       quantity: 0,
       image: [image],
       quantity: 0,
-      likes: [],
-      countLikes: this.like.length,
+      likes: 0,
     };
     addProduct(newObj);
     setName("");
