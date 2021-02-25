@@ -5,11 +5,11 @@ import { Button, Image} from "react-bootstrap"
 import { authContext } from '../../contexts/AuthContext/AuthContext';
 
 const ProductsFavorites = () => {
-    const { favorites,getFavorites } = useContext(productsContext)
-    const { users } = useContext(authContext)
+    const { products} = useContext(productsContext)
+    const { users,getFavorites } = useContext(authContext)
 
     useEffect(() => {
-        getFavorites()
+        // getFavorites()
         console.log(users)
     }, [])
 

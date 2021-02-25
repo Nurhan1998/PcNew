@@ -29,7 +29,7 @@ const Login = () => {
       }
       localStorage.setItem("user", email);
 
-      history.push("/home");
+      history.push("/");
     } else {
       alert("такого пользователя не существует, просьба зарегистрироваться");
     }

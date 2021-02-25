@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   Navbar,
   Nav,
@@ -12,7 +12,14 @@ import {
   Row,
 } from "react-bootstrap";
 import { FaPlaystation } from "react-icons/fa";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { SiPlaystation } from "react-icons/si";
+import { GiConsoleController } from "react-icons/gi";
+import { FiTriangle, FiCircle } from "react-icons/fi";
+import { GrClose } from "react-icons/gr";
+import { BsSquare } from "react-icons/bs";
+
+// import {isAdmin} from "../contexts/ProductsContext/ProductsContext"
 
 const NaviBar = () => {
   const history = useHistory();
@@ -20,40 +27,65 @@ const NaviBar = () => {
   const handleLogOut = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("role");
-    history.push("/login");
+    history.push("/");
   };
 
   return (
-    <Navbar fixed="top" expand="lg" style={{ backgroundColor: "white" }}>
-      {/* Logo */}
-      <Container>
-        <Navbar.Brand href="#">
-          <FaPlaystation />
-          playstation.store
-        </Navbar.Brand>
-      </Container>
-      {/* Links */}
-      <Container className="justify-content-center">
-        <Nav>
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="/list ">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+    <Navbar bg="white" expand="lg" sticky="top">
+      <Navbar.Brand href="/">
+        <h3 className="ml-3">
+          <SiPlaystation />
+        </h3>
+      </Navbar.Brand>
+
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto ml-auto">
+          <Nav.Link href="/list" variant="outline-info">
+            <strong>Shop</strong>
+          </Nav.Link>
+          <h4>
+            <FiTriangle />
+          </h4>
+          <Nav.Link href="/Info" variant="outline-info">
+            <strong>Out now</strong>
+          </Nav.Link>
+          <h4>
+            <FiCircle />
+          </h4>
+          <Nav.Link href="/Info" variant="outline-info">
+            <strong>About Us</strong>
+          </Nav.Link>
+          <h4>
+            <GrClose />
+          </h4>
+          <Nav.Link href="/Info" variant="outline-info">
+            <strong>Games</strong>
+          </Nav.Link>
+          <h4>
+            <BsSquare />
+          </h4>
+          <Nav.Link href="/Info" variant="outline-info">
+            <strong>Payment</strong>
+          </Nav.Link>
         </Nav>
-      </Container>
-      {/* User Buttons */}
-      <Container className="justify-content-end">
-        <Form>
+
+        <Form inline>
           <h1>{user}</h1>
-          <Button
-            variant="outline-primary"
-            className="mr-3 rounded-pill border border-dark"
-            onClick={() => history.push("/register")}
-          >
-            Sign Up
-          </Button>
+          <Link to="/register">
+            <Button
+              variant="outline-primary"
+              className="mr-3 rounded-pill border border-dark"
+              size="sm"
+            >
+              Sign Up
+            </Button>
+          </Link>
+
           {user ? (
             <Button
               className="rounded-pill border border-dark"
+              size="sm"
               onClick={() => handleLogOut()}
             >
               Log Out
@@ -61,13 +93,14 @@ const NaviBar = () => {
           ) : (
             <Button
               className="rounded-pill border border-dark"
+              size="sm"
               onClick={() => history.push("/login")}
             >
-              Sign In
+              Log In
             </Button>
           )}
         </Form>
-      </Container>
+      </Navbar.Collapse>
     </Navbar>
   );
 };
