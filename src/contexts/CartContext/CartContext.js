@@ -6,6 +6,7 @@ export const cartContext = React.createContext();
 
 const INIT_STATE = {
   carts: [],
+  favorites: [],
 };
 
 const reducer = (state = INIT_STATE, action) => {

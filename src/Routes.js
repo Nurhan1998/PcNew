@@ -14,6 +14,7 @@ import Register from "./pages/Auth/Register/Register";
 import AuthContextProvider from "./contexts/AuthContext/AuthContext";
 import ProductsContextProvider from "./contexts/ProductsContext/ProductsContext";
 import CartContextProvider from "./contexts/CartContext/CartContext";
+import ProductsFavorites from "./pages/Products/ProductsFavorites";
 
 const Routes = () => {
   return (
@@ -29,6 +30,7 @@ const Routes = () => {
               <Route exact path="/products/:id" component={ProductDetails} />
               <Route exact path="/list" component={ProductList} />
               <Route exact path="/formpage" component={FormPage} />
+              <Route exact path="/favorites" component={ProductsFavorites} />
               <Route exact path="/payment" component={Payment} />
 
               <Route exact path="/admin-add" component={ProductsAdd} />

@@ -10,8 +10,8 @@ const INIT_STATE = {
   productDetail: null,
   productToEdit: null,
   count: 0,
+  favorites: [],
 };
-// let isAdmin = false;
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
@@ -31,14 +31,19 @@ const reducer = (state = INIT_STATE, action) => {
         ...state,
         productToEdit: action.payload,
       };
-
+    case "GET_FAVORITES":
+      return {
+        ...state,
+        favorites: action.payload,
+      };
     default:
       return state;
   }
 };
 const ProductsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-  const limit = 1;
+  const isAdmin = true;
+  const limit = 3;
 
   const getProducts = async (url) => {
     const countProducts = await axios.get(`${API}/products`);
@@ -78,11 +83,18 @@ const ProductsContextProvider = ({ children }) => {
   const editSave = async (newProd) => {
     await axios.patch(`${API}/products/${newProd.id}`, newProd);
   };
-  const editLike = async (item) => {
-    let { data } = await axios(`${API}/products/${item.id}`);
-    console.log(data);
 
-    // await axios.patch(`${API}/products/${item.id}`);
+  const addFavorites = async (newFav) => {
+    await axios.post(`${API}/favorites`, newFav);
+  };
+
+  const getFavorites = async () => {
+    const { data } = await axios(`${API}/favorites`);
+    console.log(data);
+    dispatch({
+      type: "GET_FAVORITES",
+      payload: data,
+    });
   };
   return (
     <productsContext.Provider
@@ -90,15 +102,18 @@ const ProductsContextProvider = ({ children }) => {
         products: state.products,
         productDetail: state.productDetail,
         productToEdit: state.productToEdit,
+        isAdmin: isAdmin,
         count: state.count,
         limit: limit,
+        favorites: state.favorites,
         addProduct,
         getProducts,
         getProductDetail,
         productDelete,
         productEdit,
         editSave,
-        editLike,
+        getFavorites,
+        addFavorites,
       }}
     >
       {children}

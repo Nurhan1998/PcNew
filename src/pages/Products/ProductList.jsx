@@ -17,7 +17,7 @@ import Pagination from "react-bootstrap/Pagination";
 import Form from "react-bootstrap/Form";
 
 const ProductList = () => {
-  const { products, getProducts, limit, count, editLike } = useContext(
+  const { products, getProducts, limit, count, addFavorites } = useContext(
     productsContext
   );
   const { postCart } = useContext(cartContext);
@@ -28,6 +28,7 @@ const ProductList = () => {
 
   function handleFilter(e) {
     if (e.target.value == "none") {
+      setFilter(e.target.value);
       return getProducts(
         `${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`
       );
@@ -39,16 +40,12 @@ const ProductList = () => {
     if (filter == "none") {
       return getProducts(
         `${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`
-      );
+      ).then(() => {});
     }
     getProducts(
       `${API}/products?category=${filter}&_page=${page}&_limit=${limit}&q=${searchValue}`
     ).then(() => {});
   }, [page, searchValue, filter]);
-
-  useEffect(() => {
-    getProducts(`${API}/products/?search=${searchValue}`);
-  }, [searchValue]);
 
   const onPaginationChange = (e, value) => {
     setPage(+e.target.textContent);
@@ -58,11 +55,11 @@ const ProductList = () => {
     item.quantity = productCount;
     postCart(item);
   }
+  function handleClickFavorites(item) {
+    addFavorites(item);
+  }
   const handleInp = (e) => {
     setProductCount(e);
-  };
-  const handleClickLike = (item) => {
-    editLike(item);
   };
 
   let active = page;
@@ -74,7 +71,6 @@ const ProductList = () => {
       </Pagination.Item>
     );
   }
-
   return (
     <>
       <NaviBar />
@@ -142,13 +138,6 @@ const ProductList = () => {
                 >
                   Add to cart
                 </Button>
-                <Button
-                  onClick={() => handleClickLike(item)}
-                  variant="outline-primary"
-                  className="rounded-pill mr-2"
-                >
-                  like
-                </Button>
                 <input
                   type="number"
                   min="1"
@@ -157,6 +146,16 @@ const ProductList = () => {
                     handleInp(e.target.value);
                   }}
                 />
+                <Button
+                  onClick={() => handleClickFavorites(item)}
+                  variant="outline-primary"
+                  className="rounded-pill mr-2"
+                >
+                  Add to Favorites
+                </Button>
+                <Button variant="outline-primary" className="rounded-pill mr-2">
+                  like
+                </Button>
               </form>
             </div>
           ))}
