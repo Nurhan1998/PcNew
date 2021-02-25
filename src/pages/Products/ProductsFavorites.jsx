@@ -2,12 +2,15 @@ import React,{ useEffect,useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { productsContext } from '../../contexts/ProductsContext/ProductsContext';
 import { Button, Image} from "react-bootstrap"
+import { authContext } from '../../contexts/AuthContext/AuthContext';
 
 const ProductsFavorites = () => {
     const { favorites,getFavorites } = useContext(productsContext)
+    const { users } = useContext(authContext)
 
     useEffect(() => {
         getFavorites()
+        console.log(users)
     }, [])
 
 
@@ -16,7 +19,7 @@ const ProductsFavorites = () => {
                 
                 <ul>
       FavoritesList
-      {favorites?.map((item, index) => (
+      {users.favorites?.map((item, index) => (
         <div key={item.id}>
           <Image src={item.image[0]} fluid className="border border-primary" />
           <h5 className="text-center">{item.name}</h5>

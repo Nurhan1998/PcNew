@@ -105,7 +105,19 @@
       "email": "asdf",
       "password": "asdf",
       "cart": [],
-      "favorites": [],
+      "favorites": [
+        {
+          "name": "StarCraft II: Wings of Liberty",
+          "category": "strategy",
+          "price": "500",
+          "description": "StarCraft II: Wings of Liberty — компьютерная игра в жанре стратегии в реальном времени, продолжение StarCraft. Была анонсирована 19 мая 2007 года на фестивале Blizzard Worldwide Invitational в Сеуле, Южная Корея.",
+          "quantity": 0,
+          "image": [
+            "https://upload.wikimedia.org/wikipedia/ru/0/07/StarCraft_II.jpg"
+          ],
+          "id": 10
+        }
+      ],
       "id": 1
     }
   ],
@@ -155,6 +167,17 @@
         "https://image.api.playstation.com/vulcan/ap/rnd/202008/1822/YsOJjjnoruH9gzwXgwgdFFnQ.jpg"
       ],
       "id": 2
+    },
+    {
+      "name": "God of War",
+      "category": "action",
+      "price": "1200",
+      "description": "God of War — компьютерная игра в жанре action-adventure, разработанная компанией SIE Santa Monica Studio, и изданная Sony Interactive Entertainment для игровой консоли PlayStation 4. Вышла 20 апреля 2018 года. Является восьмой игрой серии God of War, а также сиквелом к игре 2010 года God of War III.",
+      "quantity": 0,
+      "image": [
+        "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5a/God_of_War_2018_cover.jpg/274px-God_of_War_2018_cover.jpg"
+      ],
+      "id": 4
     }
   ]
 }
