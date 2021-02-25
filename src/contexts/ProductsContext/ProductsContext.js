@@ -9,7 +9,8 @@ const INIT_STATE ={
     products:[],
     productDetail:null,
     productToEdit: null,
-    count:0
+    count:0,
+    favorites:[]
 }
 
 const reducer =(state = INIT_STATE,action) =>{
@@ -28,6 +29,11 @@ const reducer =(state = INIT_STATE,action) =>{
             return{
                 ...state,
                 productToEdit: action.payload
+            }
+        case 'GET_FAVORITES': 
+            return {
+                ...state,
+                favorites: action.payload           
             }
             default: return state
     }
@@ -75,6 +81,19 @@ const productDelete = async (id) =>{
 const editSave = async(newProd) =>{
     await axios.patch(`${API}/products/${newProd.id}`,newProd)
 }
+
+const addFavorites = async (newFav) => {
+    await axios.post(`${API}/favorites`, newFav);
+  };
+
+const getFavorites = async () =>{
+    const {data} = await axios(`${API}/favorites`)
+    console.log(data)
+    dispatch({
+        type: "GET_FAVORITES",
+        payload: data
+    })
+}
     return (
         <productsContext.Provider value ={{
             products : state.products,
@@ -83,16 +102,19 @@ const editSave = async(newProd) =>{
             isAdmin: isAdmin,
             count: state.count,
             limit: limit,
+            favorites: state.favorites,
             addProduct,
             getProducts,
             getProductDetail,
             productDelete,
             productEdit,
-            editSave
+            editSave,
+            getFavorites,
+            addFavorites
         }}> 
             {children}
         </productsContext.Provider>
     );
 };
 
-export default ProductsContextProvider;
+export default ProductsContextProvider; 

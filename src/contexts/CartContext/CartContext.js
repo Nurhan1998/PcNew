@@ -6,14 +6,14 @@ export const cartContext = React.createContext();
 
 const INIT_STATE = {
   carts: [],
+  favorites:[]
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_CARTS":
       return { ...state, carts: action.payload };
-    default:
-      return state;
+    default: return state;
   }
 };
 const CartContextProvider = ({ children }) => {
@@ -23,7 +23,7 @@ const CartContextProvider = ({ children }) => {
     const { data } = await axios.get(`${API}/carts`);
     dispatch({
       type: "GET_CARTS",
-      payload: data,
+      payload: data
     });
   };
   const postCart = async (item) => {
@@ -37,6 +37,7 @@ const CartContextProvider = ({ children }) => {
       await axios.post(`${API}/carts`, item);
     }
   };
+      
 
   return (
     <cartContext.Provider

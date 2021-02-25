@@ -2,14 +2,17 @@ import React, { useContext, useEffect, useState } from "react";
 import { cartContext } from "../../contexts/CartContext/CartContext";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
 import { Link } from "react-router-dom";
+import NaviBar from "../../components/NaviBar";
+import { Container, Button, Image, Col, Row, item, Card } from "react-bootstrap"
 import { API } from "../../helpers/constatns";
 import Pagination from "react-bootstrap/Pagination";
 import Form from 'react-bootstrap/Form'
 
 
 
+
 const ProductList = () => {
-  const { products, getProducts, limit, count } = useContext(productsContext);
+  const { products, getProducts, limit, count,addFavorites } = useContext(productsContext);
   const { postCart } = useContext(cartContext);
   const [page, setPage] = useState(1)
   const [searchValue, setSearchValue] = useState('')
@@ -18,19 +21,20 @@ const ProductList = () => {
 
   function handleFilter(e) {
     if (e.target.value == "none") {
+      setFilter(e.target.value)
       return getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`)
     }
     setFilter(e.target.value)
-  } 
+  }
 
   useEffect(() => {
     if (filter == "none") {
-           return getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`)
+      return getProducts(`${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`).then(() => {
+      })
     }
     (getProducts(`${API}/products?category=${filter}&_page=${page}&_limit=${limit}&q=${searchValue}`).then(() => {
     }))
   }, [page, searchValue, filter]);
-
 
   const onPaginationChange = (e, value) => {
     setPage(+e.target.textContent)
@@ -39,6 +43,9 @@ const ProductList = () => {
   function handleClickCart(item) {
     item.quantity = productCount;
     postCart(item);
+  }
+  function handleClickFavorites(item) {
+    addFavorites(item);
   }
   const handleInp = (e) => {
     setProductCount(e);
@@ -53,8 +60,8 @@ const ProductList = () => {
       </Pagination.Item>
     );
   }
-
   return (
+
     <div style={{ margin: '50px auto', minHeight: '80vh', position: 'relative' }}>
 
       <Form.Group controlId="exampleForm.ControlSelect1">
@@ -84,23 +91,28 @@ const ProductList = () => {
         ProductList
       {products?.map((item, index) => (
         <div key={item.id}>
-          <li>{item.name}</li>
-          <li>{item.category}</li>
-          <li>{item.price}</li>
-          <li>{item.description}</li>
-          <img src={item.image[0]} />
-          <input
-            type="number"
-            min="1"
-            onChange={(e) => {
-              handleInp(e.target.value);
-            }}
-          />
-          <button onClick={() => handleClickCart(item)}>в корзину</button>
-
+          <Image src={item.image[0]} fluid className="border border-primary" />
+          <h5 className="text-center">{item.name}</h5>
+          <li><strong>Category: </strong>{item.category}</li>
+          <li><strong>Price: </strong>{item.price} USD</li>
+          <li><strong>Platform: </strong>{item.description}</li>
           <Link to={`products/${item.id}`} style={{ textDecoration: "none" }}>
-            <button>Detail</button>
+            <Button className="rounded-pill mt-3" block>Details</Button>
           </Link>
+          <form className="text-center mt-2 mb-2 ">
+            <Button onClick={() => handleClickCart(item)} variant="outline-primary" className="rounded-pill mr-2">Add to cart</Button>
+            <input
+              type="number"
+              min="1"
+              style={{ width: "50px" }}
+              onChange={(e) => {
+                handleInp(e.target.value);
+              }}
+            />
+          </form>
+          <form className="text-center mt-2 mb-2 ">
+            <Button onClick={() => handleClickFavorites(item)} variant="outline-primary" className="rounded-pill mr-2">Add to Favorites</Button>
+          </form>
         </div>
       ))}
       </ul>
