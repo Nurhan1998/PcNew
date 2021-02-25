@@ -18,14 +18,18 @@ import { IoLogoWindows } from 'react-icons/io';
 import { FaPlaystation,FaCartPlus } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
 const ProductList = () => {
-  const { products, getProducts, limit, count } = useContext(productsContext);
+  const { products, getProducts, limit, count, addFavorites } = useContext(
+    productsContext
+  );
   const { postCart } = useContext(cartContext);
   const [page, setPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
   const [productCount, setProductCount] = useState(1);
   const [filter, setFilter] = useState("none");
+
   function handleFilter(e) {
     if (e.target.value == "none") {
+      setFilter(e.target.value);
       return getProducts(
         `${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`
       );
@@ -34,24 +38,25 @@ const ProductList = () => {
   }
   useEffect(() => {
     if (filter == "none") {
-      console.log("filter");
       return getProducts(
         `${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`
-      );
+      ).then(() => {});
     }
-    getProducts(
+    (getProducts(
       `${API}/products?category=${filter}&_page=${page}&_limit=${limit}&q=${searchValue}`
-    ).then(() => {});
+    ).then(() => {}))
   }, [page, searchValue, filter]);
-  useEffect(() => {
-    getProducts(`${API}/products/?search=${searchValue}`);
-  }, [searchValue]);
+
   const onPaginationChange = (e, value) => {
     setPage(+e.target.textContent);
   };
+
   function handleClickCart(item) {
     item.quantity = productCount;
     postCart(item);
+  }
+  function handleClickFavorites(item) {
+    addFavorites(item);
   }
   const handleInp = (e) => {
     setProductCount(e);
@@ -68,6 +73,17 @@ const ProductList = () => {
   return (
     
     <Container >
+      <Form.Group controlId="exampleForm.ControlSelect1">
+        <Form.Label>Filter by Category</Form.Label>
+        <Form.Control as="select" defaultValue onChange={handleFilter} >
+          <option>none</option>
+          <option>action</option>
+          <option>shooter</option>
+          <option>quest</option>
+          <option>strategy</option>
+          <option>simulator</option>
+        </Form.Control>
+      </Form.Group>
       <input
       style={{ maxWidth: '80%', margin: '0 auto', display: 'block' }}
       placeholder='Search'
@@ -82,14 +98,14 @@ const ProductList = () => {
        
       
         {products?.map((item, index) => (
-        <CardDeck className='mr-5' style={{width: '20rem', marginBottom:"50px"}} >
-          <div key={index}>
+        <CardDeck key={index} className='mr-5' style={{width: '20rem', marginBottom:"50px"}} >
+          <div >
             <Card style={{maxHeight: "100vh"}}>
               <Card.Img 
                 variant="top"
                 src="holder.js/100px160"
                 src={item.image[0]}
-                fluid
+                
               />
               <Card.Body style={{textAlign: 'center'}}>
                 <Card.Title ><strong>{item.name} </strong></Card.Title>
@@ -140,6 +156,16 @@ const ProductList = () => {
                   >
                     <AiOutlineHeart/>
                   </Button>
+                  <Button
+                  onClick={() => handleClickFavorites(item)}
+                  variant="outline-primary"
+                  className="rounded-pill mr-2"
+                >
+                  Add to Favorites
+                </Button>
+                <Button variant="outline-primary" className="rounded-pill mr-2">
+                  like
+                </Button>
                 </Form>
               </Card.Footer>
             </Card>

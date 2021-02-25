@@ -51,7 +51,7 @@ export default class PaymentForm extends React.Component {
           className="mt-2"
             type="text"
             name="name"
-            placeholder="Enter your name"
+            placeholder="enter your name"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />

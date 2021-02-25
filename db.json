@@ -83,7 +83,8 @@
       "price": "50",
       "description": "NBA 2K21 - видеоигра-симулятор баскетбольного матча, разработанная Visual Concepts и опубликованная 2K Sports на основе Национальной баскетбольной ассоциации. Это 22-й выпуск во франшизе NBA 2K и преемник NBA 2K20.",
       "quantity": 0,
-      "image": ["https://image.api.playstation.com/vulcan/ap/rnd/202009/0202/xaOL72W2afZf5lr9fldv5Soh.png?w=440&thumb=false"
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0202/xaOL72W2afZf5lr9fldv5Soh.png?w=440&thumb=false"
       ],
       "id": 8
     },
@@ -167,74 +168,18 @@
   ],
   "users": [
     {
-      "email": "asdf",
-      "password": "asdf",
+      "email": "admin",
+      "password": "admin",
+      "admin": "true",
       "id": 1
-    },
-    {
-      "email": "temir",
-      "password": "temir",
-      "id": 2
-    },
-    {
-      "email": "nba",
-      "password": "nba",
-      "id": 3
     },
     {
       "email": "123",
       "password": "123",
-      "id": 4
-    },
-    {
-      "email": "ghj",
-      "password": "ghj",
-      "id": 5
-    },
-    {
-      "email": "askat",
-      "password": "askat",
-      "id": 6
-    },
-    {
-      "email": "goal",
-      "password": "goal",
-      "id": 7
-    },
-    {
-      "email": "s",
-      "password": "s",
-      "id": 8
-    },
-    {
-      "email": "rrrr",
-      "password": "rrrr",
-      "id": 9
+      "id": 2
     }
   ],
   "carts": [
-    {
-      "name": "aaaaa",
-      "category": "",
-      "price": "8",
-      "description": "aaaa",
-      "quantity": 6,
-      "image": [
-        "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png"
-      ],
-      "id": 1
-    },
-    {
-      "name": "Counter Strike",
-      "category": "RPG",
-      "price": "20",
-      "description": "Source",
-      "quantity": "1",
-      "image": [
-        "https://s1.gaming-cdn.com/images/products/258/orig/counter-strike-source-cover.jpg"
-      ],
-      "id": 3
-    },
     {
       "name": "Red Dead",
       "category": "RPG",
@@ -247,15 +192,15 @@
       "id": 5
     },
     {
-      "name": "NBA",
-      "category": "Basketball",
-      "price": "50",
-      "description": "PC",
-      "quantity": 3,
+      "name": "Spider-Man: Miles Morales",
+      "category": "Action",
+      "price": "90",
+      "description": "Marvel’s Spider-Man: Miles Morales — компьютерная игра в жанре action-adventure, разработанная Insomniac Games и изданная Sony Interactive Entertainment по лицензии Marvel Games для PlayStation 4 и PlayStation 5. Это сиквел, продолжающий события игры Marvel’s Spider-Man 2018 года",
+      "quantity": 1,
       "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202008/1822/YsOJjjnoruH9gzwXgwgdFFnQ.jpg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/0314/tReLA4tRl0hyg4wvmg1kwEqb.png?w=440&thumb=false"
       ],
-      "id": 4
+      "id": 2
     }
   ]
 }

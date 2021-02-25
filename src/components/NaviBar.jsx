@@ -1,15 +1,27 @@
 import React from 'react';
 import {Navbar,Nav,NavDropdown,Form,FormControl,Button,Col,Image, Container,Row} from "react-bootstrap"
 import {FaPlaystation} from 'react-icons/fa'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import {SiPlaystation} from 'react-icons/si'
 import {GiConsoleController} from 'react-icons/gi'
 import {FiTriangle,FiCircle} from 'react-icons/fi'
 import {GrClose} from 'react-icons/gr'
 import {BsSquare} from 'react-icons/bs'
+
 // import {isAdmin} from "../contexts/ProductsContext/ProductsContext"
 
 const NaviBar = () => {
+
+  const history = useHistory();
+  const user = localStorage.getItem("user");
+  const handleLogOut = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("role");
+    history.push("/login");
+  };
+
+
+
     return (
       <Navbar bg="white" expand="lg" sticky="top" >
       <Navbar.Brand href="/">
@@ -31,12 +43,11 @@ const NaviBar = () => {
         </Nav>
         
         <Form inline>
-        <Link to='/register'>
-           <Button variant="outline-primary" className="mr-3 rounded-pill border border-dark" size="sm">Sign Up</Button>
-             </Link>
-             <Link to='/login'>
-           <Button className="rounded-pill border border-dark" size="sm">Log In</Button>
-             </Link>
+          <h1>{user}</h1>
+        <Button variant="outline-primary" className="mr-3 rounded-pill border border-dark" size="sm">Sign Up</Button>
+        {user?(<Button className="rounded-pill border border-dark" size="sm" onClick={()=>handleLogOut()}>Log Out</Button>):(
+          <Button className="rounded-pill border border-dark" size="sm" onClick={()=>history.push("/login")}>Log In</Button>)
+        }  
         </Form>
       </Navbar.Collapse>
     </Navbar>

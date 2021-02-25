@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import axios from "axios";
 import { API } from "../../helpers/constatns";
+import { useHistory } from "react-router-dom";
 
 export const authContext = React.createContext();
 
@@ -17,6 +18,8 @@ const reducer = (state = INIT_STATE, action) => {
   }
 };
 const AuthContextProvider = ({ children }) => {
+  const history = useHistory();
+
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const getUsers = async () => {
@@ -28,14 +31,27 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const addUser = async (newUser) => {
-    await axios.post(`${API}/users`, newUser);
+    let res = state.users.filter((item) => {
+      return item.email === newUser.email;
+    });
+    if (res.length) {
+      alert("вы уже зарегистрированы");
+      history.push("/login");
+    } else {
+      await axios.post(`${API}/users`, newUser);
+      alert("регистрация прошла успешно");
+      history.push("/home");
+    }
   };
+
   return (
     <authContext.Provider
       value={{
         users: state.users,
         addUser,
         getUsers,
+        isAdmin: state.isAdmin,
+        currentUser: state.currentUser,
       }}
     >
       {children}
