@@ -6,16 +6,17 @@ import NaviBar from "../../components/NaviBar";
 import {
   Container,
   Button,
-  Image,
-  Col,
-  Row,
-  item,
   Card,
+  Form,
+  Row,
+  Col
 } from "react-bootstrap";
 import { API } from "../../helpers/constatns";
 import Pagination from "react-bootstrap/Pagination";
-import Form from "react-bootstrap/Form";
-
+import { CardDeck } from "react-bootstrap";
+import { IoLogoWindows } from 'react-icons/io';
+import { FaPlaystation,FaCartPlus } from 'react-icons/fa'
+import { AiOutlineHeart } from 'react-icons/ai'
 const ProductList = () => {
   const { products, getProducts, limit, count, addFavorites } = useContext(
     productsContext
@@ -35,16 +36,15 @@ const ProductList = () => {
     }
     setFilter(e.target.value);
   }
-
   useEffect(() => {
     if (filter == "none") {
       return getProducts(
         `${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`
       ).then(() => {});
     }
-    getProducts(
+    (getProducts(
       `${API}/products?category=${filter}&_page=${page}&_limit=${limit}&q=${searchValue}`
-    ).then(() => {});
+    ).then(() => {}))
   }, [page, searchValue, filter]);
 
   const onPaginationChange = (e, value) => {
@@ -61,7 +61,6 @@ const ProductList = () => {
   const handleInp = (e) => {
     setProductCount(e);
   };
-
   let active = page;
   let items = [];
   for (let page = 1; page <= Math.ceil(count / limit); page++) {
@@ -72,81 +71,92 @@ const ProductList = () => {
     );
   }
   return (
-    <>
-      <NaviBar />
-      <div
-        style={{ margin: "50px auto", minHeight: "80vh", position: "relative" }}
-      >
-        <Form.Group controlId="exampleForm.ControlSelect1">
-          <Form.Label>Filter by Category</Form.Label>
-          <Form.Control as="select" defaultValue onChange={handleFilter}>
-            <option>none</option>
-            <option>action</option>
-            <option>shooter</option>
-            <option>quest</option>
-            <option>strategy</option>
-            <option>simulator</option>
-          </Form.Control>
-        </Form.Group>
-
-        <Pagination onClick={onPaginationChange}>{items}</Pagination>
-        <input
-          style={{ maxWidth: "80%", margin: "0 auto", display: "block" }}
-          placeholder="Search"
-          value={searchValue}
-          onChange={(e) => {
-            e.preventDefault();
-            setSearchValue(e.target.value);
-          }}
-        />
-
-        <ul>
-          ProductList
-          {products?.map((item, index) => (
-            <div key={item.id}>
-              <Image
+    
+    <Container >
+      <Form.Group controlId="exampleForm.ControlSelect1">
+        <Form.Label>Filter by Category</Form.Label>
+        <Form.Control as="select" defaultValue onChange={handleFilter} >
+          <option>none</option>
+          <option>action</option>
+          <option>shooter</option>
+          <option>quest</option>
+          <option>strategy</option>
+          <option>simulator</option>
+        </Form.Control>
+      </Form.Group>
+      <input
+      style={{ maxWidth: '80%', margin: '0 auto', display: 'block' }}
+      placeholder='Search'
+      value={searchValue}
+      onChange={(e) => {
+        e.preventDefault();
+        setSearchValue(e.target.value)
+      }}
+    />
+     <Container className="text-center" 
+    style={{ margin: "50px ", minHeight: "80vh", display:"flex", flexWrap:"wrap" }}>
+       
+      
+        {products?.map((item, index) => (
+        <CardDeck key={index} className='mr-5' style={{width: '20rem', marginBottom:"50px"}} >
+          <div >
+            <Card style={{maxHeight: "100vh"}}>
+              <Card.Img 
+                variant="top"
+                src="holder.js/100px160"
                 src={item.image[0]}
-                fluid
-                className="border border-primary"
+                
               />
-              <h5 className="text-center">{item.name}</h5>
-              <li>
-                <strong>Category: </strong>
-                {item.category}
-              </li>
-              <li>
-                <strong>Price: </strong>
-                {item.price} USD
-              </li>
-              <li>
-                <strong>Platform: </strong>
-                {item.description}
-              </li>
-              <Link
-                to={`products/${item.id}`}
-                style={{ textDecoration: "none" }}
-              >
-                <Button className="rounded-pill mt-3" block>
-                  Details
-                </Button>
-              </Link>
-              <form className="text-center mt-2 mb-2 ">
-                <Button
-                  onClick={() => handleClickCart(item)}
-                  variant="outline-primary"
-                  className="rounded-pill mr-2"
+              <Card.Body style={{textAlign: 'center'}}>
+                <Card.Title ><strong>{item.name} </strong></Card.Title>
+                <Card.Text>
+                  <li>
+                    <strong>Category:  </strong>
+                    {item.category}
+                  </li>
+                  <li>
+                    <strong>Price: </strong>
+                    {item.price} USD
+                  </li>
+                  <li>
+                    <strong>Platform: </strong>
+                    <IoLogoWindows className='mr-1'/>
+                    <FaPlaystation/>
+                  </li>
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <Link
+                  to={`products/${item.id}`}
+                  style={{ textDecoration: "none" }}
                 >
-                  Add to cart
-                </Button>
-                <input
-                  type="number"
-                  min="1"
-                  style={{ width: "50px" }}
-                  onChange={(e) => {
-                    handleInp(e.target.value);
-                  }}
-                />
-                <Button
+                  <Button className="rounded-pill mt-3" block>
+                    Details
+                  </Button>
+                </Link>
+                <Form className="text-center mt-2 mb-2 ">
+                  <Button
+                    onClick={() => handleClickCart(item)}
+                    variant="outline-primary"
+                    className="rounded-pill mr-2"
+                  >
+                    <FaCartPlus/>
+                  </Button>
+                  {/* <input
+                    type="number"
+                    min="1"
+                    style={{ width: "50px" }}
+                    onChange={(e) => {
+                      handleInp(e.target.value);
+                    }}
+                  /> */}
+                  <Button
+                    variant="outline-danger"
+                    className="rounded-pill mr-2"
+                  >
+                    <AiOutlineHeart/>
+                  </Button>
+                  <Button
                   onClick={() => handleClickFavorites(item)}
                   variant="outline-primary"
                   className="rounded-pill mr-2"
@@ -156,13 +166,21 @@ const ProductList = () => {
                 <Button variant="outline-primary" className="rounded-pill mr-2">
                   like
                 </Button>
-              </form>
-            </div>
-          ))}
-        </ul>
-      </div>
-    </>
+                </Form>
+              </Card.Footer>
+            </Card>
+          </div>
+        </CardDeck>))}
+        <Pagination onClick={onPaginationChange}>{items}</Pagination>
+        </Container> 
+    </Container>
+    
   );
 };
-
 export default ProductList;
+
+{/* <div style={{ 
+      width: "100%", 
+      height: 'auto',
+      backgroundColor:'#1f1f1f' 
+          }}></div> */}

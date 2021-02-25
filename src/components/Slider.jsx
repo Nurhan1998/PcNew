@@ -5,20 +5,38 @@ const Slider = () => {
     return (
         <div>
 <Carousel>
-  <Carousel.Item interval={40}>
+  <Carousel.Item >
     <img
       className="d-block w-100"
-      src="https://wowcasual.info/wp-content/uploads/2020/07/All_Heroes_3.jpg"
+      src="https://gmedia.playstation.com/is/image/SIEPDC/destruction-allstars-desktop-hero-02-ps5-en-12jun20?$native$"
       alt="First slide"
     />
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
   </Carousel.Item>
-  
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/warzone/social/wz-social-share.jpg"
+      src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-block-desktop-03-en-15jun20?$native$"
+      alt="Second slide"
+    />
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="holder.js/800x400?text=Third slide&bg=20232a"
       alt="Third slide"
     />
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
         </div>
