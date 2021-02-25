@@ -30,7 +30,7 @@ const Routes = () => {
               <Route exact path="/products/:id" component={ProductDetails} />
               <Route exact path="/list" component={ProductList} />
               <Route exact path="/formpage" component={FormPage} />
-          <Route exact path="/payment" component={Payment} />
+              <Route exact path="/payment" component={Payment} />
 
               <Route exact path="/admin-add" component={ProductsAdd} />
               <Route exact path="/admin-list" component={AdminList} />
@@ -43,4 +43,4 @@ const Routes = () => {
   );
 };
 
-export default Routes;
+export default Routes;  

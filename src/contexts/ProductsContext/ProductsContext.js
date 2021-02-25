@@ -34,7 +34,7 @@ const reducer =(state = INIT_STATE,action) =>{
 }
 const ProductsContextProvider = ({children}) => {
     const [state,dispatch] = useReducer(reducer,INIT_STATE)
-    const isAdmin = true;
+    const isAdmin = false;
     const limit = 1;
 
 const getProducts = async (url) =>{

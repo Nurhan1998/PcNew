@@ -2,6 +2,9 @@ import classes from './Products.module.css';
 import React, { useContext, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { productsContext } from '../../contexts/ProductsContext/ProductsContext';
+import { Button,Row,Container,Col } from 'react-bootstrap'
+import { FaCartPlus } from 'react-icons/fa'
+import { AiOutlineHeart } from 'react-icons/ai'
 
 const ProductDetails = () => {
     const { id } = useParams()
@@ -14,7 +17,7 @@ const ProductDetails = () => {
 
     function handleClickDelete(id) {
         productDelete(id)
-    }
+    }   
     function handleClickEdit(id) {
         productEdit(id)
     }
@@ -22,11 +25,13 @@ const ProductDetails = () => {
     return (
         <div className={classes.product_detail_content}>
 
-            <h4>Detail</h4>
-            <div >
-
-                {productDetail?.name}
-
+            
+            
+            
+            
+        <Container  >
+            <Row>
+                <Col>
                 {
                     productDetail?.image.map((item, index) => (
                         <div className={classes.imgWrapper} key={index}>
@@ -34,7 +39,9 @@ const ProductDetails = () => {
                         </div>
                     ))
                 }
-
+                </Col>
+                <Col>
+                <Container>
 
                 {!isAdmin ?
                     (
@@ -45,19 +52,36 @@ const ProductDetails = () => {
                             {productDetail?.description}
 
                             <Link onClick={() => handleClickEdit(id)} to={'/admin-edit'}>
-                                <button>Edit</button>
+                                <Button>Edit</Button>
                             </Link>
-                            <button onClick={() => handleClickDelete(id)} >
+                            <Button onClick={() => handleClickDelete(id)} >
                                 Delete
-                            </button>
+                            </Button>
 
                             <Link to='/admin-list'>
-                                <button>Exit</button>
+                                <Button>Exit</Button>
                             </Link>
                         </>
                     )
                 }
-            </div>
+                </Container>
+                 <Button
+                    // onClick={() => handleClickCart(item)}
+                    variant="outline-primary"
+                    className="rounded-pill mr-2"
+                    >
+                    <FaCartPlus/>
+                  </Button>
+                  <Button
+                    variant="outline-danger"
+                    className="rounded-pill mr-2"
+                  >
+                    <AiOutlineHeart/>
+                  </Button>
+                </Col>                
+            </Row>  
+                </Container>
+            
         </div>
 
     );
