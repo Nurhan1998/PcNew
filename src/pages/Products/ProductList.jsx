@@ -11,7 +11,7 @@ import { IoLogoWindows } from "react-icons/io";
 import { FaPlaystation, FaCartPlus } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 const ProductList = () => {
-  const { products, getProducts, limit, count, addFavorites } = useContext(
+  const { products, getProducts, limit, count, reciveFilter } = useContext(
     productsContext
   );
   const { postCart } = useContext(cartContext);
@@ -20,26 +20,28 @@ const ProductList = () => {
   const [productCount, setProductCount] = useState(1);
   const [filter, setFilter] = useState("none");
 
+
   function handleFilter(e) {
+    setPage(1)
     if (e.target.value == "none") {
       setFilter(e.target.value);
       return getProducts(
         `${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`
-      );
-    }
-    setFilter(e.target.value);
+        );
+      }
+      setFilter(e.target.value);
+      setPage(1)
   }
 
   useEffect(() => {
     if (filter == "none") {
       return getProducts(
         `${API}/products?_page=${page}&_limit=${limit}&q=${searchValue}`
-      ).then(() => {});
+      )
     }
     getProducts(
-      `${API}/products?category=${filter}&_page=${page}&_limit=${limit}&q=${searchValue}`
-    ).then(() => {});
-    console.log(filter);
+      `${API}/products?category=${filter}&_page=${page}&_limit=${limit}&q=${searchValue}`,filter
+    );
   }, [page, searchValue, filter]);
 
   const onPaginationChange = (e, value) => {
@@ -50,9 +52,7 @@ const ProductList = () => {
     item.quantity = productCount;
     postCart(item);
   }
-  function handleClickFavorites(item) {
-    addFavorites(item);
-  }
+  
   const handleInp = (e) => {
     setProductCount(e);
   };
@@ -162,7 +162,7 @@ const ProductList = () => {
                         <AiOutlineHeart />
                       </Button>
                       <Button
-                        onClick={() => handleClickFavorites(item)}
+                        // onClick={() => handleClickFavorites(item)}
                         variant="outline-primary"
                         className="rounded-pill mr-2"
                       >
@@ -180,7 +180,7 @@ const ProductList = () => {
               </div>
             </CardDeck>
           ))}
-          <Pagination onClick={onPaginationChange}>{items}</Pagination>
+          <Pagination onClick={onPaginationChange}>{items} </Pagination>
         </Container>
       </Container>
     </>

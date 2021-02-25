@@ -1,183 +1,205 @@
+
 {
   "products": [
     {
-      "name": "Counter Strike",
-      "category": "RPG",
-      "price": "20",
-      "description": "Source",
+      "name": "Spider-Man: Miles Morales",
+      "category": "Action",
+      "price": "90",
+      "description": "Marvel’s Spider-Man: Miles Morales — компьютерная игра в жанре action-adventure, разработанная Insomniac Games и изданная Sony Interactive Entertainment по лицензии Marvel Games для PlayStation 4 и PlayStation 5. Это сиквел, продолжающий события игры Marvel’s Spider-Man 2018 года",
       "quantity": 0,
       "image": [
-        "https://s1.gaming-cdn.com/images/products/258/orig/counter-strike-source-cover.jpg"
-      ],
-      "id": 1
-    },
-    {
-      "name": "NBA",
-      "category": "Basketball",
-      "price": "50",
-      "description": "PC",
-      "quantity": 0,
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202008/1822/YsOJjjnoruH9gzwXgwgdFFnQ.jpg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/0314/tReLA4tRl0hyg4wvmg1kwEqb.png?w=440&thumb=false"
       ],
       "id": 2
     },
     {
-      "name": "God of War",
-      "category": "action",
-      "price": "1200",
-      "description": "God of War — компьютерная игра в жанре action-adventure, разработанная компанией SIE Santa Monica Studio, и изданная Sony Interactive Entertainment для игровой консоли PlayStation 4. Вышла 20 апреля 2018 года. Является восьмой игрой серии God of War, а также сиквелом к игре 2010 года God of War III.",
+      "name": "Need for Speed: Hot Pursuit",
+      "category": "Simulator",
+      "price": "40",
+      "description": "Need for Speed: Hot Pursuit — компьютерная игра серии Need for Speed в жанре аркадной автогонки, изданная компанией Electronic Arts для консолей, компьютеров и мобильных устройств в 2010 году. В России игра была издана компанией «1С-СофтКлаб» полностью на русском языке.",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5a/God_of_War_2018_cover.jpg/274px-God_of_War_2018_cover.jpg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/s903xz8pn3gTqY4bcKEAxnBo.png?w=440&thumb=false"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Ghostrunner",
+      "category": "Action",
+      "price": "20",
+      "description": "Ghostrunner — компьютерная игра в жанре экшен, разработанная польской студией One More Level и изданная All In! Games совместно с 505 Games. Игра была выпущена для Windows, PlayStation 4, Xbox One и Nintendo Switch в 2020 году. В выпуске Ghostrunner так же участвовали компании 3D Realms и Slipgate Ironworks",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202008/2818/4xjRkRmOm9wklCdSWXVMaXBi.png?w=440&thumb=false"
       ],
       "id": 4
     },
     {
-      "name": "Grand Theft Auto V",
-      "category": "action",
-      "price": "1000",
-      "description": "Grand Theft Auto V — мультиплатформенная компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Rockstar North и изданная компанией Rockstar Games.",
+      "name": "Doom Eternal",
+      "category": "shooter",
+      "price": "20",
+      "description": "Doom Eternal — компьютерная игра в жанре шутера от первого лица. Игра разработана студией id Software, а издателем выступила компания Bethesda Softworks.",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/thumb/c/c8/GTAV_Official_Cover_Art.jpg/274px-GTAV_Official_Cover_Art.jpg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/ERNPc4gFqeRDG1tYQIfOKQtM.png?w=440&thumb=false"
       ],
       "id": 5
     },
     {
-      "name": "Apex Legends",
-      "category": "shooter",
-      "price": "1200",
-      "description": "Apex Legends — компьютерная игра в жанре многопользовательского шутера от первого лица и королевской битвы, разработанная американской студией Respawn Entertainment и выпущенная компанией Electronic Arts для платформ Windows, PlayStation 4 и Xbox One в 2019 году.",
+      "name": "NHL 21",
+      "category": "Simulator",
+      "price": "50",
+      "description": "Переведено с английского языка.-NHL 21 - видеоигра-симулятор хоккея, разработанная EA Vancouver и опубликованная EA Sports. Это 30-й выпуск в серии игр NHL, выпущенный для консолей PlayStation 4 и Xbox One в октябре 2020 года.",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/thumb/1/17/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Apex_Legends.jpg/266px-%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Apex_Legends.jpg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202009/3011/CfaHLEvFpbpX8ephpq3k4yGy.png?w=440&thumb=false"
       ],
       "id": 6
     },
     {
-      "name": "The Sims 4",
-      "category": "simulator",
-      "price": "700",
-      "description": "The Sims 4 — однопользовательская компьютерная игра в жанре симулятора жизни, четвёртая по счёту из серии игр The Sims, разработанная компанией Maxis и издаваемая Electronic Arts для Windows и macOS",
+      "name": "Star Wars: Squadrons",
+      "category": "Simulator",
+      "price": "30",
+      "description": "Star Wars: Squadrons — компьютерная игра по вселенной Звёздных войн в жанре космического симулятора от первого лица, разработанная канадской студией Motive Studios и изданная Electronic Arts на PlayStation 4, Xbox One и Windows",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/5/5e/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_The_Sims_4.jpeg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202009/2410/aaIGMZl7LGnfbmQNOrHOrL6c.png?w=440&thumb=false"
       ],
       "id": 7
     },
     {
-      "name": "Dirt 4",
-      "category": "simulator",
-      "price": "700",
-      "description": "DiRT 4 — видеоигра в жанре автосимулятор, посвящённая тематике ралли. Она была разработана и издана Codemasters для платформ Microsoft Windows, PlayStation 4 и Xbox One и была выпущена для macOS и Linux в 2019 году компанией Feral Interactive. Игра принадлежит серии DiRT, также известной как Colin McRae Rally",
+      "name": "NBA 2K21",
+      "category": "Simulator",
+      "price": "50",
+      "description": "NBA 2K21 - видеоигра-симулятор баскетбольного матча, разработанная Visual Concepts и опубликованная 2K Sports на основе Национальной баскетбольной ассоциации. Это 22-й выпуск во франшизе NBA 2K и преемник NBA 2K20.",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/2/2d/Dirt_4_cover.jpg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/0202/xaOL72W2afZf5lr9fldv5Soh.png?w=440&thumb=false"
       ],
       "id": 8
     },
     {
-      "name": "Dota 2",
-      "category": "strategy",
-      "price": "500",
-      "description": "Dota 2 — компьютерная многопользовательская командная игра в жанре multiplayer online battle arena, разработанная корпорацией Valve. Игра является продолжением DotA — пользовательской карты-модификации для игры Warcraft III: Reign of Chaos и дополнения к ней Warcraft III: The Frozen Throne.",
-      "quantity": 0,
+      "name": "Grand Theft Auto V",
+      "category": "Action",
+      "price": "50",
+      "description": "Grand Theft Auto V — мультиплатформенная компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Rockstar North и изданная компанией Rockstar Games.",
+
+
+"quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/8/8e/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Dota_2.jpg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202101/2019/JdvqcPlTYMxXrA1QQJm6TbDX.png?w=440&thumb=false"
       ],
       "id": 9
     },
     {
-      "name": "StarCraft II: Wings of Liberty",
-      "category": "strategy",
-      "price": "500",
-      "description": "StarCraft II: Wings of Liberty — компьютерная игра в жанре стратегии в реальном времени, продолжение StarCraft. Была анонсирована 19 мая 2007 года на фестивале Blizzard Worldwide Invitational в Сеуле, Южная Корея.",
+      "name": "The Last of Us Part II",
+      "category": "Action",
+      "price": "40",
+      "description": "The Last of Us Part II — компьютерная игра в жанре приключенческого боевика с элементами survival horror и стелс-экшена от третьего лица, разработанная компанией Naughty Dog и изданная Sony Interactive Entertainment в 2020 году для игровой приставки PlayStation 4",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/0/07/StarCraft_II.jpg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202010/2618/w48z6bzefZPrRcJHc7L8SO66.png?w=440&thumb=false"
       ],
       "id": 10
+    },
+    {
+      "name": "Ghost of Tsushima",
+      "category": "Action",
+      "price": "40",
+      "description": "Ghost of Tsushima — компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Sucker Punch Productions для PlayStation 4. Издателем игры выступила Sony Interactive Entertainment. Выход игры первоначально был намечен на 26 июня 2020 года, но позже был перенесён на 17 июля того же года.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/1023/r10cUBOmBkGLc98Vr1jUXxBd.png"
+      ],
+      "id": 11
+    },
+    {
+      "name": "FIFA 21",
+      "category": "Simulator",
+      "price": "90",
+      "description": "FIFA 21 — 28-ая по счёту компьютерная игра из серии FIFA в жанре футбольного симулятора, разработанная компаниями EA Vancouver и EA Romania под издательством Electronic Arts. На ПК, PlayStation 4, Xbox One и Nintendo Switch игра вышла 9 октября 2020 года, а на платформы нового поколения — 3 декабря 2020 года.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/pr/bam-art/113/108/36eb4762-711e-46d0-9f0b-c49ab0c153aa.png?w=620&thumb=false"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Assassin’s Creed Valhalla",
+      "category": "Action",
+      "price": "30",
+      "description": "Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202008/1318/8XGEPtD1xoasK0FYkYNcCn1z.png"
+      ],
+      "id": 13
+    },
+    {
+      "name": "Hitman 3",
+      "category": "Action",
+      "price": "20",
+      "description": "Hitman 3 — компьютерная игра в жанре стелс-экшена разработчика и издателя IO Interactive. Игра стала восьмой по счёту в основной серии Hitman, а также третьей и последней в трилогии World of Assassination после Hitman и Hitman 2.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202007/3011/XX85ZND1RuA13iphoE1Qb7ex.png"
+      ],
+      "id": 14
     }
   ],
   "users": [
     {
-      "email": "asdf",
-      "password": "asdf",
-      "cart": [],
-      "favorites": [
-        {
-          "name": "StarCraft II: Wings of Liberty",
-          "category": "strategy",
-          "price": "500",
-          "description": "StarCraft II: Wings of Liberty — компьютерная игра в жанре стратегии в реальном времени, продолжение StarCraft. Была анонсирована 19 мая 2007 года на фестивале Blizzard Worldwide Invitational в Сеуле, Южная Корея.",
-          "quantity": 0,
-          "image": [
-            "https://upload.wikimedia.org/wikipedia/ru/0/07/StarCraft_II.jpg"
-          ],
-          "id": 10
-        }
-      ],
+      "email": "admin",
+      "password": "admin",
+      "admin": "true",
       "id": 1
+    },
+    {
+      "email": "123",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "email": "test",
+      "password": "test",
+      "id": 3
     }
   ],
   "carts": [
     {
-      "name": "dfgsdfg",
-      "category": "sdfgsdg",
-      "price": "2132",
-      "description": "werwrwr",
-      "quantity": "4",
+      "name": "Red Dead",
+      "category": "RPG",
+      "price": "100",
+      "description": "PS4",
+      "quantity": 0,
       "image": [
-        "https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
+        "https://images-na.ssl-images-amazon.com/images/I/91C8piUiI0L._SL1500_.jpg"
       ],
-      "id": 2
+      "id": 5
     },
     {
-      "name": "Counter Strike",
-      "category": "RPG",
-      "price": "20",
-      "description": "Source",
-      "quantity": 4,
+      "name": "Spider-Man: Miles Morales",
+      "category": "Action",
+      "price": "90",
+      "description": "Marvel’s Spider-Man: Miles Morales — компьютерная игра в жанре action-adventure, разработанная Insomniac Games и изданная Sony Interactive Entertainment по лицензии Marvel Games для PlayStation 4 и PlayStation 5. Это сиквел, продолжающий события игры Marvel’s Spider-Man 2018 года",
+      "quantity": 1,
       "image": [
-        "https://s1.gaming-cdn.com/images/products/258/orig/counter-strike-source-cover.jpg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/0314/tReLA4tRl0hyg4wvmg1kwEqb.png?w=440&thumb=false"
+      ],
+
+
+"id": 2
+    },
+    {
+      "name": "Call of Duty: Modern Warfare Remastered111",
+      "category": "Shooter",
+      "price": "2000",
+      "description": "Call of Duty: Modern Warfare Remastered - шутер от первого лица 2016 года, разработанный Raven Software и опубликованный Activision.",
+      "quantity": 1,
+      "image": [
+        "https://image.api.playstation.com/cdn/EP0002/CUSA05380_00/FiekbfhIalRbPcJBkU83XfjWhHyvjNhk.png"
       ],
       "id": 1
-    }
-  ],
-  "favorites": [
-    {
-      "name": "Counter Strike",
-      "category": "RPG",
-      "price": "20",
-      "description": "Source",
-      "quantity": 0,
-      "image": [
-        "https://s1.gaming-cdn.com/images/products/258/orig/counter-strike-source-cover.jpg"
-      ],
-      "id": 1
-    },
-    {
-      "name": "NBA",
-      "category": "Basketball",
-      "price": "50",
-      "description": "PC",
-      "quantity": 0,
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202008/1822/YsOJjjnoruH9gzwXgwgdFFnQ.jpg"
-      ],
-      "id": 2
-    },
-    {
-      "name": "God of War",
-      "category": "action",
-      "price": "1200",
-      "description": "God of War — компьютерная игра в жанре action-adventure, разработанная компанией SIE Santa Monica Studio, и изданная Sony Interactive Entertainment для игровой консоли PlayStation 4. Вышла 20 апреля 2018 года. Является восьмой игрой серии God of War, а также сиквелом к игре 2010 года God of War III.",
-      "quantity": 0,
-      "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5a/God_of_War_2018_cover.jpg/274px-God_of_War_2018_cover.jpg"
-      ],
-      "id": 4
     }
   ]
 }

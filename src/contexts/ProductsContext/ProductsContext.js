@@ -10,8 +10,7 @@ const INIT_STATE = {
   productDetail: null,
   productToEdit: null,
   count: 0,
-  favorites: [],
-};
+ };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
@@ -31,13 +30,6 @@ const reducer = (state = INIT_STATE, action) => {
         ...state,
         productToEdit: action.payload,
       };
-    case "GET_FAVORITES":
-      return {
-        ...state,
-        favorites: action.payload,
-      };
-    default:
-      return state;
   }
 };
 const ProductsContextProvider = ({ children }) => {
@@ -46,8 +38,9 @@ const ProductsContextProvider = ({ children }) => {
   const limit = 3;
 
   const getProducts = async (url) => {
-    const countProducts = await axios.get(`${API}/products`);
+        const countProducts = await axios.get(`${API}/products`)
     const { data } = await axios.get(url);
+    
     dispatch({
       type: "GET_PRODUCTS",
       payload: {
@@ -84,18 +77,7 @@ const ProductsContextProvider = ({ children }) => {
     await axios.patch(`${API}/products/${newProd.id}`, newProd);
   };
 
-  const addFavorites = async (newFav) => {
-    await axios.post(`${API}/favorites`, newFav);
-  };
-
-  const getFavorites = async () => {
-    const { data } = await axios(`${API}/favorites`);
-    console.log(data);
-    dispatch({
-      type: "GET_FAVORITES",
-      payload: data,
-    });
-  };
+    
   return (
     <productsContext.Provider
       value={{
@@ -105,15 +87,12 @@ const ProductsContextProvider = ({ children }) => {
         isAdmin: isAdmin,
         count: state.count,
         limit: limit,
-        favorites: state.favorites,
         addProduct,
         getProducts,
         getProductDetail,
         productDelete,
         productEdit,
-        editSave,
-        getFavorites,
-        addFavorites,
+        editSave
       }}
     >
       {children}
