@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button,Container, FormControl,Form } from "react-bootstrap";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
 
@@ -26,6 +26,11 @@ export default class PaymentForm extends React.Component {
   render() {
     return (
       <div id="PaymentForm">
+        <Container 
+          style={{
+          width:"400px",
+          marginTop:"120px"
+          }}>
         <Cards
           cvc={this.state.cvc}
           expiry={this.state.expiry}
@@ -34,38 +39,44 @@ export default class PaymentForm extends React.Component {
           number={this.state.number}
         />
         <form>
-          <input
+          <FormControl
+          className="mt-2"
             type="tel"
             name="number"
             placeholder="Card Number"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
-          <input
+          <FormControl
+          className="mt-2"
             type="text"
             name="name"
             placeholder="Enter your name"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
-          <input
+          <FormControl
+          className="mt-2"
             type="tel"
             name="expiry"
-            placeholder="expiry"
+            placeholder="Expiry"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
-          <input
-            type="tel"
+          <FormControl
+          className="mt-2"
+            type="tel"  
             name="cvc"
             placeholder="cvc"
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
           />
-          <Button variant="primary">
-              Оплатить
+          <Button variant="primary" className="mt-2 " block>
+              Pay
           </Button>
         </form>
+        </Container>
+        
       </div>
     );
   }

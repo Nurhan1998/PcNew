@@ -1,146 +1,168 @@
 {
   "products": [
     {
-<<<<<<< HEAD
-      "name": "Counter Strike",
-      "category": "RPG",
+      "name": "Call of Duty: Modern Warfare Remastered",
+      "category": "Shooter",
       "price": "20",
-      "description": "Source",
+      "description": "Call of Duty: Modern Warfare Remastered - шутер от первого лица 2016 года, разработанный Raven Software и опубликованный Activision.",
       "quantity": 0,
       "image": [
-        "https://s1.gaming-cdn.com/images/products/258/orig/counter-strike-source-cover.jpg"
+        "https://image.api.playstation.com/cdn/EP0002/CUSA05380_00/FiekbfhIalRbPcJBkU83XfjWhHyvjNhk.png"
       ],
-      "id": 3
+      "id": 1
     },
     {
-      "name": "NBA",
-      "category": "Basketball",
-      "price": "50",
-      "description": "PC",
+      "name": "Spider-Man: Miles Morales",
+      "category": "Action",
+      "price": "90",
+      "description": "Marvel’s Spider-Man: Miles Morales — компьютерная игра в жанре action-adventure, разработанная Insomniac Games и изданная Sony Interactive Entertainment по лицензии Marvel Games для PlayStation 4 и PlayStation 5. Это сиквел, продолжающий события игры Marvel’s Spider-Man 2018 года",
       "quantity": 0,
       "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202008/1822/YsOJjjnoruH9gzwXgwgdFFnQ.jpg"
-=======
-      "name": "dfgsdfg",
-      "category": "sdfgsdg",
-      "price": "2132",
-      "description": "werwrwr",
-      "quantity": 0,
-      "image": [
-        "https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/0314/tReLA4tRl0hyg4wvmg1kwEqb.png?w=440&thumb=false"
       ],
       "id": 2
     },
     {
-<<<<<<< HEAD
-      "name": "GTA 5",
-      "price": "7777",
-      "description": "555",
-      "image": [
-        "data:image/jpeg;base64,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"
-      ],
-      "id": 3
-=======
-      "name": "BBBBB",
-      "category": "action",
-      "price": "123",
-      "description": "dfdff",
+      "name": "Need for Speed: Hot Pursuit",
+      "category": "Simulator",
+      "price": "40",
+      "description": "Need for Speed: Hot Pursuit — компьютерная игра серии Need for Speed в жанре аркадной автогонки, изданная компанией Electronic Arts для консолей, компьютеров и мобильных устройств в 2010 году. В России игра была издана компанией «1С-СофтКлаб» полностью на русском языке.",
       "quantity": 0,
       "image": [
-        "https://filedn.com/ltOdFv1aqz1YIFhf4gTY8D7/ingus-info/BLOGS/Photography-stocks3/stock-photography-slider.jpg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/s903xz8pn3gTqY4bcKEAxnBo.png?w=440&thumb=false"
       ],
       "id": 3
     },
     {
-      "name": "God of War",
-      "category": "action",
-      "price": "1200",
-      "description": "God of War — компьютерная игра в жанре action-adventure, разработанная компанией SIE Santa Monica Studio, и изданная Sony Interactive Entertainment для игровой консоли PlayStation 4. Вышла 20 апреля 2018 года. Является восьмой игрой серии God of War, а также сиквелом к игре 2010 года God of War III.",
+      "name": "Ghostrunner",
+      "category": "Action",
+      "price": "20",
+      "description": "Ghostrunner — компьютерная игра в жанре экшен, разработанная польской студией One More Level и изданная All In! Games совместно с 505 Games. Игра была выпущена для Windows, PlayStation 4, Xbox One и Nintendo Switch в 2020 году. В выпуске Ghostrunner так же участвовали компании 3D Realms и Slipgate Ironworks",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5a/God_of_War_2018_cover.jpg/274px-God_of_War_2018_cover.jpg"
->>>>>>> 40e5b5eb51175f2ba3caec5bcf5f6d441d42e382
+        "https://image.api.playstation.com/vulcan/ap/rnd/202008/2818/4xjRkRmOm9wklCdSWXVMaXBi.png?w=440&thumb=false"
       ],
       "id": 4
     },
     {
-<<<<<<< HEAD
-      "name": "Red Dead",
-      "category": "RPG",
-      "price": "100",
-      "description": "PS4",
+      "name": "Doom Eternal",
+      "category": "Shooter",
+      "price": "20",
+      "description": "Doom Eternal — компьютерная игра в жанре шутера от первого лица. Игра разработана студией id Software, а издателем выступила компания Bethesda Softworks.",
       "quantity": 0,
       "image": [
-        "https://images-na.ssl-images-amazon.com/images/I/91C8piUiI0L._SL1500_.jpg"
-      ],
-      "id": 5
-=======
-      "name": "Grand Theft Auto V",
-      "category": "action",
-      "price": "1000",
-      "description": "Grand Theft Auto V — мультиплатформенная компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Rockstar North и изданная компанией Rockstar Games.",
-      "quantity": 0,
-      "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/thumb/c/c8/GTAV_Official_Cover_Art.jpg/274px-GTAV_Official_Cover_Art.jpg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/ERNPc4gFqeRDG1tYQIfOKQtM.png?w=440&thumb=false"
       ],
       "id": 5
     },
     {
-      "name": "Apex Legends",
-      "category": "shooter",
-      "price": "1200",
-      "description": "Apex Legends — компьютерная игра в жанре многопользовательского шутера от первого лица и королевской битвы, разработанная американской студией Respawn Entertainment и выпущенная компанией Electronic Arts для платформ Windows, PlayStation 4 и Xbox One в 2019 году.",
+      "name": "NHL 21",
+      "category": "Simulator",
+      "price": "50",
+      "description": "Переведено с английского языка.-NHL 21 - видеоигра-симулятор хоккея, разработанная EA Vancouver и опубликованная EA Sports. Это 30-й выпуск в серии игр NHL, выпущенный для консолей PlayStation 4 и Xbox One в октябре 2020 года.",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/thumb/1/17/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Apex_Legends.jpg/266px-%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Apex_Legends.jpg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202009/3011/CfaHLEvFpbpX8ephpq3k4yGy.png?w=440&thumb=false"
       ],
       "id": 6
     },
     {
-      "name": "The Sims 4",
-      "category": "simulator",
-      "price": "700",
-      "description": "The Sims 4 — однопользовательская компьютерная игра в жанре симулятора жизни, четвёртая по счёту из серии игр The Sims, разработанная компанией Maxis и издаваемая Electronic Arts для Windows и macOS",
+      "name": "Star Wars: Squadrons",
+      "category": "Simulator",
+      "price": "30",
+      "description": "Star Wars: Squadrons — компьютерная игра по вселенной Звёздных войн в жанре космического симулятора от первого лица, разработанная канадской студией Motive Studios и изданная Electronic Arts на PlayStation 4, Xbox One и Windows",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/5/5e/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_The_Sims_4.jpeg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202009/2410/aaIGMZl7LGnfbmQNOrHOrL6c.png?w=440&thumb=false"
       ],
       "id": 7
     },
     {
-      "name": "Dirt 4",
-      "category": "simulator",
-      "price": "700",
-      "description": "DiRT 4 — видеоигра в жанре автосимулятор, посвящённая тематике ралли. Она была разработана и издана Codemasters для платформ Microsoft Windows, PlayStation 4 и Xbox One и была выпущена для macOS и Linux в 2019 году компанией Feral Interactive. Игра принадлежит серии DiRT, также известной как Colin McRae Rally",
+      "name": "NBA 2K21",
+      "category": "Simulator",
+      "price": "50",
+      "description": "NBA 2K21 - видеоигра-симулятор баскетбольного матча, разработанная Visual Concepts и опубликованная 2K Sports на основе Национальной баскетбольной ассоциации. Это 22-й выпуск во франшизе NBA 2K и преемник NBA 2K20.",
       "quantity": 0,
-      "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/2/2d/Dirt_4_cover.jpg"
+      "image": ["https://image.api.playstation.com/vulcan/ap/rnd/202009/0202/xaOL72W2afZf5lr9fldv5Soh.png?w=440&thumb=false"
       ],
       "id": 8
     },
     {
-      "name": "Dota 2",
-      "category": "strategy",
-      "price": "500",
-      "description": "Dota 2 — компьютерная многопользовательская командная игра в жанре multiplayer online battle arena, разработанная корпорацией Valve. Игра является продолжением DotA — пользовательской карты-модификации для игры Warcraft III: Reign of Chaos и дополнения к ней Warcraft III: The Frozen Throne.",
+      "name": "Grand Theft Auto V",
+      "category": "Action",
+      "price": "50",
+      "description": "Grand Theft Auto V — мультиплатформенная компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Rockstar North и изданная компанией Rockstar Games.",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/8/8e/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Dota_2.jpg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202101/2019/JdvqcPlTYMxXrA1QQJm6TbDX.png?w=440&thumb=false"
       ],
       "id": 9
     },
     {
-      "name": "StarCraft II: Wings of Liberty",
-      "category": "strategy",
-      "price": "500",
-      "description": "StarCraft II: Wings of Liberty — компьютерная игра в жанре стратегии в реальном времени, продолжение StarCraft. Была анонсирована 19 мая 2007 года на фестивале Blizzard Worldwide Invitational в Сеуле, Южная Корея.",
+      "name": "The Last of Us Part II",
+      "category": "Action",
+      "price": "40",
+      "description": "The Last of Us Part II — компьютерная игра в жанре приключенческого боевика с элементами survival horror и стелс-экшена от третьего лица, разработанная компанией Naughty Dog и изданная Sony Interactive Entertainment в 2020 году для игровой приставки PlayStation 4",
       "quantity": 0,
       "image": [
-        "https://upload.wikimedia.org/wikipedia/ru/0/07/StarCraft_II.jpg"
+        "https://image.api.playstation.com/vulcan/img/rnd/202010/2618/w48z6bzefZPrRcJHc7L8SO66.png?w=440&thumb=false"
       ],
       "id": 10
->>>>>>> e21f38529a4c35fe8a0d6d33ee75832c9e2692e2
->>>>>>> 40e5b5eb51175f2ba3caec5bcf5f6d441d42e382
+    },
+    {
+      "name": "Ghost of Tsushima",
+      "category": "Action",
+      "price": "40",
+      "description": "Ghost of Tsushima — компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Sucker Punch Productions для PlayStation 4. Издателем игры выступила Sony Interactive Entertainment. Выход игры первоначально был намечен на 26 июня 2020 года, но позже был перенесён на 17 июля того же года.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/1023/r10cUBOmBkGLc98Vr1jUXxBd.png"
+      ],
+      "id": 11
+    },
+    {
+      "name": "FIFA 21",
+      "category": "Simulator",
+      "price": "90",
+      "description": "FIFA 21 — 28-ая по счёту компьютерная игра из серии FIFA в жанре футбольного симулятора, разработанная компаниями EA Vancouver и EA Romania под издательством Electronic Arts. На ПК, PlayStation 4, Xbox One и Nintendo Switch игра вышла 9 октября 2020 года, а на платформы нового поколения — 3 декабря 2020 года.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/pr/bam-art/113/108/36eb4762-711e-46d0-9f0b-c49ab0c153aa.png?w=620&thumb=false"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Assassin’s Creed Valhalla",
+      "category": "Action",
+      "price": "30",
+      "description": "Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202008/1318/8XGEPtD1xoasK0FYkYNcCn1z.png"
+      ],
+      "id": 13
+    },
+    {
+      "name": "Hitman 3",
+      "category": "Action",
+      "price": "20",
+      "description": "Hitman 3 — компьютерная игра в жанре стелс-экшена разработчика и издателя IO Interactive. Игра стала восьмой по счёту в основной серии Hitman, а также третьей и последней в трилогии World of Assassination после Hitman и Hitman 2.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202007/3011/XX85ZND1RuA13iphoE1Qb7ex.png"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Destiny 2",
+      "category": "Shooter",
+      "price": "20",
+      "description": "Destiny 2 — компьютерная игра в жанре шутера от первого лица с элементами MMORPG, разработанная Bungie.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/0400/3PetyfDv6TpzxVQtBKYnWq8o.png"
+      ],
+      "id": 15
     }
   ],
   "users": [
@@ -160,11 +182,6 @@
       "id": 3
     },
     {
-<<<<<<< HEAD
-      "email": "qwerty",
-      "password": "qwerty",
-      "id": 4
-=======
       "email": "123",
       "password": "123",
       "id": 4
@@ -183,19 +200,28 @@
       "email": "goal",
       "password": "goal",
       "id": 7
+    },
+    {
+      "email": "s",
+      "password": "s",
+      "id": 8
+    },
+    {
+      "email": "rrrr",
+      "password": "rrrr",
+      "id": 9
     }
   ],
   "carts": [
     {
-      "name": "dfgsdfg",
-      "category": "sdfgsdg",
-      "price": "2132",
-      "description": "werwrwr",
-      "quantity": "4",
+      "name": "aaaaa",
+      "category": "",
+      "price": "8",
+      "description": "aaaa",
+      "quantity": 6,
       "image": [
-        "https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
+        "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png"
       ],
-<<<<<<< HEAD
       "id": 1
     },
     {
@@ -230,10 +256,6 @@
         "https://image.api.playstation.com/vulcan/ap/rnd/202008/1822/YsOJjjnoruH9gzwXgwgdFFnQ.jpg"
       ],
       "id": 4
-=======
-      "id": 2
->>>>>>> e21f38529a4c35fe8a0d6d33ee75832c9e2692e2
->>>>>>> 40e5b5eb51175f2ba3caec5bcf5f6d441d42e382
     }
   ]
 }

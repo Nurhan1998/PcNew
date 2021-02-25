@@ -25,7 +25,7 @@ const Login = () => {
       }
     });
     if (candidate.length) {
-      history.push("/home");
+      history.push("/");
     } else {
       alert("такого пользователя не существует, просьба зарегистрироваться");
     }
