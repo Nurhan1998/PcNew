@@ -8,7 +8,6 @@ const ProductEdit = () => {
   const history = useHistory();
   const { productToEdit, editSave } = useContext(productsContext)
   const [newProduct, setNewProduct] = useState(productToEdit)
-  console.log(productToEdit)
   useEffect(() => {
       setNewProduct(productToEdit)
   }, [productToEdit])
@@ -33,6 +32,13 @@ const ProductEdit = () => {
         marginTop:"120px"
   }}> 
             <h1>Edit</h1>
+            {
+                <div >
+                   <img src={newProduct?.image[0]} width='100%' />
+               </div>
+                    
+                }
+
             <FormControl  className="mt-2" value = {newProduct?.name} onChange ={(e) => createNewProduct(e)} type ='text' name = 'name' placeholder = 'Name'/>
             <FormControl  className="mt-2" value = {newProduct?.category} onChange ={(e) =>createNewProduct(e)} type ='text' name = 'category' placeholder = 'Category' />
             <FormControl  className="mt-2" value = {newProduct?.price} onChange ={(e) =>createNewProduct(e)} type ='number' name = 'price' placeholder = 'Price' />

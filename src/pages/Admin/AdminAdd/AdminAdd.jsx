@@ -16,7 +16,6 @@ const ProductsAdd = () => {
       category,
       price,
       description,
-      quantity:0,
       image: [image],
       quantity: 0,
     };
