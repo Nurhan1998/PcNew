@@ -10,6 +10,8 @@ import { CardDeck } from "react-bootstrap";
 import { IoLogoWindows } from "react-icons/io";
 import { FaPlaystation, FaCartPlus } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
+import classes from "./Products.module.css";
+// import {classes} from "./Products.module.css"
 const ProductList = () => {
   const { products, getProducts, limit, count} = useContext(
     productsContext
@@ -155,7 +157,7 @@ const ProductList = () => {
                       handleInp(e.target.value);
                     }}
                   /> */}
-                      <Button
+                      <Button 
                         variant="outline-danger"
                         className="rounded-pill mr-2"
                       >
@@ -164,7 +166,8 @@ const ProductList = () => {
                       <Button
                         // onClick={() => handleClickFavorites(item)}
                         variant="outline-primary"
-                        className="rounded-pill mr-2"
+                        className= " rounded-pill mr-2"
+                        className= {classes.likes}
                       >
                         Add to Favorites
                       </Button>

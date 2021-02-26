@@ -142,66 +142,6 @@
         "https://image.api.playstation.com/vulcan/img/rnd/202011/0400/3PetyfDv6TpzxVQtBKYnWq8o.png"
       ],
       "id": 15
-    },
-    {
-      "name": "test",
-      "category": "test",
-      "price": "100",
-      "description": "asdfasdf",
-      "quantity": 0,
-      "image": [
-        ""
-      ],
-      "likes": 0,
-      "id": 16
-    },
-    {
-      "name": "aaaaa1111",
-      "category": "Action",
-      "price": "200",
-      "description": "asdfasdf",
-      "quantity": 0,
-      "image": [
-        []
-      ],
-      "likes": 0,
-      "id": 17
-    },
-    {
-      "name": "",
-      "category": "",
-      "price": "",
-      "description": "",
-      "quantity": 0,
-      "image": [
-        []
-      ],
-      "likes": 0,
-      "id": 18
-    },
-    {
-      "name": "",
-      "category": "",
-      "price": "",
-      "description": "",
-      "quantity": 0,
-      "image": [
-        ""
-      ],
-      "likes": 0,
-      "id": 19
-    },
-    {
-      "name": "",
-      "category": "",
-      "price": "",
-      "description": "",
-      "quantity": 0,
-      "image": [
-        ""
-      ],
-      "likes": 0,
-      "id": 20
     }
   ],
   "users": [
@@ -238,11 +178,33 @@
       "category": "Simulator",
       "price": "40",
       "description": "Need for Speed: Hot Pursuit — компьютерная игра серии Need for Speed в жанре аркадной автогонки, изданная компанией Electronic Arts для консолей, компьютеров и мобильных устройств в 2010 году. В России игра была издана компанией «1С-СофтКлаб» полностью на русском языке.",
-      "quantity": 0,
+      "quantity": 4,
       "image": [
         "https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/s903xz8pn3gTqY4bcKEAxnBo.png?w=440&thumb=false"
       ],
       "id": 3
+    },
+    {
+      "name": "Doom Eternal",
+      "category": "shooter",
+      "price": "20",
+      "description": "Doom Eternal — компьютерная игра в жанре шутера от первого лица. Игра разработана студией id Software, а издателем выступила компания Bethesda Softworks.",
+      "quantity": 1,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/ERNPc4gFqeRDG1tYQIfOKQtM.png?w=440&thumb=false"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Ghost of Tsushima",
+      "category": "Action",
+      "price": "40",
+      "description": "Ghost of Tsushima — компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Sucker Punch Productions для PlayStation 4. Издателем игры выступила Sony Interactive Entertainment. Выход игры первоначально был намечен на 26 июня 2020 года, но позже был перенесён на 17 июля того же года.",
+      "quantity": 1,
+      "image": [
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/1023/r10cUBOmBkGLc98Vr1jUXxBd.png"
+      ],
+      "id": 11
     }
   ]
 }
