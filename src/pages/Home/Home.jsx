@@ -6,6 +6,7 @@ import Info2 from "../../components/Info2"
 import Ps4 from "../../components/Ps4"
 import Info from "../../components/Info"
 import Footer from "../../components/Footer";
+import Slider from "../../components/Slider";
 
 
 

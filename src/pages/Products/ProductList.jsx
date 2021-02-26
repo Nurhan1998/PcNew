@@ -68,16 +68,17 @@ const ProductList = () => {
   return (
     <>
        <Image src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$" style={{
-                    position: "absolute",
+                    position: "fixed",
                     width: "100%",
                     left: "50%",
                     top: "50%",
                     height: "100%",
                     objectFit: "cover",
                     transform: "translate(-50%, -50%)",
-                    zIndex: "-1"
+                    zIndex: "-1",
+                    
                 }}/>
-      <Container style={{backgroundColor: 'black'}}>
+      <Container>
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Label style={{color: 'white'}}>Filter by Category</Form.Label>
           <Form.Control as="select" defaultValue onChange={handleFilter}>
