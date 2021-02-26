@@ -68,114 +68,102 @@ const ProductList = () => {
   return (
     <>
       <NaviBar />
-      <Image
-        src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$"
+
+      <Form.Group controlId="exampleForm.ControlSelect1">
+        <Form.Label style={{ color: "white" }}>Filter by Category</Form.Label>
+        <Form.Control as="select" defaultValue onChange={handleFilter}>
+          <option>none</option>
+          <option>Action</option>
+          <option>Shooter</option>
+          <option>Quest</option>
+          <option>Strategy</option>
+          <option>Simulator</option>
+        </Form.Control>
+      </Form.Group>
+      <input
         style={{
-          position: "fixed",
-          width: "100%",
-          left: "50%",
-          top: "50%",
-          height: "100%",
-          objectFit: "cover",
-          transform: "translate(-50%, -50%)",
-          zIndex: "-1",
+          width: "280px",
+          margin: "50px ",
+          margin: "0 auto",
+          display: "block",
+          marginBottom: "10px",
+        }}
+        placeholder="Search"
+        value={searchValue}
+        onChange={(e) => {
+          e.preventDefault();
+          setSearchValue(e.target.value);
         }}
       />
-      <Container>
-        <Form.Group controlId="exampleForm.ControlSelect1">
-          <Form.Label style={{ color: "white" }}>Filter by Category</Form.Label>
-          <Form.Control as="select" defaultValue onChange={handleFilter}>
-            <option>none</option>
-            <option>Action</option>
-            <option>Shooter</option>
-            <option>Quest</option>
-            <option>Strategy</option>
-            <option>Simulator</option>
-          </Form.Control>
-        </Form.Group>
-        <input
-          style={{ maxWidth: "80%", margin: "0 auto", display: "block" }}
-          placeholder="Search"
-          value={searchValue}
-          onChange={(e) => {
-            e.preventDefault();
-            setSearchValue(e.target.value);
-          }}
-        />
-        <Container
-          className="text-center"
-          style={{
-            margin: "50px ",
-            minHeight: "80vh",
-            display: "flex",
-            flexWrap: "wrap",
-          }}
-        >
-          {products?.map((item, index) => (
-            <CardDeck
-              key={index}
-              className="mr-5"
-              style={{ width: "20rem", marginBottom: "50px" }}
-            >
-              <div>
-                <Card style={{ maxHeight: "100vh" }}>
-                  <Card.Img
-                    variant="top"
-                    src="holder.js/100px160"
-                    src={item.image[0]}
-                  />
-                  <Card.Body style={{ textAlign: "center" }}>
-                    <Card.Title>
-                      <strong>{item.name} </strong>
-                    </Card.Title>
-                    <Card.Text>
-                      <li>
-                        <strong>Category: </strong>
-                        {item.category}
-                      </li>
-                      <li>
-                        <strong>Price: </strong>
-                        {item.price} USD
-                      </li>
-                      <li>
-                        <strong>Platform: </strong>
-                        <IoLogoWindows className="mr-1" />
-                        <FaPlaystation />
-                      </li>
-                    </Card.Text>
-                  </Card.Body>
-                  <Card.Footer>
-                    <Link
-                      to={`products/${item.id}`}
-                      style={{ textDecoration: "none" }}
+      <Container
+        style={{
+          minHeight: "80vh",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        {products?.map((item, index) => (
+          <CardDeck
+            key={index}
+            className="mr-5"
+            style={{ width: "20rem", marginBottom: "50px" }}
+          >
+            <div>
+              <Card style={{ maxHeight: "100vh" }}>
+                <Card.Img variant="top" src={item.image[0]} />
+                <Card.Body style={{ textAlign: "center" }}>
+                  <Card.Title>
+                    <strong>{item.name} </strong>
+                  </Card.Title>
+                  <Card.Text>
+                    <li>
+                      <strong>Category: </strong>
+                      {item.category}
+                    </li>
+                    <li>
+                      <strong>Price: </strong>
+                      {item.price} USD
+                    </li>
+                    <li>
+                      <strong>Platform: </strong>
+                      <IoLogoWindows className="mr-1" />
+                      <FaPlaystation />
+                    </li>
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                  <Link
+                    to={`products/${item.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button className="rounded-pill mt-3" block>
+                      Details
+                    </Button>
+                  </Link>
+                  <Form className="text-center mt-2 mb-2 ">
+                    <Button
+                      onClick={() => handleClickCart(item)}
+                      variant="outline-primary"
+                      className="rounded-pill mr-2"
                     >
-                      <Button className="rounded-pill mt-3" block>
-                        Details
-                      </Button>
-                    </Link>
-                    <Form className="text-center mt-2 mb-2 ">
-                      <Button
-                        onClick={() => handleClickCart(item)}
-                        variant="outline-primary"
-                        className="rounded-pill mr-2"
-                      >
-                        <FaCartPlus />
-                      </Button>
-                      <Button
-                        variant="outline-danger"
-                        className="rounded-pill mr-2"
-                      >
-                        <AiOutlineHeart />
-                      </Button>
-                    </Form>
-                  </Card.Footer>
-                </Card>
-              </div>
-            </CardDeck>
-          ))}
-        </Container>
+                      <FaCartPlus />
+                    </Button>
+                    <Button
+                      variant="outline-danger"
+                      className="rounded-pill mr-2"
+                    >
+                      <AiOutlineHeart />
+                    </Button>
+                  </Form>
+                </Card.Footer>
+              </Card>
+            </div>
+          </CardDeck>
+        ))}
         <Pagination onClick={onPaginationChange}>{items}</Pagination>
       </Container>
+
       <Footer />
     </>
   );

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { productsContext } from "../../../contexts/ProductsContext/ProductsContext";
 import { Container, FormControl, Button, Image } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 const ProductsAdd = () => {
   const [name, setName] = useState("");
@@ -9,7 +10,7 @@ const ProductsAdd = () => {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([]);
   const { addProduct } = useContext(productsContext);
-
+  const history = useHistory();
   function handleClick() {
     let newObj = {
       name,
@@ -27,26 +28,28 @@ const ProductsAdd = () => {
     setPrice("");
     setDescription("");
     setImage("");
+    history.push("/admin-list");
   }
   return (
     <div>
-      <Image src="https://cdn.wallpapersafari.com/73/41/V1Imlh.jpg" style={{
-                    position: "absolute",
-                    width: "100%",
-                    left: "50%",
-                    top: "50%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transform: "translate(-50%, -50%)",
-                    zIndex: "-1"
-                }}
-/>
+      <Image
+        src="https://cdn.wallpapersafari.com/73/41/V1Imlh.jpg"
+        style={{
+          position: "fixed",
+          width: "100%",
+          left: "50%",
+          top: "50%",
+          height: "100%",
+          objectFit: "cover",
+          transform: "translate(-50%, -50%)",
+          zIndex: "-1",
+        }}
+      />
       <Container
         style={{
-          
           width: "400px",
           paddingTop: "120px",
-          paddingBottom: "278px"
+          paddingBottom: "278px",
         }}
       >
         <h1>Admin Add Product</h1>

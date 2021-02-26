@@ -36,24 +36,29 @@ const Login = () => {
   };
   return (
     <div>
-      <Image src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$" style={{
-                    position: "absolute",
-                    width: "100%",
-                    left: "50%",
-                    top: "50%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transform: "translate(-50%, -50%)",
-                    zIndex: "-1"
-                }}/>
+      <Image
+        src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$"
+        style={{
+          position: "fixed",
+          width: "100%",
+          left: "50%",
+          top: "50%",
+          height: "100%",
+          objectFit: "cover",
+          transform: "translate(-50%, -50%)",
+          zIndex: "-1",
+        }}
+      />
       <Container
         style={{
           width: "400px",
           marginTop: "120px",
-
         }}
       >
-        <form className='border border-primary' style={{ backgroundColor: "white" }}>
+        <form
+          className="border border-primary"
+          style={{ backgroundColor: "white" }}
+        >
           <div style={{ backgroundColor: "black" }}>
             <h3 style={{ color: "gray" }} className="text-center">
               SONY

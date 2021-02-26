@@ -1,36 +1,35 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel'
+import React from "react";
+import { Container, Carousel } from "react-bootstrap";
 
 const Slider = () => {
-    return (
-        <div>
-<Carousel>
-  <Carousel.Item >
-    <img
-      className="d-block w-100"
-      src="https://gmedia.playstation.com/is/image/SIEPDC/destruction-allstars-desktop-hero-02-ps5-en-12jun20?$native$"
-      alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://gmedia.playstation.com/is/image/SIEPDC/destruction-allstars-desktop-hero-02-ps5-en-12jun20?$native$"
-      alt="Second slide"
-    />
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  
-</Carousel>
-        </div>
-    );
+  return (
+    <div>
+      <Carousel>
+        <Carousel.Item interval={1000}>
+          <img
+            className="d-block w-100"
+            src="https://gmedia.playstation.com/is/image/SIEPDC/hogwarts-legacy-key-art-01-ps5-en-02oct20?$4000px--t$"
+            alt="First slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item interval={1000}>
+          <img
+            className="d-block w-100"
+            src="https://gmedia.playstation.com/is/image/SIEPDC/call-of-duty-black-ops-cold-war-screen-08-en-26aug20?$4000px--t$"
+            alt="Second slide"
+          />
+        </Carousel.Item>
+
+        <Carousel.Item interval={1000}>
+          <img
+            className="d-block w-100"
+            src="https://gmedia.playstation.com/is/image/SIEPDC/fifa-21-ps4-screen-03-en-23jul20?$native$"
+            alt="Second slide"
+          />
+        </Carousel.Item>
+      </Carousel>
+    </div>
+  );
 };
 
 export default Slider;

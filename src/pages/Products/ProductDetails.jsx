@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
-import { Media, Image } from "react-bootstrap";
+import { Media, Image, Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { cartContext } from "../../contexts/CartContext/CartContext";
 import { FaCartPlus } from "react-icons/fa";
@@ -46,37 +46,27 @@ const ProductDetails = () => {
   return (
     <>
       <NaviBar />
-      <Image
-        src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$"
-        style={{
-          position: "fixed",
-          width: "100%",
-          left: "50%",
-          top: "50%",
-          height: "100%",
-          objectFit: "cover",
-          transform: "translate(-50%, -50%)",
-          zIndex: "-1",
-        }}
-      />
-      <div>
-        <Media>
-          {productDetail?.image.map((item, index) => (
-            <div className="m-4" key={index}>
-              <img
-                src={item}
-                alt={`product image ${index + 1}`}
-                width={400}
-                height={400}
-                className="mr-5"
-              />
-            </div>
-          ))}
-          <Media.Body>
+
+      <Container>
+        <Row>
+          <Col>
+            {productDetail?.image.map((item, index) => (
+              <div className="m-4" key={index}>
+                <img
+                  src={item}
+                  alt={`product image ${index + 1}`}
+                  width={250}
+                  height={300}
+                  className="mr-5"
+                />
+              </div>
+            ))}
+          </Col>
+          <Col>
             <h5>{productDetail?.name}</h5>
             {!isAdmin ? (
               <>
-                <p style={{ color: "white" }}>{productDetail?.description}</p>
+                <p>{productDetail?.description}</p>
                 <Link to="/list">
                   <Button>Exit</Button>
                 </Link>
@@ -104,9 +94,9 @@ const ProductDetails = () => {
                 </Link>
               </>
             )}
-          </Media.Body>
-        </Media>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

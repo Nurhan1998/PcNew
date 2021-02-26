@@ -144,64 +144,28 @@
       "id": 15
     },
     {
-      "name": "test",
-      "category": "test",
-      "price": "100",
-      "description": "asdfasdf",
+      "name": "CyberPank",
+      "category": "Shooter",
+      "price": "1000",
+      "description": "best game all over the world",
       "quantity": 0,
       "image": [
-        ""
+        "https://www.pcgamesn.com/wp-content/uploads/2020/11/FeaturedImage_04_v04.jpg"
       ],
       "likes": 0,
       "id": 16
     },
     {
-      "name": "aaaaa1111",
-      "category": "Action",
-      "price": "200",
-      "description": "asdfasdf",
+      "name": "",
+      "category": "",
+      "price": "",
+      "description": "",
       "quantity": 0,
       "image": [
         []
       ],
       "likes": 0,
       "id": 17
-    },
-    {
-      "name": "",
-      "category": "",
-      "price": "",
-      "description": "",
-      "quantity": 0,
-      "image": [
-        []
-      ],
-      "likes": 0,
-      "id": 18
-    },
-    {
-      "name": "",
-      "category": "",
-      "price": "",
-      "description": "",
-      "quantity": 0,
-      "image": [
-        ""
-      ],
-      "likes": 0,
-      "id": 19
-    },
-    {
-      "name": "",
-      "category": "",
-      "price": "",
-      "description": "",
-      "quantity": 0,
-      "image": [
-        ""
-      ],
-      "likes": 0,
-      "id": 20
     }
   ],
   "users": [
@@ -220,30 +184,12 @@
       "email": "test",
       "password": "test",
       "id": 3
-    }
-  ],
-  "carts": [
-    {
-      "name": "Ghostrunner",
-      "category": "Action",
-      "price": "20",
-      "description": "Ghostrunner — компьютерная игра в жанре экшен, разработанная польской студией One More Level и изданная All In! Games совместно с 505 Games. Игра была выпущена для Windows, PlayStation 4, Xbox One и Nintendo Switch в 2020 году. В выпуске Ghostrunner так же участвовали компании 3D Realms и Slipgate Ironworks",
-      "quantity": 1,
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202008/2818/4xjRkRmOm9wklCdSWXVMaXBi.png?w=440&thumb=false"
-      ],
-      "id": 4
     },
     {
-      "name": "Need for Speed: Hot Pursuit",
-      "category": "Simulator",
-      "price": "40",
-      "description": "Need for Speed: Hot Pursuit — компьютерная игра серии Need for Speed в жанре аркадной автогонки, изданная компанией Electronic Arts для консолей, компьютеров и мобильных устройств в 2010 году. В России игра была издана компанией «1С-СофтКлаб» полностью на русском языке.",
-      "quantity": 0,
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/s903xz8pn3gTqY4bcKEAxnBo.png?w=440&thumb=false"
-      ],
-      "id": 3
+      "email": "test",
+      "password": "test",
+      "id": 4
     }
-  ]
+  ],
+  "carts": []
 }
