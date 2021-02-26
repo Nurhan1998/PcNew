@@ -120,6 +120,88 @@
         "https://image.api.playstation.com/vulcan/ap/rnd/202008/1318/8XGEPtD1xoasK0FYkYNcCn1z.png"
       ],
       "id": 13
+    },
+    {
+      "name": "Hitman 3",
+      "category": "Action",
+      "price": "20",
+      "description": "Hitman 3 — компьютерная игра в жанре стелс-экшена разработчика и издателя IO Interactive. Игра стала восьмой по счёту в основной серии Hitman, а также третьей и последней в трилогии World of Assassination после Hitman и Hitman 2.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202007/3011/XX85ZND1RuA13iphoE1Qb7ex.png"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Destiny 2",
+      "category": "shooter",
+      "price": "20",
+      "description": "Destiny 2 — компьютерная игра в жанре шутера от первого лица с элементами MMORPG, разработанная Bungie.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/img/rnd/202011/0400/3PetyfDv6TpzxVQtBKYnWq8o.png"
+      ],
+      "id": 15
+    },
+    {
+      "name": "test",
+      "category": "test",
+      "price": "100",
+      "description": "asdfasdf",
+      "quantity": 0,
+      "image": [
+        ""
+      ],
+      "likes": 0,
+      "id": 16
+    },
+    {
+      "name": "aaaaa1111",
+      "category": "Action",
+      "price": "200",
+      "description": "asdfasdf",
+      "quantity": 0,
+      "image": [
+        []
+      ],
+      "likes": 0,
+      "id": 17
+    },
+    {
+      "name": "",
+      "category": "",
+      "price": "",
+      "description": "",
+      "quantity": 0,
+      "image": [
+        []
+      ],
+      "likes": 0,
+      "id": 18
+    },
+    {
+      "name": "",
+      "category": "",
+      "price": "",
+      "description": "",
+      "quantity": 0,
+      "image": [
+        ""
+      ],
+      "likes": 0,
+      "id": 19
+    },
+    {
+      "name": "",
+      "category": "",
+      "price": "",
+      "description": "",
+      "quantity": 0,
+      "image": [
+        ""
+      ],
+      "likes": 0,
+      "id": 20
     }
   ],
   "users": [
@@ -140,5 +222,28 @@
       "id": 3
     }
   ],
-  "carts": []
+  "carts": [
+    {
+      "name": "Ghostrunner",
+      "category": "Action",
+      "price": "20",
+      "description": "Ghostrunner — компьютерная игра в жанре экшен, разработанная польской студией One More Level и изданная All In! Games совместно с 505 Games. Игра была выпущена для Windows, PlayStation 4, Xbox One и Nintendo Switch в 2020 году. В выпуске Ghostrunner так же участвовали компании 3D Realms и Slipgate Ironworks",
+      "quantity": 1,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202008/2818/4xjRkRmOm9wklCdSWXVMaXBi.png?w=440&thumb=false"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Need for Speed: Hot Pursuit",
+      "category": "Simulator",
+      "price": "40",
+      "description": "Need for Speed: Hot Pursuit — компьютерная игра серии Need for Speed в жанре аркадной автогонки, изданная компанией Electronic Arts для консолей, компьютеров и мобильных устройств в 2010 году. В России игра была издана компанией «1С-СофтКлаб» полностью на русском языке.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/s903xz8pn3gTqY4bcKEAxnBo.png?w=440&thumb=false"
+      ],
+      "id": 3
+    }
+  ]
 }

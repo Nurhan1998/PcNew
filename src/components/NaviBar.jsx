@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   Nav,
@@ -26,11 +26,19 @@ const NaviBar = () => {
   const handleLogOut = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("role");
-    history.push("/");
+    history.push("/login");
   };
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    const admin = localStorage.getItem("role");
+    if (admin) {
+      setIsAdmin(true);
+    }
+  }, []);
 
   return (
-    <Navbar bg="white" expand="lg" sticky="top">
+    <Navbar expand="lg" sticky="top" bg="white">
       <Navbar.Brand href="/">
         <h3 className="ml-3">
           <SiPlaystation />
@@ -40,7 +48,10 @@ const NaviBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto ml-auto">
-          <Nav.Link href="/list" variant="outline-info">
+          <Nav.Link
+            href={isAdmin ? "/admin-list" : "/list"}
+            variant="outline-info"
+          >
             <strong>Shop</strong>
           </Nav.Link>
           <h4>

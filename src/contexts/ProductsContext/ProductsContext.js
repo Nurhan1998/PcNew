@@ -31,11 +31,7 @@ const reducer = (state = INIT_STATE, action) => {
         ...state,
         productToEdit: action.payload,
       };
-    case "GET_FAVORITES":
-      return {
-        ...state,
-        favorites: action.payload,
-      };
+
     default:
       return state;
   }

@@ -6,10 +6,11 @@ import NaviBar from "../../components/NaviBar";
 import { Container, Button, Card, Form, Row, Col } from "react-bootstrap";
 import { API } from "../../helpers/constatns";
 import Pagination from "react-bootstrap/Pagination";
-import { CardDeck } from "react-bootstrap";
+import { CardDeck, Image } from "react-bootstrap";
 import { IoLogoWindows } from "react-icons/io";
 import { FaPlaystation, FaCartPlus } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
+import Footer from "../../components/Footer";
 const ProductList = () => {
   const { products, getProducts, limit, count, addFavorites } = useContext(
     productsContext
@@ -49,7 +50,6 @@ const ProductList = () => {
   };
 
   function handleClickCart(item) {
-    item.quantity = productCount;
     postCart(item);
   }
 
@@ -68,9 +68,22 @@ const ProductList = () => {
   return (
     <>
       <NaviBar />
+      <Image
+        src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$"
+        style={{
+          position: "fixed",
+          width: "100%",
+          left: "50%",
+          top: "50%",
+          height: "100%",
+          objectFit: "cover",
+          transform: "translate(-50%, -50%)",
+          zIndex: "-1",
+        }}
+      />
       <Container>
         <Form.Group controlId="exampleForm.ControlSelect1">
-          <Form.Label>Filter by Category</Form.Label>
+          <Form.Label style={{ color: "white" }}>Filter by Category</Form.Label>
           <Form.Control as="select" defaultValue onChange={handleFilter}>
             <option>none</option>
             <option>Action</option>
@@ -163,15 +176,8 @@ const ProductList = () => {
         </Container>
         <Pagination onClick={onPaginationChange}>{items}</Pagination>
       </Container>
+      <Footer />
     </>
   );
 };
 export default ProductList;
-
-{
-  /* <div style={{ 
-      width: "100%", 
-      height: 'auto',
-      backgroundColor:'#1f1f1f' 
-          }}></div> */
-}
