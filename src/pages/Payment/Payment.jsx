@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, FormControl, Form } from "react-bootstrap";
 import Cards from "react-credit-cards";
+import { Link } from "react-router-dom";
 import "react-credit-cards/es/styles-compiled.css";
 
 export default class PaymentForm extends React.Component {
@@ -83,14 +84,16 @@ export default class PaymentForm extends React.Component {
               onChange={this.handleInputChange}
               onFocus={this.handleInputFocus}
             />
-            <Button
-              variant="primary"
-              className="mt-2 "
-              block
-              onClick={this.handleSubmit}
-            >
-              Pay
-            </Button>
+            <Link to="/">
+              <Button
+                variant="primary"
+                className="mt-2 "
+                block
+                onClick={this.handleSubmit}
+              >
+                Pay
+              </Button>
+            </Link>
           </form>
         </Container>
       </div>

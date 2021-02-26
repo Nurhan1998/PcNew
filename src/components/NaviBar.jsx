@@ -57,20 +57,20 @@ const NaviBar = () => {
           <h4>
             <FiTriangle />
           </h4>
-          <Nav.Link href="/Info" variant="outline-info">
+          <Nav.Link href="/" variant="outline-info">
             <strong>Out now</strong>
           </Nav.Link>
           <h4>
             <FiCircle />
           </h4>
-          <Nav.Link href="/Info" variant="outline-info">
-            <strong>About Us</strong>
+          <Nav.Link href="/" variant="outline-info">
+            <strong>Main</strong>
           </Nav.Link>
           <h4>
             <GrClose />
           </h4>
-          <Nav.Link href="/Info" variant="outline-info">
-            <strong>Games</strong>
+          <Nav.Link href="/" variant="outline-info">
+            <strong>Home</strong>
           </Nav.Link>
           <h4>
             <BsSquare />

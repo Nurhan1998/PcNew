@@ -10,7 +10,6 @@ import {
 } from "react-bootstrap";
 import Slider from "../components/Slider";
 import Typical from "react-typical";
-import { Link } from "react-router-dom";
 
 const Info2 = () => {
   return (
@@ -24,31 +23,22 @@ const Info2 = () => {
       </h5>
       <Row>
         <Col lg={6}>
-          <Container style={{ width: "400px" }}>
+          <Container style={{ width: "100%", marginTop: "200px" }}>
+            {/* Typical Library */}
             <Typical
               loop={Infinity}
               wrapper="b"
               steps={[
                 "PlayStation 5 - Console Experience an all-new generation of incredible PlayStation games.",
-                3000,
-                "DualSense™ Wireless Controller Immerse yourself with a controller offering haptic feedback, adaptive triggers and a built-in mic.",
-                2000,
-                "english",
-                1000,
-                "welsh",
-                1000,
+                50,
+                "DualSense™ Wireless Controller - Immerse yourself with a controller offering haptic feedback, adaptive triggers and a built-in mic.",
+                30,
+                "PULSE 3D™ Wireless Headset - Enjoy a seamless wireless experience with a headset fine-tuned for 3D Audio on PS5 consoles.",
+                30,
+                "HD Camera - Add yourself to your gameplay videos and broadcasts with smooth, sharp, full-HD capture.",
+                40,
               ]}
             />
-            {/* Сделать адаптивным */}
-            <Container>
-              <a href="https://store.playstation.com/ru-ru/subscriptions">
-                <Button size="sm">Наш Главные партнеры</Button>
-              </a>
-            </Container>
-            <h1 style={{ marginTop: "170px" }}>PlayStation 5 Console</h1>
-            <p>
-              Experience an all-new generation of incredible PlayStation games.
-            </p>
           </Container>
         </Col>
         <Col lg={6}>
@@ -58,28 +48,28 @@ const Info2 = () => {
               height: "100%",
             }}
           >
-            <Carousel.Item interval={4000}>
+            <Carousel.Item interval={12000}>
               <img
                 className="d-block w-100"
                 src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-5-horizontal-product-shot-01-ps5-en-23nov20?$1600px--t$"
                 alt="First slide"
               />
             </Carousel.Item>
-            <Carousel.Item interval={2000}>
+            <Carousel.Item interval={16000}>
               <img
                 className="d-block w-100"
                 src="https://gmedia.playstation.com/is/image/SIEPDC/Dualsense-square-image-block-ps5-01-en-09oct20?$1600px--t$"
                 alt="Second slide"
               />
             </Carousel.Item>
-            <Carousel.Item interval={2000}>
+            <Carousel.Item interval={15000}>
               <img
                 className="d-block w-100"
                 src="https://gmedia.playstation.com/is/image/SIEPDC/3D-Pulse-Wireless-Headset-square-image-block-ps5-01-en-09oct20?$1600px--t$"
                 alt="Third slide"
               />
             </Carousel.Item>
-            <Carousel.Item>
+            <Carousel.Item interval={12000}>
               <img
                 className="d-block w-100"
                 src="https://gmedia.playstation.com/is/image/SIEPDC/hd-camera-square-image-block-ps5-01-en-07dec20?$1600px$"

@@ -35,6 +35,7 @@ const CartContextProvider = ({ children }) => {
       res.quantity += 1;
       await axios.patch(`${API}/carts/${res.id}`, res);
     } else {
+      item.quantity += 1;
       await axios.post(`${API}/carts`, item);
     }
   };
@@ -44,7 +45,7 @@ const CartContextProvider = ({ children }) => {
     console.log(res);
 
     if (res) {
-      if (res.quantity === 1) {
+      if (res.quantity <= 1) {
         await axios.delete(`${API}/carts/${res.id}`);
       } else {
         res.quantity -= 1;

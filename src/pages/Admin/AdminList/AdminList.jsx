@@ -1,18 +1,24 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import ProductList from "../../Products/ProductList";
 import { Link } from "react-router-dom";
 
 const AdminList = () => {
   return (
-    <div>
+    <>
       <ProductList />
       <Link to="/admin-add">
-        <Button style={{ position: "fixed", right: "15px", top: "25vh" }}>
+        <Button
+          style={{
+            position: "fixed",
+            top: "25vh",
+            position: "fixed",
+          }}
+        >
           Add product
         </Button>
       </Link>
-    </div>
+    </>
   );
 };
 
