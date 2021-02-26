@@ -6,19 +6,14 @@ import { useHistory } from "react-router-dom";
 export const authContext = React.createContext();
 
 const INIT_STATE = {
-  users: [],
-  favorites:[]
+  users:[]
 };
 
 const reducer = (state = INIT_STATE, action) => {
-  switch (action.type) {
+    switch (action.type) {
     case "GET_USERS":
       return { ...state, users: action.payload };
-    case "GET_FAVORITES":
-      return {
-        ...state,
-        favorites: action.payload
-      }
+    
     default:
       return state;
   }
@@ -49,24 +44,16 @@ const AuthContextProvider = ({ children }) => {
       history.push("/home");
     }
   };
-  const getFavorites = async () =>{
-    const {data} = await axios (`${API}/user`)
-    dispatch({
-      type: "GET_FAVORITES",
-      payload : data
-    })
-  }
+  
 
   return (
     <authContext.Provider
       value={{
         users: state.users,
-        favorites: state.favorites,
         isAdmin: state.isAdmin,
         currentUser: state.currentUser,
         addUser,
         getUsers,
-        getFavorites
       }}
     >
       {children}

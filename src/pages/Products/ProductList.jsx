@@ -11,7 +11,7 @@ import { IoLogoWindows } from "react-icons/io";
 import { FaPlaystation, FaCartPlus } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 const ProductList = () => {
-  const { products, getProducts, limit, count, reciveFilter } = useContext(
+  const { products, getProducts, limit, count} = useContext(
     productsContext
   );
   const { postCart } = useContext(cartContext);
@@ -171,9 +171,9 @@ const ProductList = () => {
                       <Button
                         variant="outline-primary"
                         className="rounded-pill mr-2"
-                      >
+                                          >
                         like
-                      </Button>
+                      </Button >
                     </Form>
                   </Card.Footer>
                 </Card>

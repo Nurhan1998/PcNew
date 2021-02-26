@@ -5,8 +5,8 @@ import { API } from "../../helpers/constatns";
 export const cartContext = React.createContext();
 
 const INIT_STATE = {
-  carts: [],
-  favorites: [],
+  carts: []
+ 
 };
 
 const reducer = (state = INIT_STATE, action) => {

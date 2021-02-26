@@ -3,7 +3,7 @@ import { Button, Container, FormControl, Image } from "react-bootstrap";
 import { authContext } from "../../../contexts/AuthContext/AuthContext";
 
 const Register = () => {
-  const { addUser, getUsers } = useContext(authContext);
+  const { users,addUser, getUsers } = useContext(authContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
@@ -11,7 +11,7 @@ const Register = () => {
   useEffect(() => {
     getUsers();
   }, []);
-
+console.log(users)
   const handleClickAddUser = () => {
     if (!email || !password || !confirm) {
       setEmail("");

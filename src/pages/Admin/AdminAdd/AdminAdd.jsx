@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { productsContext } from "../../../contexts/ProductsContext/ProductsContext";
 import { Container, FormControl, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ProductsAdd = () => {
   const [name, setName] = useState("");
@@ -72,9 +73,11 @@ const ProductsAdd = () => {
           type="text"
           placeholder="Image URL"
         />
+        <Link to="/admin-list">
         <Button className="mt-2 " block onClick={handleClick}>
           Add Product
         </Button>
+        </Link>
       </Container>
     </div>
   );
