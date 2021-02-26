@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { productsContext } from "../../../contexts/ProductsContext/ProductsContext";
-import { Container, FormControl, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, FormControl, Button, Image } from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 const ProductsAdd = () => {
   const [name, setName] = useState("");
@@ -31,10 +31,23 @@ const ProductsAdd = () => {
   }
   return (
     <div>
+      <Image src="https://cdn.wallpapersafari.com/73/41/V1Imlh.jpg" style={{
+                    position: "absolute",
+                    width: "100%",
+                    left: "50%",
+                    top: "50%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transform: "translate(-50%, -50%)",
+                    zIndex: "-1"
+                }}
+/>
       <Container
         style={{
+          
           width: "400px",
-          marginTop: "120px",
+          paddingTop: "120px",
+          paddingBottom: "278px"
         }}
       >
         <h1>Admin Add Product</h1>
@@ -73,15 +86,14 @@ const ProductsAdd = () => {
           type="text"
           placeholder="Image URL"
         />
-        <Link to="/admin-list">
-        <Button className="mt-2 " block onClick={handleClick}>
+        <Link>
+        <Button variant="dark" className="mt-2 " block onClick={handleClick}>
           Add Product
         </Button>
         </Link>
       </Container>
     </div>
   );
-  return <div></div>;
 };
 
 export default ProductsAdd;

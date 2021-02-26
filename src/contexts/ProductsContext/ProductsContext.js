@@ -30,6 +30,9 @@ const reducer = (state = INIT_STATE, action) => {
         ...state,
         productToEdit: action.payload,
       };
+
+    default:
+      return state;
   }
 };
 const ProductsContextProvider = ({ children }) => {

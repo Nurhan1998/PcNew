@@ -171,7 +171,7 @@ const ProductList = () => {
                       <Button
                         variant="outline-primary"
                         className="rounded-pill mr-2"
-                                          >
+                                        >
                         like
                       </Button >
                     </Form>

@@ -10,17 +10,28 @@ export default class PaymentForm extends React.Component {
     focus: "",
     name: "",
     number: "",
+    alert: false,
   };
 
   handleInputFocus = (e) => {
     this.setState({ focus: e.target.name });
-    console.log(e);
   };
 
   handleInputChange = (e) => {
     const { name, value } = e.target;
 
     this.setState({ [name]: value });
+  };
+  handleSubmit = () => {
+    if (
+      !this.state.cvc ||
+      !this.state.expiry ||
+      !this.state.name ||
+      !this.state.number
+    ) {
+      this.setState({ alert: true });
+      return;
+    }
   };
 
   render() {
@@ -72,7 +83,12 @@ export default class PaymentForm extends React.Component {
               onChange={this.handleInputChange}
               onFocus={this.handleInputFocus}
             />
-            <Button variant="primary" className="mt-2 " block>
+            <Button
+              variant="primary"
+              className="mt-2 "
+              block
+              onClick={this.handleSubmit}
+            >
               Pay
             </Button>
           </form>
