@@ -48,36 +48,36 @@ const NaviBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto ml-auto">
-          <Nav.Link
-            href={isAdmin ? "/admin-list" : "/list"}
+          <Link className="nav-link" 
+            to={isAdmin ? "/admin-list" : "/list"}
             variant="outline-info"
           >
             <strong>Shop</strong>
-          </Nav.Link>
+          </Link>
           <h4>
             <FiTriangle />
           </h4>
-          <Nav.Link href="/" variant="outline-info">
+          <Link className="nav-link" to="/" variant="outline-info">
             <strong>Out now</strong>
-          </Nav.Link>
+          </Link>
           <h4>
             <FiCircle />
           </h4>
-          <Nav.Link href="/" variant="outline-info">
+          <Link className="nav-link" to="/" variant="outline-info">
             <strong>Main</strong>
-          </Nav.Link>
+          </Link>
           <h4>
             <GrClose />
           </h4>
-          <Nav.Link href="/" variant="outline-info">
+          <Link className="nav-link" to="/" variant="outline-info">
             <strong>Home</strong>
-          </Nav.Link>
+          </Link>
           <h4>
             <BsSquare />
           </h4>
-          <Nav.Link href="/Info" variant="outline-info">
+          <Link className="nav-link" to="/Info" variant="outline-info">
             <strong>Payment</strong>
-          </Nav.Link>
+          </Link>
         </Nav>
 
         <Form inline>

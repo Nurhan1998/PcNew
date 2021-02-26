@@ -40,7 +40,7 @@ const AuthContextProvider = ({ children }) => {
     } else {
       await axios.post(`${API}/users`, newUser);
       alert("регистрация прошла успешно");
-      history.push("/home");
+      history.push("/login");
     }
   };
 
