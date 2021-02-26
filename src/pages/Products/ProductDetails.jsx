@@ -41,6 +41,7 @@ const ProductDetails = () => {
   function handleClickEdit(id) {
     productEdit(id);
   }
+  console.log("askat");
 
   return (
     <>
