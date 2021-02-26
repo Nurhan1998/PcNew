@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import Slider from "../../components/Slider";
+import React  from "react";
 import NaviBar from "../../components/NaviBar";
 import VideoPage from "../../components/VideoPage"
 import Info1 from "../../components/Info1"
@@ -7,7 +6,9 @@ import Info2 from "../../components/Info2"
 import Ps4 from "../../components/Ps4"
 import Info from "../../components/Info"
 import Footer from "../../components/Footer";
-import InfoSpider from "../../components/InfoSpider";
+import Slider from "../../components/Slider";
+
+
 
 const Home = () => {
   return <div>

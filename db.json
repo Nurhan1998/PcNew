@@ -177,6 +177,42 @@
       ],
       "likes": 0,
       "id": 17
+    },
+    {
+      "name": "",
+      "category": "",
+      "price": "",
+      "description": "",
+      "quantity": 0,
+      "image": [
+        []
+      ],
+      "likes": 0,
+      "id": 18
+    },
+    {
+      "name": "",
+      "category": "",
+      "price": "",
+      "description": "",
+      "quantity": 0,
+      "image": [
+        ""
+      ],
+      "likes": 0,
+      "id": 19
+    },
+    {
+      "name": "",
+      "category": "",
+      "price": "",
+      "description": "",
+      "quantity": 0,
+      "image": [
+        ""
+      ],
+      "likes": 0,
+      "id": 20
     }
   ],
   "users": [

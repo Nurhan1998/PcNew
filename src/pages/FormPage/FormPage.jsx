@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const FormPage = () => {
     
     return (
-        <>
-        <Container >
+        <div >
+        <Container className='FormPage'>
 
         <Form>
   <Form.Row>
@@ -66,7 +66,7 @@ const FormPage = () => {
 </Form>
         </Container>
         
-        </>
+        </div>
 
     );
 };
