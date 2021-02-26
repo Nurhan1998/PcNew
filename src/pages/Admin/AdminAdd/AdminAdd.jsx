@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { productsContext } from "../../../contexts/ProductsContext/ProductsContext";
-import {Container,FormControl,Button} from 'react-bootstrap'
+import { Container, FormControl, Button, Image } from "react-bootstrap";
 
 const ProductsAdd = () => {
   const [name, setName] = useState("");
@@ -16,9 +16,10 @@ const ProductsAdd = () => {
       category,
       price,
       description,
-      quantity:0,
+      quantity: 0,
       image: [image],
       quantity: 0,
+      likes: 0,
     };
     addProduct(newObj);
     setName("");
@@ -29,53 +30,67 @@ const ProductsAdd = () => {
   }
   return (
     <div>
-      <Container 
+      <Image src="https://cdn.wallpapersafari.com/73/41/V1Imlh.jpg" style={{
+                    position: "absolute",
+                    width: "100%",
+                    left: "50%",
+                    top: "50%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transform: "translate(-50%, -50%)",
+                    zIndex: "-1"
+                }}
+/>
+      <Container
         style={{
-        width:"400px",
-        marginTop:"120px"
-  }}> 
-    <h1>Admin Add Product</h1>
-      <FormControl
-        className="mt-2"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        type="text"
-        placeholder="Name"
-      />
-      <FormControl
-        className="mt-2"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        type="text"
-        placeholder="Category"
-      />
-      <FormControl
-        className="mt-2"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-        type="number"
-        placeholder="Price"
-      />
-      <FormControl
-        className="mt-2"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        type="text"
-        placeholder="Description"
-      />
-      <FormControl
-        className="mt-2"
-        value={image}
-        onChange={(e) => setImage(e.target.value)}
-        type="text"
-        placeholder="Image URL"
-      />
-      <Button className="mt-2 " block onClick={handleClick}>Add Product</Button>
+          
+          width: "400px",
+          paddingTop: "120px",
+          paddingBottom: "278px"
+        }}
+      >
+        <h1>Admin Add Product</h1>
+        <FormControl
+          className="mt-2"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          placeholder="Name"
+        />
+        <FormControl
+          className="mt-2"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          type="text"
+          placeholder="Category"
+        />
+        <FormControl
+          className="mt-2"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          type="number"
+          placeholder="Price"
+        />
+        <FormControl
+          className="mt-2"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          type="text"
+          placeholder="Description"
+        />
+        <FormControl
+          className="mt-2"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+          type="text"
+          placeholder="Image URL"
+        />
+        <Button variant="dark" className="mt-2 " block onClick={handleClick}>
+          Add Product
+        </Button>
       </Container>
-     
     </div>
   );
-  return <div></div>;
 };
 
 export default ProductsAdd;

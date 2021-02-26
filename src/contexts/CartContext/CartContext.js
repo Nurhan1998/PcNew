@@ -6,6 +6,7 @@ export const cartContext = React.createContext();
 
 const INIT_STATE = {
   carts: [],
+  favorites: [],
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -37,6 +38,21 @@ const CartContextProvider = ({ children }) => {
       await axios.post(`${API}/carts`, item);
     }
   };
+  const deleteCart = async (item) => {
+    let { data } = await axios(`${API}/carts`);
+    let res = data.find((elem) => item.id === elem.id);
+    console.log(res);
+
+    if (res) {
+      if (res.quantity === 1) {
+        await axios.delete(`${API}/carts/${res.id}`);
+      } else {
+        res.quantity -= 1;
+        await axios.patch(`${API}/carts/${res.id}`, res);
+      }
+    }
+    getCarts();
+  };
 
   return (
     <cartContext.Provider
@@ -44,6 +60,7 @@ const CartContextProvider = ({ children }) => {
         carts: state.carts,
         getCarts,
         postCart,
+        deleteCart,
       }}
     >
       {children}
