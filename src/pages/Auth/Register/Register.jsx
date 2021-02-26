@@ -1,12 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Button, Container, FormControl, Image } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import { authContext } from "../../../contexts/AuthContext/AuthContext";
+
 
 const Register = () => {
   const { addUser, getUsers } = useContext(authContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
+  const history = useHistory()
 
   useEffect(() => {
     getUsers();
@@ -28,6 +31,7 @@ const Register = () => {
       setEmail("");
       setPassword("");
       setConfirm("");
+      history.push("/login")
     } else {
       setPassword("");
       setConfirm("");
