@@ -53,6 +53,18 @@ const CartContextProvider = ({ children }) => {
     }
     getCarts();
   };
+  let count = 0;
+
+  state.carts.map((item) => {
+    console.log(item);
+    count += item.price * item.quantity;
+  });
+  const trashCart = async () => {
+    const { data } = await axios.get(`${API}/carts`);
+    data.forEach((item) => {
+      axios.delete(`${API}/carts/${item.id}`);
+    });
+  };
 
   return (
     <cartContext.Provider
@@ -61,6 +73,8 @@ const CartContextProvider = ({ children }) => {
         getCarts,
         postCart,
         deleteCart,
+        count,
+        trashCart,
       }}
     >
       {children}

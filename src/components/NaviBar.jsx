@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   Nav,
@@ -11,10 +11,9 @@ import {
   Container,
   Row,
 } from "react-bootstrap";
-import { FaPlaystation } from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
 import { SiPlaystation } from "react-icons/si";
-import { GiConsoleController } from "react-icons/gi";
+import { FaCartPlus } from "react-icons/fa";
 import { FiTriangle, FiCircle } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { BsSquare } from "react-icons/bs";
@@ -27,13 +26,19 @@ const NaviBar = () => {
   const handleLogOut = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("role");
-    history.push("/");
+    history.push("/login");
   };
+  const [isAdmin, setIsAdmin] = useState(false);
 
+  useEffect(() => {
+    const admin = localStorage.getItem("role");
+    if (admin) {
+      setIsAdmin(true);
+    }
+  }, []);
 
-
-    return (
-      <Navbar expand="lg" sticky="top" bg="white">
+  return (
+    <Navbar expand="lg" sticky="top" bg="white">
       <Navbar.Brand href="/">
         <h3 className="ml-3">
           <SiPlaystation />
@@ -43,7 +48,10 @@ const NaviBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto ml-auto">
-          <Nav.Link href="/list" variant="outline-info">
+          <Nav.Link
+            href={isAdmin ? "/admin-list" : "/list"}
+            variant="outline-info"
+          >
             <strong>Shop</strong>
           </Nav.Link>
           <h4>
@@ -73,7 +81,14 @@ const NaviBar = () => {
         </Nav>
 
         <Form inline>
-          <h1>{user}</h1>
+          <h5>{user}</h5>
+          <Button
+            variant="outline-primary"
+            className="mr-3 ml-3 rounded-pill border border-primary"
+            onClick={() => history.push("/cart")}
+          >
+            <FaCartPlus />
+          </Button>
           <Link to="/register">
             <Button
               variant="outline-primary"

@@ -1,10 +1,15 @@
-import classes from "./Products.module.css";
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
-import {Image} from "react-bootstrap"
+import { Media, Image } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import { cartContext } from "../../contexts/CartContext/CartContext";
+import { FaCartPlus } from "react-icons/fa";
+import NaviBar from "../../components/NaviBar";
 
 const ProductDetails = () => {
+  const { postCart } = useContext(cartContext);
+  const history = useHistory();
   const { id } = useParams();
   const {
     getProductDetail,
@@ -13,6 +18,9 @@ const ProductDetails = () => {
     productEdit,
   } = useContext(productsContext);
 
+  function handleClickCart() {
+    postCart(productDetail);
+  }
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
@@ -28,53 +36,77 @@ const ProductDetails = () => {
 
   function handleClickDelete(id) {
     productDelete(id);
+    history.push("/list");
   }
   function handleClickEdit(id) {
     productEdit(id);
   }
+  console.log("askat");
 
   return (
     <>
-    <Image src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$" style={{
-      position: "fixed",
-      width: "100%",
-      left: "50%",
-      top: "50%",
-      height: "100%",
-      objectFit: "cover",
-      transform: "translate(-50%, -50%)",
-      zIndex: "-1",
-      
-  }}/>
-    <div className={classes.product_detail_content}>
-      <h4>Detail</h4>
+      <NaviBar />
+      <Image
+        src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$"
+        style={{
+          position: "fixed",
+          width: "100%",
+          left: "50%",
+          top: "50%",
+          height: "100%",
+          objectFit: "cover",
+          transform: "translate(-50%, -50%)",
+          zIndex: "-1",
+        }}
+      />
       <div>
-        {productDetail?.name}
+        <Media>
+          {productDetail?.image.map((item, index) => (
+            <div className="m-4" key={index}>
+              <img
+                src={item}
+                alt={`product image ${index + 1}`}
+                width={400}
+                height={400}
+                className="mr-5"
+              />
+            </div>
+          ))}
+          <Media.Body>
+            <h5>{productDetail?.name}</h5>
+            {!isAdmin ? (
+              <>
+                <p style={{ color: "white" }}>{productDetail?.description}</p>
+                <Link to="/list">
+                  <Button>Exit</Button>
+                </Link>
+                <Button
+                  onClick={() => handleClickCart()}
+                  variant="outline-primary"
+                  className="rounded-pill mr-2 ml-2"
+                >
+                  <FaCartPlus />
+                </Button>
+              </>
+            ) : (
+              <>
+                <p>{productDetail?.description}</p>
 
-        {productDetail?.image.map((item, index) => (
-          <div className={classes.imgWrapper} key={index}>
-            <img src={item} alt={`product image ${index + 1}`} />
-          </div>
-        ))}
+                <Link onClick={() => handleClickEdit(id)} to={"/admin-edit"}>
+                  <Button className="mr-3">Edit</Button>
+                </Link>
+                <Button className="mr-3" onClick={() => handleClickDelete(id)}>
+                  Delete
+                </Button>
 
-        {!isAdmin ? (
-          <> {productDetail?.description}</>
-        ) : (
-          <>
-            {productDetail?.description}
-
-            <Link onClick={() => handleClickEdit(id)} to={"/admin-edit"}>
-              <button>Edit</button>
-            </Link>
-            <button onClick={() => handleClickDelete(id)}>Delete</button>
-
-            <Link to="/admin-list">
-              <button>Exit</button>
-            </Link>
-          </>
-        )}
+                <Link to="/admin-list">
+                  <Button>Exit</Button>
+                </Link>
+              </>
+            )}
+          </Media.Body>
+        </Media>
       </div>
-    </div>
     </>
   );
 };

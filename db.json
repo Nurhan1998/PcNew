@@ -1,17 +1,6 @@
 {
   "products": [
     {
-      "name": "Spider-Man: Miles Morales",
-      "category": "Action",
-      "price": "90",
-      "description": "Marvel’s Spider-Man: Miles Morales — компьютерная игра в жанре action-adventure, разработанная Insomniac Games и изданная Sony Interactive Entertainment по лицензии Marvel Games для PlayStation 4 и PlayStation 5. Это сиквел, продолжающий события игры Marvel’s Spider-Man 2018 года",
-      "quantity": 0,
-      "image": [
-        "https://image.api.playstation.com/vulcan/img/rnd/202011/0314/tReLA4tRl0hyg4wvmg1kwEqb.png?w=440&thumb=false"
-      ],
-      "id": 2
-    },
-    {
       "name": "Need for Speed: Hot Pursuit",
       "category": "Simulator",
       "price": "40",
@@ -235,37 +224,26 @@
   ],
   "carts": [
     {
-      "name": "Red Dead",
-      "category": "RPG",
-      "price": "100",
-      "description": "PS4",
+      "name": "Ghostrunner",
+      "category": "Action",
+      "price": "20",
+      "description": "Ghostrunner — компьютерная игра в жанре экшен, разработанная польской студией One More Level и изданная All In! Games совместно с 505 Games. Игра была выпущена для Windows, PlayStation 4, Xbox One и Nintendo Switch в 2020 году. В выпуске Ghostrunner так же участвовали компании 3D Realms и Slipgate Ironworks",
+      "quantity": 1,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202008/2818/4xjRkRmOm9wklCdSWXVMaXBi.png?w=440&thumb=false"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Need for Speed: Hot Pursuit",
+      "category": "Simulator",
+      "price": "40",
+      "description": "Need for Speed: Hot Pursuit — компьютерная игра серии Need for Speed в жанре аркадной автогонки, изданная компанией Electronic Arts для консолей, компьютеров и мобильных устройств в 2010 году. В России игра была издана компанией «1С-СофтКлаб» полностью на русском языке.",
       "quantity": 0,
       "image": [
-        "https://images-na.ssl-images-amazon.com/images/I/91C8piUiI0L._SL1500_.jpg"
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/s903xz8pn3gTqY4bcKEAxnBo.png?w=440&thumb=false"
       ],
-      "id": 5
-    },
-    {
-      "name": "Spider-Man: Miles Morales",
-      "category": "Action",
-      "price": "90",
-      "description": "Marvel’s Spider-Man: Miles Morales — компьютерная игра в жанре action-adventure, разработанная Insomniac Games и изданная Sony Interactive Entertainment по лицензии Marvel Games для PlayStation 4 и PlayStation 5. Это сиквел, продолжающий события игры Marvel’s Spider-Man 2018 года",
-      "quantity": 1,
-      "image": [
-        "https://image.api.playstation.com/vulcan/img/rnd/202011/0314/tReLA4tRl0hyg4wvmg1kwEqb.png?w=440&thumb=false"
-      ],
-      "id": 2
-    },
-    {
-      "name": "Call of Duty: Modern Warfare Remastered111",
-      "category": "Shooter",
-      "price": "2000",
-      "description": "Call of Duty: Modern Warfare Remastered - шутер от первого лица 2016 года, разработанный Raven Software и опубликованный Activision.",
-      "quantity": 1,
-      "image": [
-        "https://image.api.playstation.com/cdn/EP0002/CUSA05380_00/FiekbfhIalRbPcJBkU83XfjWhHyvjNhk.png"
-      ],
-      "id": 1
+      "id": 3
     }
   ]
 }

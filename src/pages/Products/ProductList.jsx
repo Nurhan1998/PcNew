@@ -10,6 +10,7 @@ import { CardDeck, Image } from "react-bootstrap";
 import { IoLogoWindows } from "react-icons/io";
 import { FaPlaystation, FaCartPlus } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
+import Footer from "../../components/Footer";
 const ProductList = () => {
   const { products, getProducts, limit, count, addFavorites } = useContext(
     productsContext
@@ -21,6 +22,7 @@ const ProductList = () => {
   const [filter, setFilter] = useState("none");
 
   function handleFilter(e) {
+    setPage(1);
     if (e.target.value == "none") {
       setFilter(e.target.value);
       return getProducts(
@@ -28,6 +30,7 @@ const ProductList = () => {
       );
     }
     setFilter(e.target.value);
+    setPage(1);
   }
 
   useEffect(() => {
@@ -47,12 +50,9 @@ const ProductList = () => {
   };
 
   function handleClickCart(item) {
-    item.quantity = productCount;
     postCart(item);
   }
-  function handleClickFavorites(item) {
-    addFavorites(item);
-  }
+
   const handleInp = (e) => {
     setProductCount(e);
   };
@@ -67,20 +67,23 @@ const ProductList = () => {
   }
   return (
     <>
-       <Image src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$" style={{
-                    position: "fixed",
-                    width: "100%",
-                    left: "50%",
-                    top: "50%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transform: "translate(-50%, -50%)",
-                    zIndex: "-1",
-                    
-                }}/>
+      <NaviBar />
+      <Image
+        src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-page-background-desktop-block-01-en-15jun20?$native$"
+        style={{
+          position: "fixed",
+          width: "100%",
+          left: "50%",
+          top: "50%",
+          height: "100%",
+          objectFit: "cover",
+          transform: "translate(-50%, -50%)",
+          zIndex: "-1",
+        }}
+      />
       <Container>
         <Form.Group controlId="exampleForm.ControlSelect1">
-          <Form.Label style={{color: 'white'}}>Filter by Category</Form.Label>
+          <Form.Label style={{ color: "white" }}>Filter by Category</Form.Label>
           <Form.Control as="select" defaultValue onChange={handleFilter}>
             <option>none</option>
             <option>Action</option>
@@ -158,32 +161,11 @@ const ProductList = () => {
                       >
                         <FaCartPlus />
                       </Button>
-                      {/* <input
-                    type="number"
-                    min="1"
-                    style={{ width: "50px" }}
-                    onChange={(e) => {
-                      handleInp(e.target.value);
-                    }}
-                  /> */}
                       <Button
                         variant="outline-danger"
                         className="rounded-pill mr-2"
                       >
                         <AiOutlineHeart />
-                      </Button>
-                      <Button
-                        onClick={() => handleClickFavorites(item)}
-                        variant="outline-primary"
-                        className="rounded-pill mr-2"
-                      >
-                        Add to Favorites
-                      </Button>
-                      <Button
-                        variant="outline-primary"
-                        className="rounded-pill mr-2"
-                      >
-                        like
                       </Button>
                     </Form>
                   </Card.Footer>
@@ -191,18 +173,11 @@ const ProductList = () => {
               </div>
             </CardDeck>
           ))}
-          <Pagination onClick={onPaginationChange}>{items}</Pagination>
         </Container>
+        <Pagination onClick={onPaginationChange}>{items}</Pagination>
       </Container>
+      <Footer />
     </>
   );
 };
 export default ProductList;
-
-{
-  /* <div style={{ 
-      width: "100%", 
-      height: 'auto',
-      backgroundColor:'#1f1f1f' 
-          }}></div> */
-}

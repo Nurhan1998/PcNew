@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 
 const Cart = () => {
   let history = useHistory();
-  const { carts, getCarts, deleteCart } = useContext(cartContext);
+  const { carts, getCarts, deleteCart, count } = useContext(cartContext);
   useEffect(() => {
     getCarts();
   }, []);
@@ -29,8 +29,8 @@ const Cart = () => {
               className="border"
             >
               <h5 className="text-center border-bottom">MY CART</h5>
-              {carts.map((item) => (
-                <div key={item.id} className="text-center mb-5 border-bottom">
+              {carts.map((item, index) => (
+                <div key={index} className="text-center mb-5 border-bottom">
                   <Image src={item.image[0]} fluid />
                   <h5>
                     <strong>{item.name}</strong>
@@ -69,7 +69,23 @@ const Cart = () => {
               style={{ width: "20rem", marginTop: "30px", height: "400px" }}
               className="border"
             >
-              <h5 className="text-center border-bottom">TOTAL</h5>
+              <ul>
+                {carts.map((item, index) => (
+                  <div
+                    key={index}
+                    className="d-flex justify-content-between border-bottom"
+                  >
+                    <strong>{item.name}</strong>
+                    <span>{item.quantity * item.price}$</span>
+                  </div>
+                ))}
+              </ul>
+              <h5 className="text-center border-bottom">TOTAL:</h5>
+
+              <p className="text-center">
+                <strong>{count}$</strong>
+              </p>
+
               <Button block onClick={() => history.push("/formpage")}>
                 CHECKOUT
               </Button>
