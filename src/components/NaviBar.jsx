@@ -11,10 +11,9 @@ import {
   Container,
   Row,
 } from "react-bootstrap";
-import { FaPlaystation } from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
 import { SiPlaystation } from "react-icons/si";
-import { GiConsoleController } from "react-icons/gi";
+import { FaCartPlus } from "react-icons/fa";
 import { FiTriangle, FiCircle } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { BsSquare } from "react-icons/bs";
@@ -71,7 +70,14 @@ const NaviBar = () => {
         </Nav>
 
         <Form inline>
-          <h1>{user}</h1>
+          <h5>{user}</h5>
+          <Button
+            variant="outline-primary"
+            className="mr-3 ml-3 rounded-pill border border-primary"
+            onClick={() => history.push("/cart")}
+          >
+            <FaCartPlus />
+          </Button>
           <Link to="/register">
             <Button
               variant="outline-primary"

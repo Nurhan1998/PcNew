@@ -1,9 +1,11 @@
-import classes from "./Products.module.css";
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/ProductsContext/ProductsContext";
+import { Media } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 const ProductDetails = () => {
+  const history = useHistory();
   const { id } = useParams();
   const {
     getProductDetail,
@@ -27,40 +29,50 @@ const ProductDetails = () => {
 
   function handleClickDelete(id) {
     productDelete(id);
+    history.push("/list");
   }
   function handleClickEdit(id) {
     productEdit(id);
   }
 
   return (
-    <div className={classes.product_detail_content}>
-      <h4>Detail</h4>
-      <div>
-        {productDetail?.name}
-
+    <div className="m-5">
+      <Media>
         {productDetail?.image.map((item, index) => (
-          <div className={classes.imgWrapper} key={index}>
-            <img src={item} alt={`product image ${index + 1}`} />
+          <div key={index}>
+            <img
+              src={item}
+              alt={`product image ${index + 1}`}
+              width={400}
+              height={400}
+              className="mr-5"
+            />
           </div>
         ))}
+        <Media.Body>
+          <h5>{productDetail?.name}</h5>
+          {!isAdmin ? (
+            <>
+              <p>{productDetail?.description}</p>
+            </>
+          ) : (
+            <>
+              <p>{productDetail?.description}</p>
 
-        {!isAdmin ? (
-          <> {productDetail?.description}</>
-        ) : (
-          <>
-            {productDetail?.description}
+              <Link onClick={() => handleClickEdit(id)} to={"/admin-edit"}>
+                <Button className="mr-3">Edit</Button>
+              </Link>
+              <Button className="mr-3" onClick={() => handleClickDelete(id)}>
+                Delete
+              </Button>
 
-            <Link onClick={() => handleClickEdit(id)} to={"/admin-edit"}>
-              <button>Edit</button>
-            </Link>
-            <button onClick={() => handleClickDelete(id)}>Delete</button>
-
-            <Link to="/admin-list">
-              <button>Exit</button>
-            </Link>
-          </>
-        )}
-      </div>
+              <Link to="/admin-list">
+                <Button>Exit</Button>
+              </Link>
+            </>
+          )}
+        </Media.Body>
+      </Media>
     </div>
   );
 };

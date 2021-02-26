@@ -21,6 +21,7 @@ const ProductList = () => {
   const [filter, setFilter] = useState("none");
 
   function handleFilter(e) {
+    setPage(1);
     if (e.target.value == "none") {
       setFilter(e.target.value);
       return getProducts(
@@ -28,6 +29,7 @@ const ProductList = () => {
       );
     }
     setFilter(e.target.value);
+    setPage(1);
   }
 
   useEffect(() => {
@@ -50,9 +52,7 @@ const ProductList = () => {
     item.quantity = productCount;
     postCart(item);
   }
-  function handleClickFavorites(item) {
-    addFavorites(item);
-  }
+
   const handleInp = (e) => {
     setProductCount(e);
   };
@@ -67,6 +67,7 @@ const ProductList = () => {
   }
   return (
     <>
+      <NaviBar />
       <Container>
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Label>Filter by Category</Form.Label>
@@ -147,32 +148,11 @@ const ProductList = () => {
                       >
                         <FaCartPlus />
                       </Button>
-                      {/* <input
-                    type="number"
-                    min="1"
-                    style={{ width: "50px" }}
-                    onChange={(e) => {
-                      handleInp(e.target.value);
-                    }}
-                  /> */}
                       <Button
                         variant="outline-danger"
                         className="rounded-pill mr-2"
                       >
                         <AiOutlineHeart />
-                      </Button>
-                      <Button
-                        onClick={() => handleClickFavorites(item)}
-                        variant="outline-primary"
-                        className="rounded-pill mr-2"
-                      >
-                        Add to Favorites
-                      </Button>
-                      <Button
-                        variant="outline-primary"
-                        className="rounded-pill mr-2"
-                      >
-                        like
                       </Button>
                     </Form>
                   </Card.Footer>
@@ -180,8 +160,8 @@ const ProductList = () => {
               </div>
             </CardDeck>
           ))}
-          <Pagination onClick={onPaginationChange}>{items}</Pagination>
         </Container>
+        <Pagination onClick={onPaginationChange}>{items}</Pagination>
       </Container>
     </>
   );
