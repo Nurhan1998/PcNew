@@ -15,7 +15,7 @@ const Slider = () => {
         <Carousel.Item interval={1000}>
           <img
             className="d-block w-100"
-            src="https://gmedia.playstation.com/is/image/SIEPDC/call-of-duty-black-ops-cold-war-screen-08-en-26aug20?$4000px--t$"
+            src="https://gmedia.playstation.com/is/image/SIEPDC/call-of-duty-black-ops-cold-war-screen-08-en-26aug20?$4000px--t$https://gmedia.playstation.com/is/image/SIEPDC/call-of-duty-black-ops-cold-war-screen-08-en-26aug20?$4000px--t$ "
             alt="Second slide"
           />
         </Carousel.Item>
