@@ -1,16 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Col,
-  Image,
-  Container,
-  Row,
-} from "react-bootstrap";
+import { Navbar, Nav, Form, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { SiPlaystation } from "react-icons/si";
 import { FaCartPlus } from "react-icons/fa";
@@ -48,7 +37,8 @@ const NaviBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto ml-auto">
-          <Link className="nav-link" 
+          <Link
+            className="nav-link"
             to={isAdmin ? "/admin-list" : "/list"}
             variant="outline-info"
           >
@@ -63,7 +53,7 @@ const NaviBar = () => {
           <h4>
             <FiCircle />
           </h4>
-          <Link className="nav-link" to="/" variant="outline-info">
+          <Link className="nav-link" to="/list" variant="outline-info">
             <strong>Main</strong>
           </Link>
           <h4>
@@ -75,7 +65,7 @@ const NaviBar = () => {
           <h4>
             <BsSquare />
           </h4>
-          <Link className="nav-link" to="/Info" variant="outline-info">
+          <Link className="nav-link" to="/payment" variant="outline-info">
             <strong>Payment</strong>
           </Link>
         </Nav>

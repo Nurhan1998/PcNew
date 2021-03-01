@@ -1,6 +1,17 @@
 {
   "products": [
     {
+<<<<<<< HEAD
+      "name": "Need for Speed: Hot Pursuit",
+      "category": "Simulator",
+      "price": "40",
+      "description": "Need for Speed: Hot Pursuit — компьютерная игра серии Need for Speed в жанре аркадной автогонки, изданная компанией Electronic Arts для консолей, компьютеров и мобильных устройств в 2010 году. В России игра была издана компанией «1С-СофтКлаб» полностью на русском языке.",
+      "quantity": 0,
+      "image": [
+        "https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/s903xz8pn3gTqY4bcKEAxnBo.png?w=440&thumb=false"
+      ],
+      "id": 3
+=======
       "name": "Ghostrunner",
       "category": "Action",
       "price": "20",
@@ -10,6 +21,7 @@
         "https://image.api.playstation.com/vulcan/ap/rnd/202008/2818/4xjRkRmOm9wklCdSWXVMaXBi.png?w=440&thumb=false"
       ],
       "id": 4
+>>>>>>> 6ffdbaf40b76865442e6784f1bcd99a89c18052e
     },
     {
       "name": "Doom Eternal",
@@ -194,6 +206,14 @@
     {
       "email": "test",
       "password": "test",
+<<<<<<< HEAD
+      "id": 4
+    },
+    {
+      "email": "akyl",
+      "password": "akyl",
+=======
+>>>>>>> 6ffdbaf40b76865442e6784f1bcd99a89c18052e
       "id": 5
     }
   ],
