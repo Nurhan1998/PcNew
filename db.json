@@ -12,17 +12,6 @@
       "id": 3
     },
     {
-      "name": "Ghostrunner",
-      "category": "Action",
-      "price": "20",
-      "description": "Ghostrunner — компьютерная игра в жанре экшен, разработанная польской студией One More Level и изданная All In! Games совместно с 505 Games. Игра была выпущена для Windows, PlayStation 4, Xbox One и Nintendo Switch в 2020 году. В выпуске Ghostrunner так же участвовали компании 3D Realms и Slipgate Ironworks",
-      "quantity": 0,
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202008/2818/4xjRkRmOm9wklCdSWXVMaXBi.png?w=440&thumb=false"
-      ],
-      "id": 4
-    },
-    {
       "name": "Doom Eternal",
       "category": "shooter",
       "price": "20",
@@ -189,6 +178,11 @@
       "email": "test",
       "password": "test",
       "id": 4
+    },
+    {
+      "email": "akyl",
+      "password": "akyl",
+      "id": 5
     }
   ],
   "carts": []

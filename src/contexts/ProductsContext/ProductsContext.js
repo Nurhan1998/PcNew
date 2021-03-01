@@ -10,7 +10,6 @@ const INIT_STATE = {
   productDetail: null,
   productToEdit: null,
   count: 0,
-  favorites: [],
 };
 
 const reducer = (state = INIT_STATE, action) => {

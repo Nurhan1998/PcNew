@@ -1,16 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Col,
-  Image,
-  Container,
-  Row,
-} from "react-bootstrap";
+import { Navbar, Nav, Form, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { SiPlaystation } from "react-icons/si";
 import { FaCartPlus } from "react-icons/fa";
@@ -48,36 +37,37 @@ const NaviBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto ml-auto">
-          <Nav.Link
-            href={isAdmin ? "/admin-list" : "/list"}
+          <Link
+            className="nav-link"
+            to={isAdmin ? "/admin-list" : "/list"}
             variant="outline-info"
           >
             <strong>Shop</strong>
-          </Nav.Link>
+          </Link>
           <h4>
             <FiTriangle />
           </h4>
-          <Nav.Link href="/" variant="outline-info">
+          <Link className="nav-link" to="/" variant="outline-info">
             <strong>Out now</strong>
-          </Nav.Link>
+          </Link>
           <h4>
             <FiCircle />
           </h4>
-          <Nav.Link href="/" variant="outline-info">
+          <Link className="nav-link" to="/list" variant="outline-info">
             <strong>Main</strong>
-          </Nav.Link>
+          </Link>
           <h4>
             <GrClose />
           </h4>
-          <Nav.Link href="/" variant="outline-info">
+          <Link className="nav-link" to="/" variant="outline-info">
             <strong>Home</strong>
-          </Nav.Link>
+          </Link>
           <h4>
             <BsSquare />
           </h4>
-          <Nav.Link href="/Info" variant="outline-info">
+          <Link className="nav-link" to="/payment" variant="outline-info">
             <strong>Payment</strong>
-          </Nav.Link>
+          </Link>
         </Nav>
 
         <Form inline>
