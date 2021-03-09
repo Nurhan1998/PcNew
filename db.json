@@ -1,7 +1,6 @@
 {
   "products": [
     {
-<<<<<<< HEAD
       "name": "Need for Speed: Hot Pursuit",
       "category": "Simulator",
       "price": "40",
@@ -11,17 +10,6 @@
         "https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/s903xz8pn3gTqY4bcKEAxnBo.png?w=440&thumb=false"
       ],
       "id": 3
-=======
-      "name": "Ghostrunner",
-      "category": "Action",
-      "price": "20",
-      "description": "Ghostrunner — компьютерная игра в жанре экшен, разработанная польской студией One More Level и изданная All In! Games совместно с 505 Games. Игра была выпущена для Windows, PlayStation 4, Xbox One и Nintendo Switch в 2020 году. В выпуске Ghostrunner так же участвовали компании 3D Realms и Slipgate Ironworks",
-      "quantity": 0,
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202008/2818/4xjRkRmOm9wklCdSWXVMaXBi.png?w=440&thumb=false"
-      ],
-      "id": 4
->>>>>>> 6ffdbaf40b76865442e6784f1bcd99a89c18052e
     },
     {
       "name": "Doom Eternal",
@@ -157,18 +145,6 @@
       "id": 16
     },
     {
-      "name": "",
-      "category": "",
-      "price": "",
-      "description": "",
-      "quantity": 0,
-      "image": [
-        []
-      ],
-      "likes": 0,
-      "id": 17
-    },
-    {
       "name": "test",
       "category": "Shooter",
       "price": "100",
@@ -194,40 +170,10 @@
       "id": 2
     },
     {
-      "email": "qweqr",
-      "password": "1",
-      "id": 3
-    },
-    {
-      "email": "tilek",
-      "password": "1",
-      "id": 4
-    },
-    {
       "email": "test",
       "password": "test",
-<<<<<<< HEAD
-      "id": 4
-    },
-    {
-      "email": "akyl",
-      "password": "akyl",
-=======
->>>>>>> 6ffdbaf40b76865442e6784f1bcd99a89c18052e
-      "id": 5
+      "id": 3
     }
   ],
-  "carts": [
-    {
-      "name": "Doom Eternal",
-      "category": "shooter",
-      "price": "20",
-      "description": "Doom Eternal — компьютерная игра в жанре шутера от первого лица. Игра разработана студией id Software, а издателем выступила компания Bethesda Softworks.",
-      "quantity": 1,
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/ERNPc4gFqeRDG1tYQIfOKQtM.png?w=440&thumb=false"
-      ],
-      "id": 5
-    }
-  ]
+  "carts": []
 }
