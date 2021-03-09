@@ -1,7 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Table } from "react-bootstrap";
 import { cartContext } from "../../contexts/CartContext/CartContext";
-import Pagination from "react-bootstrap/Pagination";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { RiAddCircleLine, RiDeleteBin6Line } from "react-icons/ri";

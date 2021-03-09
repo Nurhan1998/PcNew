@@ -43,6 +43,7 @@ const CartContextProvider = ({ children }) => {
     let { data } = await axios(`${API}/carts`);
     let res = data.find((elem) => item.id === elem.id);
     console.log(res);
+    
 
     if (res) {
       if (res.quantity <= 1) {
